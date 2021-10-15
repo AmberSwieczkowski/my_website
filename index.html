@@ -1,5 +1,5 @@
 <!--https://www.youtube.com/watch?v=FazgJVnrVuI&ab_channel=BrianDesign
-Stopped at 00:22:04
+Stopped at 00:43:58
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -8,11 +8,20 @@ Stopped at 00:22:04
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
+    <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/" id="navbar__logo">CONFIDENTIAL</a>
+        <a href="/" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>CONFIDENTIAL</a
+        >
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -20,13 +29,15 @@ Stopped at 00:22:04
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/" class="navbar__links">Kusty Krab</a>
+            <a href="/" target="_blank" class="navbar__links">Krusty Krab</a>
           </li>
           <li class="navbar__item">
-            <a href="/tech.html" class="navbar__links">Top Secret</a>
+            <a href="/tech.html" target="_blank" class="navbar__links"
+              >Top Secret</a
+            >
           </li>
           <li class="navbar__item">
-            <a href="/" class="navbar__links">Projects</a>
+            <a href="/" target="_blank" class="navbar__links">Projects</a>
           </li>
           <li class="navbar__btn">
             <a href="/self_destruct.html" class="button"
@@ -36,5 +47,33 @@ Stopped at 00:22:04
         </ul>
       </div>
     </nav>
+
+    <!-- Hero Section -->
+    <div class="main">
+      <div class="main__container">
+        <div class="main__content">
+          <h1>NOW SERVING KRUSTY PIZZA</h1>
+          <h2>
+            For A Limited Time Only:
+            <br />
+            Buy One, Get Another One
+            <br />
+            For The Same Price!
+          </h2>
+          <p>See what makes us different.</p>
+          <button class="main__btn">
+            <a href="/" target="_blank">Come here often?</a>
+          </button>
+        </div>
+        <div class="main__img--container">
+          <img
+            src="images/kangaroo-laying-in-grass.jpeg"
+            alt="kangaroo laying in grass"
+            id="main__img"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
   </body>
 </html>
