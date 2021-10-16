@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Kumbh Sans", sans-serif;
 }
 
+/* Navigation Bar Section CSS */
+
 .navbar {
-  background: black;
+  background: #131313;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -15,6 +17,7 @@
   position: sticky;
   top: 0;
   z-index: 999;
+  opacity: 1;
 }
 
 .navbar__container {
@@ -82,7 +85,42 @@
   font-size: 1rem;
 }
 
-.button {
+.navbar__links:hover {
+  color: #00ffff;
+}
+
+/* Self Destruct Button Section */
+
+.self_destruct_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
+  color: #131313;
+  cursor: help;
+}
+
+.self_destruct_button:hover {
+  background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
+  transition: all 0.5s ease-in;
+}
+
+.self_destruct_button:hover span {
+  display: none;
+}
+
+.self_destruct_button:hover:before {
+  content: "Are You Sure?";
+}
+
+.self_destruct_verification_button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,21 +135,17 @@
   color: #131313;
 }
 
-.button:hover {
+.self_destruct_verification_button {
   background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
   transition: all 0.5s ease-in;
 }
 
-.button:hover span {
+.self_destruct_verification_button span {
   display: none;
 }
 
-.button:hover:before {
+.self_destruct_verification_button:hover:before {
   content: "Are You Sure?";
-}
-
-.navbar__links:hover {
-  color: #00ffff;
 }
 
 @media screen and (max-width: 960px) {
@@ -186,7 +220,7 @@
     transform: translateY(8px) rotate(45deg);
   }
 
-  .button {
+  .self_destruct_button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -233,6 +267,7 @@
 }
 
 .main__content h1 {
+  font-family: "Rampart One", cursive;
   font-size: 4rem;
   background-color: #00ffff;
   background-image: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
@@ -243,6 +278,13 @@
   -moz-text-fill-color: transparent;
   padding-right: 5rem;
   text-align: center;
+  animation: blinker 5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
 }
 
 .main__content h2 {
@@ -260,12 +302,74 @@
 
 .main__content p {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 50px;
+}
+
+.main__btn {
+  font-size: 1rem;
+  background-image: linear-gradient(to top, #00ffff 100%, #bbff99 100%);
+  padding: 14px 32px;
+  margin-left: 95px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn a {
+  position: relative;
+  z-index: 2;
+  color: #131313;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.main__btn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  transition: all 0.35s;
+  border-radius: 4px;
+}
+
+.main__btn:hover {
+  color: #fff;
+}
+
+.main__btn:hover:after {
+  width: 100%;
+}
+
+.main__img--container {
+  text-align: center;
 }
 
 #main__img {
+  box-sizing: border-box;
   width: 650px;
   height: auto;
   object-fit: cover;
+  border-radius: 3%;
+  transition: transform 0.2s;
+}
+
+.main__img--container:hover {
+  background-color: #131313;
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
