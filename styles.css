@@ -67,7 +67,7 @@
 }
 
 .navbar__links {
-  color: #bbff99;
+  color: #00ffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,7 +77,7 @@
 }
 
 .navbar__links:hover {
-  color: #00ffff;
+  color: yellow;
 }
 
 /* Self Destruct Button Section */
@@ -120,6 +120,8 @@
   content: "Are You Sure?";
 }
 
+/* Self Destruct Button Verification Section */
+
 .self_destruct_verification_button {
   display: flex;
   justify-content: center;
@@ -133,19 +135,21 @@
   border-radius: 10px;
   background: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
   color: #131313;
+  transition: all 0.5s ease-in;
 }
 
-.self_destruct_verification_button {
+.self_destruct_verification_button:hover {
   background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
   transition: all 0.5s ease-in;
 }
 
-.self_destruct_verification_button span {
+.self_destruct_verification_button:hover span {
   display: none;
 }
 
 .self_destruct_verification_button:hover:before {
-  content: "Are You Sure?";
+  font-family: "Space Mono", monospace;
+  content: "Are You REALLY Sure? This Cannot Be Undone.";
 }
 
 @media screen and (max-width: 960px) {
