@@ -152,6 +152,46 @@
   content: "Are You REALLY Sure? This Cannot Be Undone.";
 }
 
+/* Back to Saftey Button Section */
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.back_to_safety_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
+  color: #131313;
+  cursor: pointer;
+}
+
+.back_to_safety_button:hover {
+  background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
+  transition: all 0.5s ease-in;
+}
+
+.back_to_safety_button:hover span {
+  display: none;
+}
+
+.back_to_safety_button:hover:before {
+  content: "Take Me Back";
+}
+
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
@@ -280,7 +320,7 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  padding-right: 5rem;
+  padding: 5%;
   text-align: center;
   animation: blinker 5s linear infinite;
 }
@@ -300,7 +340,7 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  padding-right: 5rem;
+  padding-right: 5%;
   text-align: center;
 }
 
@@ -310,18 +350,18 @@
   font-weight: 700;
   color: #fff;
   padding: 2px;
-  margin-bottom: 50px;
+  margin-bottom: 10%;
+  text-align: center;
 }
 
 .main__btn {
   font-size: 1rem;
   background-image: linear-gradient(to top, #00ffff 100%, #bbff99 100%);
-  padding: 14px 32px;
-  margin-left: 95px;
+  padding: 2% 5%;
+  margin: 1% 20% 1% 20%;
   border: none;
   border-radius: 10px;
   color: #fff;
-  margin-top: 1rem;
   cursor: pointer;
   position: relative;
   transition: all 0.35s;
@@ -404,10 +444,41 @@
 
   .main_content h2 {
     font-size: 3rem;
+    text-align: center;
   }
 
   .main__content p {
     margin-top: 1rem;
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .main_content h2 {
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  .main__content p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+
+  .main_btn {
+    padding: 12px 12px;
+    margin: 0 0;
+    align-content: center;
+  }
+
+  .main_img {
+    align-content: center;
+    margin: 0 10%;
   }
 }
