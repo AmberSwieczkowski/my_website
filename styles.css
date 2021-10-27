@@ -422,7 +422,12 @@
   font-family: "Permanent Marker", cursive;
   font-size: 4rem;
   background-color: #00ffff;
-  background-image: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
+  background-image: linear-gradient(
+    to top,
+    #cc0000 0%,
+    #ff0000 50%,
+    #cc0000 100%
+  );
   background-size: 100%;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -475,7 +480,7 @@
   border: none;
   outline: none;
   border-radius: 10px;
-  background: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
+  background: linear-gradient(to top, #cc0000 0%, #ff0000 50%, #cc0000 100%);
   color: #131313;
   transition: none;
   margin: auto;
@@ -484,7 +489,7 @@
 .self_destruct_verification_button a {
   position: relative;
   z-index: 2;
-  color: #131313;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
