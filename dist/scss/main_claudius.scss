@@ -1,0 +1,223 @@
+$colors: (
+  primary: #005dff,
+  primary_light: lighten(#005dff, 40%),
+  primary_dark: darken(#005dff, 40%),
+  c-royalblue: #0091ff,
+  c-aqua: #00ffff,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-pink: #ff99ff,
+  c-grey: #e0e0e0,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-linear_gradient_background: linear_gradient_background(), 
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+);
+
+@function linear_gradient_colors() {
+  @return background
+      repeating-linear-gradient(
+        45deg,
+        color(c-white),
+        color(c-aqua) 2em,
+        color(c-white) 4em,
+        color(c-lime) 3em,
+        color(c-black) 5em,
+        #787e7e 6em,
+        color(c-white) 3em
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      color(c-black),
+      color(c-aqua) 2em,
+      color(c-black) 3em,
+      color(c-lime) 4em,
+      color(c-white) 5em,
+      color(c-aqua) 6em,
+      color(c-white) 3em
+    );
+}
+
+@function linear_gradient_background() {
+  @return linear_gradient_colors(), background-blend-mode multiply,
+    background-size auto;
+}
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, sans-serif, Arial;
+
+  background-color: color(c-white);
+  background: repeating-linear-gradient(
+      45deg,
+      color(c-white),
+      color(c-aqua) 2em,
+      color(c-white) 4em,
+      color(c-lime) 3em,
+      color(c-black) 5em,
+      #787e7e 6em,
+      color(c-white) 3em
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      color(c-black),
+      color(c-aqua) 2em,
+      color(c-black) 3em,
+      color(c-lime) 4em,
+      color(c-white) 5em,
+      color(c-aqua) 6em,
+      color(c-white) 3em
+    );
+
+  background-blend-mode: multiply;
+  background-size: auto;
+  }
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+
+  #bg {
+    clip-path: polygon(100% 0, 100% 52%, 20% 100%, 0 100%, 0 0);
+    background-color: color(c-black);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include desktop {
+      clip-path: polygon(0 0, 70% 0, 45% 100%, 0 100%);
+    }
+  }
+
+  header a {
+    color: color(c-aqua);
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-transform: uppercase;
+  }
+}
+
+
+main {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "primary card";
+    
+  }
+
+  section#card {
+    background: color(c-aqua_to_lime);
+    padding: 20px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+
+    @include desktop {
+      grid-area: card;
+      height: fit-content;
+      align-self: center;
+      margin: 1em;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        span {
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          background-color: color(c-black);
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        p {
+          display: inline-block;
+          margin-left: max(40px);
+          margin-top: 10px;
+          color: color(c-black);
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  section#primary {
+    color: color(c-aqua);
+    padding: $padding;
+    text-align: center;
+
+    @include desktop {
+      grid-area: primary;
+      text-align: left;
+      margin: 4em 0 0 4em;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 10px;
+      text-transform: uppercase;
+      color: color(c-orange);
+
+      @include desktop {
+        width: 30%;
+        font-size: 4em;
+        line-height: 0.9em;
+      }
+    }
+
+    p {
+      font-size: 1.4em;
+      color: color(c-pink);
+    }
+
+    a {
+      color: color(c-black);
+      border-radius: $borders;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: color(c-aqua);
+      display: block;
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+
+      @include desktop {
+        display: inline-block;
+        padding: $padding $padding * 4;
+      }
+    }
+  }
+}
