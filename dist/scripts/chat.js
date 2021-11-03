@@ -55,12 +55,12 @@ function getHardResponse(userText) {
     document.getElementById("chat-bar-bottom").scrollIntoView(true);
 }
 
-//Gets the text text from the input box and processes it
+//Gets the text from the input box and processes it
 function getResponse() {
     let userText = $("#textInput").val();
 
     if (userText == "") {
-        userText = "I love Code Palace!";
+        userText = "I love you!";
     }
 
     let userHtml = '<p class="userText"><span>' + userText + '</span></p>';

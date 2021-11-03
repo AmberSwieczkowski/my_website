@@ -103,7 +103,7 @@
 }
 
 .navbar__links:hover {
-  color: yellow;
+  color: #bbff99;
 }
 
 /* Self Destruct Button Section */
@@ -875,7 +875,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  position: fixed;
+  position: flex;
   bottom: 0;
 }
 

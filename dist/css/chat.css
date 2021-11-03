@@ -5,10 +5,11 @@
           box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   color: #141414;
   z-index: 100;
+  position: fixed;
 }
 
 .collapsible {
-  background-color: #00ffff;
+  background-color: #bbff99;
   color: #131313;
   cursor: pointer;
   padding: 18px;
@@ -33,7 +34,7 @@
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 
 .full-chat-block {
@@ -119,6 +120,7 @@
 
 .input-box {
   float: left;
+  border: none;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -148,6 +150,7 @@
   border-bottom-right-radius: 2px;
   max-width: 80%;
   margin-right: 10px;
+  margin-bottom: 10px;
   -webkit-animation: floatup 0.5s forwards;
           animation: floatup 0.5s forwards;
 }
@@ -169,6 +172,7 @@
   border-bottom-left-radius: 2px;
   max-width: 80%;
   margin-left: 10px;
+  margin-bottom: 10px;
   -webkit-animation: floatup 0.5s forwards;
           animation: floatup 0.5s forwards;
 }

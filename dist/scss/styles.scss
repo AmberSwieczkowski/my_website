@@ -98,7 +98,7 @@ $colors: (
 }
 
 .navbar__links:hover {
-  color: yellow;
+  color: color(c-lime);
 }
 
 /* Self Destruct Button Section */
@@ -124,7 +124,7 @@ $colors: (
   outline: none;
   border-radius: 10px;
   background: color(c-aqua_to_lime);
-  color: #131313;
+  color: color(c-black);
   cursor: help;
 }
 
@@ -483,7 +483,7 @@ $colors: (
   margin-top: 1rem;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #fff;
+  color: color(c-white);
   padding: 2px;
   margin-bottom: 10%;
   text-align: center;
@@ -511,7 +511,7 @@ $colors: (
 .self_destruct_verification_button a {
   position: relative;
   z-index: 2;
-  color: #fff;
+  color: color(c-white);
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -710,7 +710,7 @@ $colors: (
     url("/images/sheep-on-mountain.jpeg");
   background-size: cover;
   position: relative;
-  color: #fff;
+  color: color(c-white);
 }
 
 .services__card:nth-child(2) {
@@ -791,7 +791,7 @@ $colors: (
   justify-content: center;
   align-items: center;
   width: 100%;
-  position: fixed;
+  position: flex;
   bottom: 0;
 }
 
@@ -1042,13 +1042,13 @@ $colors: (
   left: 0;
   width: 0;
   height: 100%;
-  background: #fff;
+  background: color(c-white);
   transition: all 0.35s;
   border-radius: 10px;
 }
 
 .top__secret__main__btn:hover {
-  color: #fff;
+  color: color(c-white);
 }
 
 .top__secret__main__btn:hover:after {

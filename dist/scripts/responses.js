@@ -14,6 +14,6 @@ function getBotResponse(input) {
     } else if (input == "goodbye") {
         return "Talk to you later!";
     } else {
-        return "Try asking something else!";
+        return "I love you!";
     }
 }
