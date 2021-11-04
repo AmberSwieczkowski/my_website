@@ -189,6 +189,9 @@ $colors: (
   .full-chat-block {
     width: 100%;
     border-radius: 0px;
+    border: 3px solid color(c-black);
+    border-bottom: none;
+    border-top: none;
   }
   .chat-bar-collapsible {
     position: fixed;

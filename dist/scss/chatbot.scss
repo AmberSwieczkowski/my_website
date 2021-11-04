@@ -1,0 +1,165 @@
+$colors: (
+  c-royalblue: #0091ff,
+  c-aqua: #00ffff,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-pink: #ff99ff,
+  c-grey: #e0e0e0,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-linear_gradient_background: linear_gradient_background(),
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+);
+
+@function linear_gradient_colors() {
+  @return background
+      repeating-linear-gradient(
+        45deg,
+        color(c-white),
+        color(c-aqua) 2em,
+        color(c-white) 4em,
+        color(c-lime) 3em,
+        color(c-black) 5em,
+        #787e7e 6em,
+        color(c-white) 3em
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      color(c-black),
+      color(c-aqua) 2em,
+      color(c-black) 3em,
+      color(c-lime) 4em,
+      color(c-white) 5em,
+      color(c-aqua) 6em,
+      color(c-white) 3em
+    );
+}
+
+@function linear_gradient_background() {
+  @return linear_gradient_colors(), background-blend-mode multiply,
+    background-size auto;
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+#chatbot-container {
+  border: 4px solid color(c-lime);
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px color(c-lime);
+  padding: 1rem 1rem 3rem 1rem;
+  height: 450px;
+  width: 100%;
+  background-color: color(c-black);
+}
+#chatbot-inner {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  /* Hiding scrollbars is a pain. This is from: https://redstapler.co/css-hidden-scrollbar-while-scrollable-element/ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+#chatbot-inner::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}
+
+.chat-response,
+.chat-ask {
+  opacity: 0; /* Set to activated to show */
+  transform: translateY(-50%); /* Set to activated to move down */
+  transition: all 0.3s 0.3s;
+  border-radius: 12px;
+  background-color: color(c-aqua);
+  padding: 0.5rem 0.7rem;
+  line-height: 1.4;
+  color: color(c-black);
+  width: 80%;
+  margin-bottom: 0.5rem;
+  border: 1px solid color(c-orange);
+}
+.chat-response {
+  margin-left: 26px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.fa-user-secret {
+  color: color(c-aqua);
+  top: 20px;
+  width: 100%;
+  margin: 3%;
+  padding: 3%;
+  z-index: 100;
+}
+
+.chat-response:before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  border-radius: 100%;
+}
+.chat-ask {
+  background-color: color(c-orange);
+  margin-right: 0;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  color: color(c-black);
+}
+.choices {
+  opacity: 1; /* Set to active to show */
+  transform: translateY(-50%); /* Set to activated to move down */
+  transition: all 0.3s 0.3s;
+  transition: opacity 0.3s 0.3s;
+  margin-top: 0.5rem;
+  margin-left: 22px;
+  margin-bottom: 2rem;
+}
+.choice {
+  display: inline-block;
+  outline: none;
+  border: 1px solid color(c-aqua);
+  padding: 0.3rem 0.8rem;
+  background-color: color(c-orange);
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  text-decoration: none;
+  color: color(c-black);
+  cursor: pointer;
+}
+.choice:disabled {
+  color: color(c-grey);
+  border-color: color(c-grey);
+}
+.activated {
+  opacity: 1;
+  transform: translateY(0);
+}
+.restart {
+  position: relative;
+  bottom: 0.5rem;
+  outline: none;
+  font-size: 12px;
+  color: color(c-lime);
+  box-shadow: none;
+  border: 1px solid color(c-lime);
+  border-radius: 1rem;
+  background: color(c-black);
+  padding: 0.2rem 0.5rem;
+  margin: auto;
+  margin-left: 1rem;
+  cursor: pointer;
+}

@@ -60,31 +60,7 @@ $desktop: 840px;
 html {
   scroll-behavior: smooth;
   font-family: Helvetica, sans-serif, Arial;
-  background-color: color(c-pink);
-  background-color: color(c-white);
-  background: repeating-linear-gradient(
-      45deg,
-      color(c-white),
-      color(c-aqua) 2em,
-      color(c-white) 4em,
-      color(c-lime) 3em,
-      color(c-black) 5em,
-      #787e7e 6em,
-      color(c-white) 3em
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      color(c-black),
-      color(c-aqua) 2em,
-      color(c-black) 3em,
-      color(c-lime) 4em,
-      color(c-white) 5em,
-      color(c-aqua) 6em,
-      color(c-white) 3em
-    );
-
-  background-blend-mode: multiply;
-  background-size: auto;
+  background-color: color(c-black);
 }
 
 body,
@@ -95,21 +71,9 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0 auto;
+  background-color: color(c-black);
 
-  #bg {
-    clip-path: polygon(100% 0, 100% 52%, 20% 100%, 0 100%, 0 0);
-    background-color: color(c-black);
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
-
-    @include desktop {
-      clip-path: polygon(0 0, 70% 0, 45% 100%, 0 100%);
-      z-index: -1;
-    }
-  }
-
+  
   header a {
     color: color(c-aqua);
     text-decoration: none;
@@ -117,13 +81,12 @@ body {
     display: block;
     text-transform: uppercase;
   }
-}
 
 main {
   @include desktop {
     display: grid;
     grid-template-columns: 50% auto;
-    grid-template-areas: "primary card";
+    grid-template-areas: "main__claudius__text card";
   }
 
   section#card {
@@ -140,42 +103,14 @@ main {
       align-self: center;
       margin: 1em;
     }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin-bottom: 10px;
-
-        span {
-          position: absolute;
-          width: 30px;
-          height: 30px;
-          background-color: color(c-black);
-          border-radius: 50%;
-          margin-right: 10px;
-        }
-
-        p {
-          display: inline-block;
-          margin-left: max(40px);
-          margin-top: 10px;
-          color: color(c-black);
-          font-size: 1.2em;
-        }
-      }
-    }
   }
-
-  section#primary {
+  section#main__claudius__text {
     color: color(c-aqua);
     padding: $padding;
     text-align: center;
 
     @include desktop {
-      grid-area: primary;
+      grid-area: main__claudius__text;
       text-align: left;
       margin: 4em 0 0 4em;
     }
@@ -184,7 +119,7 @@ main {
       font-size: 3em;
       margin-top: 10px;
       text-transform: uppercase;
-      color: color(c-orange);
+      color: color(c-aqua);
 
       @include desktop {
         width: 30%;
@@ -199,7 +134,7 @@ main {
     }
 
     a {
-      color: color(c-aqua);
+      color: color(c-orange);
       text-decoration: none;
       text-transform: uppercase;
       font-weight: bold;
@@ -214,8 +149,13 @@ main {
       }
     }
   }
+  }
+
+  
+  // Hover affect around Claudius is Waiting
+
   .claudius__is__waiting {
-    color: color(c-aqua_to_lime);
+    background-color: color(c-black);
     position: relative;
     border-top-right-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -237,8 +177,8 @@ main {
     &:before {
       bottom: -1px;
       right: -1px;
-      border-bottom: 5px solid color(c-orange);
-      border-right: 5px solid color(c-orange);
+      border-bottom: 5px solid color(c-aqua);
+      border-right: 5px solid color(c-aqua);
     }
     &:hover {
       border-top-right-radius: 0px;

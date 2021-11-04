@@ -7,14 +7,19 @@
     <title>Claudius Main Page</title>
 
     <link rel="stylesheet" href="./dist/css/main_claudius.css" />
-    <link rel="stylesheet" href="./dist/css/chat.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="dist/css/chatbot.css" />
+    <!-- <link rel="stylesheet" href="dist/css/chatbot_main.css"> -->
 
-    <!--Icon Umbrella-Beach Import-->
+    <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
+    <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!--Font Awesome Icon Import, Umbrella-Beach -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -44,15 +49,16 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/" target="_blank" class="navbar__links">Testimonials</a>
+            <a href="/index.html" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="/top_secret.html" target="_blank" class="navbar__links"
-              >Top Secret</a
-            >
+            <a href="/testimonials.html" class="navbar__links">Testimonials</a>
           </li>
           <li class="navbar__item">
-            <a href="/" target="_blank" class="navbar__links">About You</a>
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/chatbot.html" class="navbar__links">About You</a>
           </li>
           <li class="navbar__btn">
             <a
@@ -65,94 +71,42 @@
       </div>
     </nav>
 
-    <div id="bg"></div>
-
     <main class="main__claudius__container">
-      <section id="card">
-        <ul>
-          <li>
-            <span></span>
-            <p>Trump</p>
-          </li>
-          <li>
-            <span></span>
-            <p>Russia</p>
-          </li>
-          <li>
-            <span></span>
-            <p>Possible Collusion</p>
-          </li>
-        </ul>
-      </section>
-      <section id="primary">
+      <section id="main__claudius__text">
         <h1>Your Personal Assistant</h1>
-        <p>Get Help With Your Daily Life Stuff</p>
-
-        <a href="#" class="claudius__is__waiting"><span>Claudius is waiting for you</span></a>
+        <p>Click the orange bubble to begin your journey</p>
+        <a href="#" class="claudius__is__waiting"
+          ><span>Claudius is waiting for you</span></a
+        >
       </section>
-    </main>
-    <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-      <button id="chat-button" type="button" class="collapsible">
-        Chat with Claudius!
-        <i class="far fa-comments" id="chat-icon"></i>
-      </button>
 
-      <div class="content">
-        <div class="full-chat-block">
-          <!-- Message Container -->
-          <div class="outer-container">
-            <div class="chat-container">
-              <!-- Messages -->
-              <div id="chatbox">
-                <h5 id="chat-timestamp"></h5>
-                <p id="botStarterMessage" class="botText">
-                  <span>Loading...</span>
-                </p>
-              </div>
-
-              <!-- User input box -->
-              <div class="chat-bar-input-block">
-                <div id="userInput">
-                  <input
-                    id="textInput"
-                    class="input-box"
-                    type="text"
-                    name="msg"
-                    placeholder="Tap 'Enter' to send a message"
-                  />
-                  <p></p>
-                </div>
-
-                <div class="chat-bar-icons">
-                  <i
-                    id="chat-icon"
-                    style="color: crimson"
-                    class="fa fa-fw fa-heart"
-                    onclick="heartButton()"
-                  ></i>
-                  <i
-                    id="chat-icon"
-                    style="color: #131313"
-                    class="fa fa-fw fa-send"
-                    onclick="sendButton()"
-                  ></i>
-                </div>
-              </div>
-
-              <div id="chat-bar-bottom">
-                <p></p>
-              </div>
-            </div>
+      <section id="card">
+        <div id="chatbot-container">
+          <div id="chatbot-inner">
+            <i style="font-size: 3rem;" class="fas fa-user-secret"></i>
+            <div id="chatbot"></div>
           </div>
         </div>
+      </section>
+    </main>
+
+    <div>
+      <div class="text-center">
+        <h1 class="xl reset-margin large-margin">Claudius</h1>
+        <p>Claudius a pure-bred Confess-A-Bear!</p>
+        <p>
+          I'm continuing my mom's line of work who was first employed by
+          Spongebob Squarepants and worked closely with Patrick Star.
+        </p>
       </div>
     </div>
-
-  
+    <script src="dist/scripts/chatbot_conversation.js"></script>
+    <script
+      type="text/babel"
+      data-presets="es2015,es2016,es2017"
+      src="dist/scripts/chatbot.js"
+    ></script>
+    <script src="dist/scripts/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </body>
-  <script src="dist/scripts/app.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="dist/scripts/responses.js"></script>
-  <script src="dist/scripts/chat.js"></script>
 </html>
