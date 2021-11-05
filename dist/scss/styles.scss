@@ -240,7 +240,25 @@ $colors: (
   }
 }
 
-/* Hero Section Index CSS */
+// Scrolling Progress Bar
+
+.scrolling-progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+  z-index: 100;
+  background-color: color(c-black);
+}
+
+.progress-bar {
+  height: 8px;
+  background: color(c-pink);
+  width: 0%;
+  z-index: 100;
+}
+
+/* Home Main Section Index CSS */
 
 .main {
   background-color: color(c-background_black);
@@ -435,237 +453,9 @@ $colors: (
   }
 }
 
-/* Self Destruct Verification CSS */
-
-.main__sdv {
-  background-color: color(c-black);
-}
-
-.main__content_sdv h1 {
-  font-family: "Permanent Marker", cursive;
-  font-size: 4rem;
-  background-color: color(c-aqua);
-  background-image: linear-gradient(
-    to top,
-    #cc0000 0%,
-    #ff0000 50%,
-    #cc0000 100%
-  );
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding: 5%;
-  text-align: center;
-  animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-  70% {
-    opacity: 0.2;
-  }
-}
-
-.main__content_sdv h2 {
-  font-size: 1.2rem;
-  background-color: color(aqua);
-  background-image: color(c-orange_to_pink);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding: 5%;
-  text-align: center;
-}
-
-.main__content_sdv p {
-  margin-top: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: color(c-white);
-  padding: 2px;
-  margin-bottom: 10%;
-  text-align: center;
-}
-
-/* Self Destruct Verification Button Section */
-
-.self_destruct_verification_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 3% 5%;
-  height: 100%;
-  width: 50%;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  background: linear-gradient(to top, #cc0000 0%, #ff0000 50%, #cc0000 100%);
-  color: color(c-black);
-  transition: none;
-  margin: auto;
-}
-
-.self_destruct_verification_button a {
-  position: relative;
-  z-index: 2;
-  color: color(c-white);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Permanent Marker", cursive;
-}
-
-.self_destruct_verification_button:hover {
-  background: color(c-orange_to_pink);
-  transition: none;
-  padding: 3% 5%;
-}
-
-.self_destruct_verification_button:hover span {
-  display: none;
-}
-
-.self_destruct_verification_button:hover:before {
-  font-family: "Space Mono", monospace;
-  content: "Are You REALLY Sure? This Cannot Be Undone.";
-  font-size: 2rem;
-}
-
-/* Back to Saftey Button Section */
-
-.navbar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  width: 100%;
-  font-size: 1rem;
-}
-
-.back_to_safety_button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  padding: 10px 20px;
-  height: 100%;
-  width: 100%;
-  border: none;
-  outline: none;
-  border-radius: 10px;
-  background: color(c-aqua_to_lime);
-  color: color(c-black);
-  cursor: pointer;
-}
-
-.back_to_safety_button:hover {
-  background: color(c-orange_to_pink);
-  transition: all 0.5s ease-in;
-}
-
-.back_to_safety_button:hover span {
-  display: none;
-}
-
-.back_to_safety_button:hover:before {
-  content: "Take Me Back";
-}
-
-/* Self Destruct Verification Main Image */
-
-.main__img--container {
-  text-align: center;
-}
-
-#main__img {
-  box-sizing: border-box;
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 3%;
-  transition: transform 0.2s;
-  margin-bottom: 0 auto;
-}
-
-.main__img--container:hover {
-  background-color: transparent;
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  display: flex;
-}
-
-/* Self Destruct Verification Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .main__container_sdv {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 90vh;
-  }
-
-  .main__content_sdv {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .main__content_sdv h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .main_content_sdv h2 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .main__content_sdv p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .main__content_sdv h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    align-items: center;
-  }
-
-  .main_content_sdv h2 {
-    font-size: 2rem;
-    align-items: center;
-  }
-
-  .main__content_sdv p {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    align-items: center;
-  }
-
-  .main_btn_sdv {
-    padding: 12px 12px;
-    margin: 0 0;
-    align-content: center;
-  }
-
-  .main_img_sdv {
-    align-content: center;
-    margin: 0 10%;
-  }
-}
-
 /* Services Section CSS */
 .services {
-  background: color(c-background_black);
+  background: color(c-black);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -673,7 +463,7 @@ $colors: (
 }
 
 .services h1 {
-  background-color: color(c-background_black);
+  background: color(c-aqua_to_lime);
   background-image: linear
     gradient(
       to right,
@@ -690,6 +480,11 @@ $colors: (
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+}
+
+.services:hover h1 {
+  transform: rotateY(360deg);
+  transition: 1s ease-in;
 }
 
 .services__container {
@@ -751,8 +546,8 @@ $colors: (
 }
 
 .services__card:hover {
-  transform: scale(1.075);
-  transition: 0.2s ease-in;
+  transform: rotate(360deg);
+  transition: 1s ease-in;
   cursor: pointer;
 }
 
@@ -917,227 +712,5 @@ $colors: (
     margin: 0;
     padding: 10px;
     width: 100%;
-  }
-}
-
-/* Top Secret CSS */
-
-.main,
-.top__secret__main {
-  background: repeating-linear-gradient(
-      45deg,
-      color(c-white),
-      color(c-aqua) 2em,
-      color(c-white) 4em,
-      color(c-lime) 3em,
-      color(c-black) 5em,
-      #787e7e 6em,
-      color(c-white) 3em
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      color(c-black),
-      color(c-aqua) 2em,
-      color(c-black) 3em,
-      color(c-lime) 4em,
-      color(c-white) 5em,
-      color(c-aqua) 6em,
-      color(c-white) 3em
-    );
-
-  background-blend-mode: multiply;
-  background-size: auto;
-}
-
-.top__secret__main__container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  justify-self: center;
-  margin: 0 auto;
-  height: 90vh;
-  background-color: color(c-black);
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
-}
-
-.top__secret__main__content h1 {
-  font-family: "Rampart One", cursive;
-  font-size: 4rem;
-  background-color: color(c-aqua);
-  background-image: color(c-aqua_to_lime);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding: 5%;
-  text-align: center;
-  animation: blinker 5s linear infinite;
-}
-
-@keyframes blinker {
-  50% {
-    opacity: 0.2;
-  }
-}
-
-.top__secret__main__content h2 {
-  font-size: 1.2rem;
-  background-color: color(c-aqua);
-  background-image: linear-gradient(
-    to top,
-    #804000 0%,
-    #ffcc66 50%,
-    #804000 100%
-  );
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding-right: 5%;
-  text-align: center;
-}
-
-.top__secret__main__content p {
-  margin-top: 1rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: color(c-white);
-  padding: 2px;
-  margin-bottom: 10%;
-  text-align: center;
-}
-
-.top__secret__main__btn {
-  font-size: 1rem;
-  background-image: color(c-aqua_to_lime);
-  padding: 2% 5%;
-  margin: 1% 20% 1% 20%;
-  border: none;
-  border-radius: 10px;
-  color: color(c-white);
-  cursor: pointer;
-  position: relative;
-  transition: all 0.35s;
-  outline: none;
-}
-
-.top__secret__main__btn a {
-  position: relative;
-  z-index: 2;
-  color: color(c-black);
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Archivo Black", sans-serif;
-}
-
-.top__secret__main__btn:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: color(c-white);
-  transition: all 0.35s;
-  border-radius: 10px;
-}
-
-.top__secret__main__btn:hover {
-  color: color(c-white);
-}
-
-.top__secret__main__btn:hover:after {
-  width: 100%;
-}
-
-.top__secret__main__img--container {
-  text-align: center;
-}
-
-#top__secret__main__img {
-  box-sizing: border-box;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 3%;
-  transition: transform 0.2s;
-  margin-bottom: 0 auto;
-}
-
-.top__secret__main__img--container:hover {
-  background-color: transparent;
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  display: flex;
-}
-
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-  .top__secret__main__container {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    margin: 0 auto;
-    height: 90vh;
-  }
-
-  .top__secret__main__content {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
-
-  .top__secret__main__content h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .top__secret__main_content h2 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .top__secret__main__content p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .top__secret__main__content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    align-items: center;
-  }
-
-  .top__secret__main_content h2 {
-    font-size: 2rem;
-    align-items: center;
-  }
-
-  .top__secret__main__content p {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    align-items: center;
-  }
-
-  .top__secret__main_btn {
-    padding: 12px 12px;
-    margin: 0 0;
-    align-content: center;
-  }
-
-  .top__secret__main_img {
-    align-content: center;
-    margin: 0 0;
   }
 }

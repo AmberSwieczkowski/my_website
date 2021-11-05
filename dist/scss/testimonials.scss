@@ -1,0 +1,321 @@
+$colors: (
+  c-royalblue: #0091ff,
+  c-aqua: #00ffff,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-star_yellow: #fffc66,
+  c-pink: #ff99ff,
+  c-grey: #e0e0e0,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-linear_gradient_background: linear_gradient_background(),
+  c-aqua_to_lime:
+    linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%),
+  c-orange_to_pink:
+    linear-gradient(to top, #ff0e0e 0%, #ffcc66 40%, #ff99ff 100%),
+);
+
+@function linear_gradient_colors() {
+  @return background
+      repeating-linear-gradient(
+        45deg,
+        color(c-white),
+        color(c-aqua) 2em,
+        color(c-white) 4em,
+        color(c-lime) 3em,
+        color(c-black) 5em,
+        #787e7e 6em,
+        color(c-white) 3em
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      color(c-black),
+      color(c-aqua) 2em,
+      color(c-black) 3em,
+      color(c-lime) 4em,
+      color(c-white) 5em,
+      color(c-aqua) 6em,
+      color(c-white) 3em
+    );
+}
+
+@function linear_gradient_background() {
+  @return linear_gradient_colors(), background-blend-mode multiply,
+    background-size auto;
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: color(c-black);
+  font-family: Helvetica, sans-serif;
+}
+
+.scrolling-progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+  z-index: 100;
+  background-color: color(c-black);
+}
+
+.progress-bar {
+  height: 8px;
+  background: color(c-pink);
+  width: 0%;
+  z-index: 100;
+}
+
+/* The vertical timeline bar */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background: color(c-orange_to_pink);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+}
+
+/* Container around testimonials */
+.testimonial__container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  /* The circles on the timeline */
+  &:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background: color(c-aqua_to_lime);
+    border: 4px solid color(c-lime);
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+}
+
+.right {
+  /* Place the container to the right */
+  left: 50%;
+  /* Add arrows to the right container (pointing left) */
+  &:before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid color(c-lime);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent color(c-lime) transparent transparent;
+  }
+  /* Fix the circle for containers on the right side */
+  &:after {
+    left: -16px;
+  }
+  /* The testimonial content on the right */
+  .testimonial {
+    padding: 20px 30px;
+    background: color(c-aqua_to_lime);
+    position: relative;
+    border-radius: 6px;
+    border: 4px solid color(c-lime);
+  }
+}
+
+.left {
+  /* Place the container on the left */
+  left: 0;
+  /* Add arrows to the left container (pointing right) */
+  &:before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid color(c-lime);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent color(c-lime);
+  }
+  /* The testimonial content on the left */
+  .testimonial {
+    padding: 20px 30px;
+    background: color(c-aqua_to_lime);
+    position: relative;
+    border-radius: 6px;
+    border: 4px solid color(c-lime);
+  }
+}
+
+// Star Ratings
+.checked {
+  color: color(c-star_yellow);
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Media Responsive Timeline */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full-width containers */
+  .testimonial__container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    /* Make sure that all arrows are pointing leftwards */
+    &:before {
+      left: 60px;
+      border: medium solid color(c-lime);
+      border-width: 10px 10px 10px 0;
+      border-color: transparent color(c-lime) transparent transparent;
+    }
+  }
+
+  .right {
+    .testimonial {
+      background: color(c-aqua_to_lime);
+      color: color(c-black);
+    }
+  }
+
+  /* Timelime Circles to Same Spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* Testimonial Comments Box */
+
+.testimonial__comment__box__container {
+.clearfix {
+	clear: both;
+}
+
+.comment__box {
+  color: color(c-black);
+}
+
+h1, p, textarea, li, button {
+	margin: 20px;
+	padding: 0;
+	color: color(c-white);
+	font-size: 1em;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+}
+
+header {
+	min-height: 100px;
+}
+
+header h1 {
+	font-size: 150%;
+	font-weight: 600;
+	line-height: 400%;
+	text-align: center;
+}
+
+section {
+	width: 400px;
+	margin: 0 auto;
+}
+
+section textarea {
+	width: 100%;
+	height: 70px;
+	padding: 5px;
+	outline: none;
+	font-size: 80%;
+	resize: vertical;
+	margin-bottom: 20px;
+	border: 1px solid color(c-aqua);
+	border-bottom: 4px solid color(c-lime);
+  background: color(c-aqua_to_lime);
+  border-radius: 6px;
+}
+
+section p {
+	float: left;
+	line-height: 30px;
+}
+
+section span {
+	font-weight: bold;
+}
+
+section button {
+	border: 0;
+	width:	30%;
+	color: #fff;
+	height: 35px;
+	float: right;
+	outline: none;
+	cursor: pointer;
+	font-weight: 700;
+	background-color:color(c-royalblue);
+	border-bottom: 3px solid color(c-aqua);
+  border-radius: 6px;
+}
+
+section button:hover {
+	background-color: color(c-pink);
+	border-bottom: 3px solid color(c-orange);
+}
+
+section button:disabled {
+	background-color: color(c-grey);
+	border-bottom: 3px solid color(-c-grey);
+}
+
+.under__post__button {
+  margin-bottom: 120px;
+}
+
+section ul {
+	margin-top: 60px;
+	list-style: none;
+	padding-left: 0px;
+}
+
+section ul li {
+	padding: 10px 10px;
+  word-wrap: break-word;
+	border-bottom: 3px solid color(c-pink);
+}
+
+section ul li:hover {
+	border-bottom: 3px solid color(c-orange);
+}
+}

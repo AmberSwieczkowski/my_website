@@ -1,0 +1,262 @@
+.main__sdv {
+  background-color: #131313;
+}
+
+.main__content_sdv h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 4rem;
+  background-color: #00ffff;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#cc0000), color-stop(50%, #ff0000), to(#cc0000));
+  background-image: linear-gradient(to top, #cc0000 0%, #ff0000 50%, #cc0000 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5%;
+  text-align: center;
+  -webkit-animation: blinker 1s linear infinite;
+          animation: blinker 1s linear infinite;
+}
+
+@-webkit-keyframes blinker {
+  70% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes blinker {
+  70% {
+    opacity: 0.2;
+  }
+}
+
+.main__content_sdv h2 {
+  font-size: 1.2rem;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffcc66), to(#ff99ff));
+  background-image: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5%;
+  text-align: center;
+}
+
+.main__content_sdv p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+/* Self Destruct Verification Button Section */
+.self_destruct_verification_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  padding: 3% 5%;
+  height: 100%;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#cc0000), color-stop(50%, #ff0000), to(#cc0000));
+  background: linear-gradient(to top, #cc0000 0%, #ff0000 50%, #cc0000 100%);
+  color: #131313;
+  -webkit-transition: none;
+  transition: none;
+  margin: auto;
+}
+
+.self_destruct_verification_button a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+.self_destruct_verification_button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffcc66), to(#ff99ff));
+  background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
+  -webkit-transition: none;
+  transition: none;
+  padding: 3% 5%;
+}
+
+.self_destruct_verification_button:hover span {
+  display: none;
+}
+
+.self_destruct_verification_button:hover:before {
+  font-family: "Space Mono", monospace;
+  content: "Are You REALLY Sure? This Cannot Be Undone.";
+  font-size: 2rem;
+}
+
+/* Back to Saftey Button Section */
+.navbar__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.back_to_safety_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#00ffff), to(#bbff99));
+  background: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
+  color: #131313;
+  cursor: pointer;
+}
+
+.back_to_safety_button:hover {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffcc66), to(#ff99ff));
+  background: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.back_to_safety_button:hover span {
+  display: none;
+}
+
+.back_to_safety_button:hover:before {
+  content: "Take Me Back";
+}
+
+/* Self Destruct Verification Main Image */
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3%;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  margin-bottom: 0 auto;
+}
+
+.main__img--container:hover {
+  background-color: transparent;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* Self Destruct Verification Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container_sdv {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+  .main__content_sdv {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  .main__content_sdv h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .main_content_sdv h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .main__content_sdv p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content_sdv h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main_content_sdv h2 {
+    font-size: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main__content_sdv p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main_btn_sdv {
+    padding: 12px 12px;
+    margin: 0 0;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .main_img_sdv {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0 10%;
+  }
+}
+/*# sourceMappingURL=self_destruct_verification.css.map */

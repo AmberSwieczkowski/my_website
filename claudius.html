@@ -13,7 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="dist/css/chatbot.css" />
-    <!-- <link rel="stylesheet" href="dist/css/chatbot_main.css"> -->
 
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
@@ -58,7 +57,7 @@
             <a href="/top_secret.html" class="navbar__links">Top Secret</a>
           </li>
           <li class="navbar__item">
-            <a href="/chatbot.html" class="navbar__links">About You</a>
+            <a href="/about_you.html" class="navbar__links">About You</a>
           </li>
           <li class="navbar__btn">
             <a
@@ -70,7 +69,10 @@
         </ul>
       </div>
     </nav>
-
+    <!-- Scrolling Progress Bar -->
+    <div class="scrolling-progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
     <main class="main__claudius__container">
       <section id="main__claudius__text">
         <h1>Your Personal Assistant</h1>
@@ -83,7 +85,7 @@
       <section id="card">
         <div id="chatbot-container">
           <div id="chatbot-inner">
-            <i style="font-size: 3rem;" class="fas fa-user-secret"></i>
+            <i style="font-size: 3rem" class="fas fa-user-secret"></i>
             <div id="chatbot"></div>
           </div>
         </div>
@@ -108,5 +110,6 @@
     ></script>
     <script src="dist/scripts/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="dist/scripts/scrolling_progress_bar.js"></script>
   </body>
 </html>

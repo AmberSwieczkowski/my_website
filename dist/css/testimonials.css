@@ -1,0 +1,274 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #131313;
+  font-family: Helvetica, sans-serif;
+}
+
+.scrolling-progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+  position: fixed;
+  z-index: 100;
+  background-color: #131313;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #ff99ff;
+  width: 0%;
+  z-index: 100;
+}
+
+/* The vertical timeline bar */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ff0e0e), color-stop(40%, #ffcc66), to(#ff99ff));
+  background: linear-gradient(to top, #ff0e0e 0%, #ffcc66 40%, #ff99ff 100%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around testimonials */
+.testimonial__container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  /* The circles on the timeline */
+}
+
+.testimonial__container:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  border: 4px solid #bbff99;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.right {
+  /* Place the container to the right */
+  left: 50%;
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */
+  /* The testimonial content on the right */
+}
+
+.right:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid #bbff99;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #bbff99 transparent transparent;
+}
+
+.right:after {
+  left: -16px;
+}
+
+.right .testimonial {
+  padding: 20px 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  position: relative;
+  border-radius: 6px;
+  border: 4px solid #bbff99;
+}
+
+.left {
+  /* Place the container on the left */
+  left: 0;
+  /* Add arrows to the left container (pointing right) */
+  /* The testimonial content on the left */
+}
+
+.left:before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid #bbff99;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #bbff99;
+}
+
+.left .testimonial {
+  padding: 20px 30px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  position: relative;
+  border-radius: 6px;
+  border: 4px solid #bbff99;
+}
+
+.checked {
+  color: #fffc66;
+  margin-top: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* Media Responsive Timeline */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+  /* Full-width containers */
+  .testimonial__container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    /* Make sure that all arrows are pointing leftwards */
+  }
+  .testimonial__container:before {
+    left: 60px;
+    border: medium solid #bbff99;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #bbff99 transparent transparent;
+  }
+  .right .testimonial {
+    background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+    background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+    color: #131313;
+  }
+  /* Timelime Circles to Same Spot */
+  .left::after,
+  .right::after {
+    left: 15px;
+  }
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* Testimonial Comments Box */
+.testimonial__comment__box__container .clearfix {
+  clear: both;
+}
+
+.testimonial__comment__box__container .comment__box {
+  color: #131313;
+}
+
+.testimonial__comment__box__container h1, .testimonial__comment__box__container p, .testimonial__comment__box__container textarea, .testimonial__comment__box__container li, .testimonial__comment__box__container button {
+  margin: 20px;
+  padding: 0;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.testimonial__comment__box__container header {
+  min-height: 100px;
+}
+
+.testimonial__comment__box__container header h1 {
+  font-size: 150%;
+  font-weight: 600;
+  line-height: 400%;
+  text-align: center;
+}
+
+.testimonial__comment__box__container section {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.testimonial__comment__box__container section textarea {
+  width: 100%;
+  height: 70px;
+  padding: 5px;
+  outline: none;
+  font-size: 80%;
+  resize: vertical;
+  margin-bottom: 20px;
+  border: 1px solid #00ffff;
+  border-bottom: 4px solid #bbff99;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  border-radius: 6px;
+}
+
+.testimonial__comment__box__container section p {
+  float: left;
+  line-height: 30px;
+}
+
+.testimonial__comment__box__container section span {
+  font-weight: bold;
+}
+
+.testimonial__comment__box__container section button {
+  border: 0;
+  width: 30%;
+  color: #fff;
+  height: 35px;
+  float: right;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #0091ff;
+  border-bottom: 3px solid #00ffff;
+  border-radius: 6px;
+}
+
+.testimonial__comment__box__container section button:hover {
+  background-color: #ff99ff;
+  border-bottom: 3px solid #ffcc66;
+}
+
+.testimonial__comment__box__container section button:disabled {
+  background-color: #e0e0e0;
+  border-bottom: 3px solid;
+}
+
+.testimonial__comment__box__container .under__post__button {
+  margin-bottom: 120px;
+}
+
+.testimonial__comment__box__container section ul {
+  margin-top: 60px;
+  list-style: none;
+  padding-left: 0px;
+}
+
+.testimonial__comment__box__container section ul li {
+  padding: 10px 10px;
+  word-wrap: break-word;
+  border-bottom: 3px solid #ff99ff;
+}
+
+.testimonial__comment__box__container section ul li:hover {
+  border-bottom: 3px solid #ffcc66;
+}
+/*# sourceMappingURL=testimonials.css.map */

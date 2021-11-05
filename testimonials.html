@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Testimonials</title>
 
-    <link rel="stylesheet" href="./dist/css/main_claudius.css" />
-    <link rel="stylesheet" href="./dist/css/chat.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
+    <link rel="stylesheet" href="./dist/css/testimonials.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,16 +20,10 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
-
-    <!-- Font Import Monserrat | font-family: 'Montserrat', sans-serif;-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Testimonial Comments Box -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
   </head>
-  <body>
+  <div>
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
@@ -47,12 +40,15 @@
             <a href="/index.html" class="navbar__links">Home</a>
           </li>
           <li class="navbar__item">
-            <a href="/top_secret.html" class="navbar__links"
-              >Top Secret</a
+            <a href="/claudius.html" class="navbar__links"
+              >Chat With Claudius</a
             >
           </li>
           <li class="navbar__item">
-            <a href="/" target="_blank" class="navbar__links">About You</a>
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/about_you.html" class="navbar__links">About You</a>
           </li>
           <li class="navbar__btn">
             <a
@@ -64,95 +60,114 @@
         </ul>
       </div>
     </nav>
+    <!-- Scrolling Progress Bar -->
+    <div class="scrolling-progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
 
-    <div id="bg"></div>
+<!-- Testimonial Comments Box -->
 
-    <main class="main__claudius__container">
-      <section id="card">
-        <ul>
-          <li>
-            <span></span>
-            <p>Trump</p>
-          </li>
-          <li>
-            <span></span>
-            <p>Russia</p>
-          </li>
-          <li>
-            <span></span>
-            <p>Possible Collusion</p>
-          </li>
-        </ul>
-      </section>
-      <section id="primary">
-        <h1>The best website ever!</h1>
-        <p>-Donald J Trump</p>
+  <div class="testimonial__comment__box__container">
+    <section>
+  <textarea class="comment__box" placeholder="Testify here" type="textarea"></textarea>
+  <p><span class="character__counter">140</span> Characters left</p>
+  <button>Post</button>
+  <div class="under__post__button">
+    <p></p>
+  </div>
+  <ul class="clearfix comments">
+    <li>Last testimonial...</li>
+    <li>Second to last testimonial...</li>
+  </ul>
+</section>
+</div>
 
-        <a href="#" class="claudius__is__waiting"><span>Other websites are rubbish <br> -Vladimir V Putin</span></a>
-      </section>
-    </main>
-    <!-- CHAT BAR BLOCK -->
-    <div class="chat-bar-collapsible">
-      <button id="chat-button" type="button" class="collapsible">
-        Chat with Claudius!
-        <i class="far fa-comments" id="chat-icon"></i>
-      </button>
 
-      <div class="content">
-        <div class="full-chat-block">
-          <!-- Message Container -->
-          <div class="outer-container">
-            <div class="chat-container">
-              <!-- Messages -->
-              <div id="chatbox">
-                <h5 id="chat-timestamp"></h5>
-                <p id="botStarterMessage" class="botText">
-                  <span>Loading...</span>
-                </p>
-              </div>
-
-              <!-- User input box -->
-              <div class="chat-bar-input-block">
-                <div id="userInput">
-                  <input
-                    id="textInput"
-                    class="input-box"
-                    type="text"
-                    name="msg"
-                    placeholder="Tap 'Enter' to send a message"
-                  />
-                  <p></p>
-                </div>
-
-                <div class="chat-bar-icons">
-                  <i
-                    id="chat-icon"
-                    style="color: crimson"
-                    class="fa fa-fw fa-heart"
-                    onclick="heartButton()"
-                  ></i>
-                  <i
-                    id="chat-icon"
-                    style="color: #131313"
-                    class="fa fa-fw fa-send"
-                    onclick="sendButton()"
-                  ></i>
-                </div>
-              </div>
-
-              <div id="chat-bar-bottom">
-                <p></p>
-              </div>
-            </div>
-          </div>
+<!-- Timeline -->
+    <div class="timeline">
+      <div class="testimonial__container left">
+        <div class="testimonial">
+          <h2>Claudius</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            I loved this site so much that I became a bot so that I could stay on it forever. <a href="/claudius.html"> Chat with me if you dare!</a>
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__container right">
+        <div class="testimonial">
+          <h2>Vladimir Putin</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            Russia is the bomb diggity. We have the most bombs. The bird is the word.
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__container left">
+        <div class="testimonial">
+          <h2>Marcin S</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            I am the Grand Ball Master. The tribal chief has confirmed it.
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__container right">
+        <div class="testimonial">
+          <h2>Donald J Trump</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            This website is the best website to exist. I've seen every website ever and all of them are absolute rubbish execpt this one. 👌
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__container left">
+        <div class="testimonial">
+          <h2>An Italian</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            Has anyone heard about France? France is no longer France. I wouldn't go to France.
+          </p>
+        </div>
+      </div>
+      <div class="testimonial__container right">
+        <div class="testimonial">
+          <h2>Grandpappy</h2>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <p>
+            When I was a kid there were no websites. We were too busy doing useful things like walking 5 miles to school in the snow - uphill both ways. *cough*
+          </p>
         </div>
       </div>
     </div>
-
-  
   </body>
   <script src="dist/scripts/app.js"></script>
+  <script src="dist/scripts/scrolling_progress_bar.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="dist/scripts/responses.js"></script>
-  <script src="dist/scripts/chat.js"></script>
+  <script src="dist/scripts/scrolling_progress_bar.js"></script>
+  <script src="dist/scripts/testimonial_comments.js"></script>
 </html>

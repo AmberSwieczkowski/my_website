@@ -1,0 +1,246 @@
+$colors: (
+  primary: #005dff,
+  primary_light: lighten(#005dff, 40%),
+  primary_dark: darken(#005dff, 40%),
+  c-royalblue: #0091ff,
+  c-aqua: #00ffff,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-pink: #ff99ff,
+  c-grey: #e0e0e0,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+.main__sdv {
+  background-color: color(c-black);
+}
+
+.main__content_sdv h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 4rem;
+  background-color: color(c-aqua);
+  background-image: linear-gradient(
+    to top,
+    #cc0000 0%,
+    #ff0000 50%,
+    #cc0000 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5%;
+  text-align: center;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  70% {
+    opacity: 0.2;
+  }
+}
+
+.main__content_sdv h2 {
+  font-size: 1.2rem;
+  background-color: color(aqua);
+  background-image: color(c-orange_to_pink);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5%;
+  text-align: center;
+}
+
+.main__content_sdv p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: color(c-white);
+  padding: 2px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+/* Self Destruct Verification Button Section */
+
+.self_destruct_verification_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 3% 5%;
+  height: 100%;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: linear-gradient(to top, #cc0000 0%, #ff0000 50%, #cc0000 100%);
+  color: color(c-black);
+  transition: none;
+  margin: auto;
+}
+
+.self_destruct_verification_button a {
+  position: relative;
+  z-index: 2;
+  color: color(c-white);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+.self_destruct_verification_button:hover {
+  background: color(c-orange_to_pink);
+  transition: none;
+  padding: 3% 5%;
+}
+
+.self_destruct_verification_button:hover span {
+  display: none;
+}
+
+.self_destruct_verification_button:hover:before {
+  font-family: "Space Mono", monospace;
+  content: "Are You REALLY Sure? This Cannot Be Undone.";
+  font-size: 2rem;
+}
+
+/* Back to Saftey Button Section */
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.back_to_safety_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: color(c-aqua_to_lime);
+  color: color(c-black);
+  cursor: pointer;
+}
+
+.back_to_safety_button:hover {
+  background: color(c-orange_to_pink);
+  transition: all 0.5s ease-in;
+}
+
+.back_to_safety_button:hover span {
+  display: none;
+}
+
+.back_to_safety_button:hover:before {
+  content: "Take Me Back";
+}
+
+/* Self Destruct Verification Main Image */
+
+.main__img--container {
+  text-align: center;
+}
+
+#main__img {
+  box-sizing: border-box;
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 3%;
+  transition: transform 0.2s;
+  margin-bottom: 0 auto;
+}
+
+.main__img--container:hover {
+  background-color: transparent;
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  display: flex;
+}
+
+/* Self Destruct Verification Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container_sdv {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main__content_sdv {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content_sdv h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .main_content_sdv h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .main__content_sdv p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content_sdv h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .main_content_sdv h2 {
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  .main__content_sdv p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+
+  .main_btn_sdv {
+    padding: 12px 12px;
+    margin: 0 0;
+    align-content: center;
+  }
+
+  .main_img_sdv {
+    align-content: center;
+    margin: 0 10%;
+  }
+}
