@@ -61,7 +61,6 @@ body {
 .scrolling-progress-container {
   width: 100%;
   height: 8px;
-  background: #ccc;
   position: fixed;
   z-index: 100;
   background-color: color(c-black);
@@ -98,7 +97,7 @@ body {
   position: relative;
   background-color: inherit;
   width: 50%;
-  /* The circles on the timeline */
+  /* The circles on vertial timeline bar */
   &:after {
     content: "";
     position: absolute;
@@ -217,105 +216,114 @@ body {
 }
 
 /* Testimonial Comments Box */
-
 .testimonial__comment__box__container {
-.clearfix {
-	clear: both;
+  .clearfix {
+    clear: both;
+  }
+
+  .comment__box {
+    color: color(c-black);
+  }
+
+  h1,
+  p,
+  textarea,
+  li,
+  button {
+    margin: 20px;
+    padding: 0;
+    color: color(c-white);
+    font-size: 1em;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  header {
+    min-height: 100px;
+  }
+
+  header h1 {
+    font-size: 150%;
+    font-weight: 600;
+    line-height: 400%;
+    text-align: center;
+  }
+
+  section {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  section textarea {
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    outline: none;
+    font-size: 80%;
+    resize: vertical;
+    margin-bottom: 20px;
+    border: 1px solid color(c-aqua);
+    border-bottom: 4px solid color(c-lime);
+    background: color(c-aqua_to_lime);
+    border-radius: 6px;
+  }
+
+  section p {
+    float: left;
+    line-height: 30px;
+  }
+
+  section span {
+    font-weight: bold;
+  }
+
+  section button {
+    border: 0;
+    width: 30%;
+    color: #fff;
+    height: 35px;
+    float: right;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: color(c-royalblue);
+    border-bottom: 3px solid color(c-aqua);
+    border-radius: 6px;
+  }
+
+  section button:hover {
+    background-color: color(c-pink);
+    border-bottom: 3px solid color(c-orange);
+  }
+
+  section button:disabled {
+    background-color: color(c-grey);
+    border-bottom: 3px solid color(-c-grey);
+  }
+
+  .under__post__button {
+    margin-bottom: 120px;
+  }
+
+  section ul {
+    margin-top: 60px;
+    list-style: none;
+    padding-left: 0px;
+  }
+
+  section ul li {
+    padding: 10px 10px;
+    word-wrap: break-word;
+    border-bottom: 3px solid color(c-pink);
+  }
+
+  section ul li:hover {
+    border-bottom: 3px solid color(c-orange);
+  }
 }
 
-.comment__box {
-  color: color(c-black);
-}
-
-h1, p, textarea, li, button {
-	margin: 20px;
-	padding: 0;
-	color: color(c-white);
-	font-size: 1em;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
-}
-
-header {
-	min-height: 100px;
-}
-
-header h1 {
-	font-size: 150%;
-	font-weight: 600;
-	line-height: 400%;
-	text-align: center;
-}
-
-section {
-	width: 400px;
-	margin: 0 auto;
-}
-
-section textarea {
-	width: 100%;
-	height: 70px;
-	padding: 5px;
-	outline: none;
-	font-size: 80%;
-	resize: vertical;
-	margin-bottom: 20px;
-	border: 1px solid color(c-aqua);
-	border-bottom: 4px solid color(c-lime);
-  background: color(c-aqua_to_lime);
-  border-radius: 6px;
-}
-
-section p {
-	float: left;
-	line-height: 30px;
-}
-
-section span {
-	font-weight: bold;
-}
-
-section button {
-	border: 0;
-	width:	30%;
-	color: #fff;
-	height: 35px;
-	float: right;
-	outline: none;
-	cursor: pointer;
-	font-weight: 700;
-	background-color:color(c-royalblue);
-	border-bottom: 3px solid color(c-aqua);
-  border-radius: 6px;
-}
-
-section button:hover {
-	background-color: color(c-pink);
-	border-bottom: 3px solid color(c-orange);
-}
-
-section button:disabled {
-	background-color: color(c-grey);
-	border-bottom: 3px solid color(-c-grey);
-}
-
-.under__post__button {
-  margin-bottom: 120px;
-}
-
-section ul {
-	margin-top: 60px;
-	list-style: none;
-	padding-left: 0px;
-}
-
-section ul li {
-	padding: 10px 10px;
-  word-wrap: break-word;
-	border-bottom: 3px solid color(c-pink);
-}
-
-section ul li:hover {
-	border-bottom: 3px solid color(c-orange);
-}
+/* Testimonial Posting Box */
+#testimonial__container {
+  border: 1px solid white;
+  color: color(c-white);
 }
