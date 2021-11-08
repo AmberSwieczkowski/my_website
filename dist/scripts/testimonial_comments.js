@@ -30,6 +30,6 @@ $(document).ready(function() {
 function post_testimonial() {
 	var new__testimonial = document.createElement("P");
 	new__testimonial.className = "testimonial__container testimonial right";
-	new__testimonial.innerHTML = "This is a paragraph.";
+	new__testimonial.innerHTML = `${new__testimonial}`;
 	document.getElementById("testimonial__container").appendChild(new__testimonial);
-  }
+};
