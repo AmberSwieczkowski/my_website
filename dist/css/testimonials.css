@@ -13,14 +13,140 @@ body {
   height: 8px;
   position: fixed;
   z-index: 100;
-  background-color: #ff99ff;
+  background-color: #131313;
 }
 
 .progress-bar {
   height: 8px;
-  background: #bbff99;
+  background: #ff99ff;
   width: 0%;
   z-index: 100;
+}
+
+/* New Testimonial Comments Section */
+#new__testimonial__container {
+  display: none;
+}
+
+.testimonial__comment__box__container {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 50px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.testimonial__comment__box__container .comment__box {
+  color: #131313;
+  overflow: auto;
+}
+
+.testimonial__comment__box__container section {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.testimonial__comment__box__container section .comment__box,
+.testimonial__comment__box__container .name__box {
+  width: 100%;
+  height: 70px;
+  padding: 5px;
+  outline: none;
+  font-size: 80%;
+  resize: vertical;
+  margin-bottom: 20px;
+  border: 1px solid #00ffff;
+  border-bottom: 4px solid #bbff99;
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.testimonial__comment__box__container section .comment__box.name__box,
+.testimonial__comment__box__container .name__box.name__box {
+  width: 50%;
+  height: 30px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.testimonial__comment__box__container .rating {
+  float: right;
+  width: 30%;
+  height: 10px;
+}
+
+.testimonial__comment__box__container section p {
+  float: left;
+  line-height: 30px;
+  color: #fff;
+}
+
+.testimonial__comment__box__container section span {
+  font-weight: bold;
+}
+
+.testimonial__comment__box__container section button {
+  border: 0;
+  width: 30%;
+  color: #131313;
+  height: 35px;
+  float: right;
+  outline: none;
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #ffcc66;
+  border-bottom: 3px solid #ff99ff;
+  border-radius: 6px;
+}
+
+.testimonial__comment__box__container section button:hover {
+  background-color: #ff99ff;
+  border-bottom: 3px solid #ffcc66;
+}
+
+.testimonial__comment__box__container section button:disabled {
+  background-color: #131313;
+  border: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  color: #e0e0e0;
+}
+
+.testimonial__comment__box__container .under__post__button {
+  margin-bottom: 100px;
+}
+
+.timeline__header {
+  border-top: 1px solid #0091ff;
+  border-bottom: 6px solid #ff99ff;
+  border-radius: 30px;
+}
+
+.timeline__header h1 {
+  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
+  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 3rem;
+  position: relative;
+  margin: 5% 10%;
+  text-align: center;
 }
 
 /* The vertical timeline bar */
@@ -128,11 +254,16 @@ body {
   border: 4px solid #bbff99;
 }
 
-/* Star Ratings */
+/* Star Ratings on Old Testimonials */
 .checked {
   color: #fffc66;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+}
+
+/* Star Ratings on New Testimonial */
+.new__rating {
+  display: none;
 }
 
 /* Media Responsive Timeline */
@@ -168,84 +299,4 @@ body {
   .right {
     left: 0%;
   }
-}
-
-/* New Testimonial Comments Section */
-.testimonial__comment__box__container .comment__box {
-  color: #131313;
-}
-
-.testimonial__comment__box__container section {
-  width: 400px;
-  margin: 0 auto;
-  margin-top: 120px;
-}
-
-.testimonial__comment__box__container section .comment__box, .testimonial__comment__box__container .name__box {
-  width: 100%;
-  height: 70px;
-  padding: 5px;
-  outline: none;
-  font-size: 80%;
-  resize: vertical;
-  margin-bottom: 20px;
-  border: 1px solid #00ffff;
-  border-bottom: 4px solid #bbff99;
-  background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
-  background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
-  border-radius: 6px;
-  margin-top: 20px;
-}
-
-.testimonial__comment__box__container section .comment__box.name__box, .testimonial__comment__box__container .name__box.name__box {
-  width: 50%;
-  height: 30px;
-  float: left;
-  margin-bottom: 10px;
-}
-
-.testimonial__comment__box__container .rating {
-  float: right;
-  width: 30%;
-  height: 10px;
-}
-
-.testimonial__comment__box__container section p {
-  float: left;
-  line-height: 30px;
-  color: #fff;
-}
-
-.testimonial__comment__box__container section span {
-  font-weight: bold;
-}
-
-.testimonial__comment__box__container section button {
-  border: 0;
-  width: 30%;
-  color: #131313;
-  height: 35px;
-  float: right;
-  outline: none;
-  cursor: pointer;
-  font-weight: 700;
-  background-color: #ffcc66;
-  border-bottom: 3px solid #ff99ff;
-  border-radius: 6px;
-}
-
-.testimonial__comment__box__container section button:hover {
-  background-color: #ff99ff;
-  border-bottom: 3px solid #ffcc66;
-}
-
-.testimonial__comment__box__container section button:disabled {
-  background-color: #131313;
-  border: 1px solid #e0e0e0;
-  border-bottom: 3px solid #e0e0e0;
-  color: #e0e0e0;
-}
-
-.testimonial__comment__box__container .under__post__button {
-  margin-bottom: 120px;
 }

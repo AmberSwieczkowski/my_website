@@ -63,14 +63,129 @@ body {
   height: 8px;
   position: fixed;
   z-index: 100;
-  background-color: color(c-pink);
+  background-color: color(c-black);
 }
 
 .progress-bar {
   height: 8px;
-  background: color(c-lime);
+  background: color(c-pink);
   width: 0%;
   z-index: 100;
+}
+
+/* New Testimonial Comments Section */
+#new__testimonial__container {
+  display: none;
+}
+
+.testimonial__comment__box__container {
+  width: 75%;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 50px;
+  object-fit: scale-down;
+
+  .comment__box {
+    color: color(c-black);
+    overflow: auto;
+  }
+
+  section {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 60px;
+  }
+
+  section .comment__box,
+  .name__box {
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    outline: none;
+    font-size: 80%;
+    resize: vertical;
+    margin-bottom: 20px;
+    border: 1px solid color(c-aqua);
+    border-bottom: 4px solid color(c-lime);
+    background: color(c-aqua_to_lime);
+    border-radius: 6px;
+    margin-top: 20px;
+
+    &.name__box {
+      width: 50%;
+      height: 30px;
+      float: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  .rating {
+    float: right;
+    width: 30%;
+    height: 10px;
+  }
+
+  section p {
+    float: left;
+    line-height: 30px;
+    color: color(c-white);
+  }
+
+  section span {
+    font-weight: bold;
+  }
+
+  section button {
+    border: 0;
+    width: 30%;
+    color: color(c-black);
+    height: 35px;
+    float: right;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: color(c-orange);
+    border-bottom: 3px solid color(c-pink);
+    border-radius: 6px;
+  }
+
+  section button:hover {
+    background-color: color(c-pink);
+    border-bottom: 3px solid color(c-orange);
+  }
+
+  section button:disabled {
+    background-color: color(c-black);
+    border: 1px solid color(c-grey);
+    border-bottom: 3px solid color(c-grey);
+    color: color(c-grey);
+  }
+
+  .under__post__button {
+    margin-bottom: 100px;
+  }
+}
+
+.timeline__header {
+  border-top: 1px solid color(c-royalblue);
+  border-bottom: 6px solid color(c-pink);
+  border-radius: 30px;
+}
+
+.timeline__header h1 {
+  background: color(c-aqua_to_lime);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;
+  position: relative;
+  margin: 5% 10%;
+  text-align: center;
 }
 
 /* The vertical timeline bar */
@@ -168,11 +283,16 @@ body {
   }
 }
 
-/* Star Ratings */
+/* Star Ratings on Old Testimonials */
 .checked {
   color: color(c-star_yellow);
   margin-top: 0.2rem;
   margin-bottom: 1rem;
+}
+
+/* Star Ratings on New Testimonial */
+.new__rating {
+  display: none;
 }
 
 /* Media Responsive Timeline */
@@ -212,86 +332,5 @@ body {
   /* Make all right containers behave like the left ones */
   .right {
     left: 0%;
-  }
-}
-
-/* New Testimonial Comments Section */
-.testimonial__comment__box__container {
-  .comment__box {
-    color: color(c-black);
-  }
-
-  section {
-    width: 400px;
-    margin: 0 auto;
-    margin-top: 120px;
-  }
-
-  section .comment__box, .name__box {
-    width: 100%;
-    height: 70px;
-    padding: 5px;
-    outline: none;
-    font-size: 80%;
-    resize: vertical;
-    margin-bottom: 20px;
-    border: 1px solid color(c-aqua);
-    border-bottom: 4px solid color(c-lime);
-    background: color(c-aqua_to_lime);
-    border-radius: 6px;
-    margin-top: 20px;
-
-    &.name__box {
-      width: 50%;
-      height: 30px;
-      float: left;
-      margin-bottom: 10px;
-    }
-  }
-
-  .rating {
-    float: right;
-    width: 30%;
-    height: 10px;
-  }
-
-  section p {
-    float: left;
-    line-height: 30px;
-    color: color(c-white);
-  }
-
-  section span {
-    font-weight: bold;
-  }
-
-  section button {
-    border: 0;
-    width: 30%;
-    color: color(c-black);
-    height: 35px;
-    float: right;
-    outline: none;
-    cursor: pointer;
-    font-weight: 700;
-    background-color: color(c-orange);
-    border-bottom: 3px solid color(c-pink);
-    border-radius: 6px;
-  }
-
-  section button:hover {
-    background-color: color(c-pink);
-    border-bottom: 3px solid color(c-orange);
-  }
-
-  section button:disabled {
-    background-color: color(c-black);
-    border: 1px solid color(c-grey);
-    border-bottom: 3px solid color(c-grey);
-    color: color(c-grey);
-  }
-
-  .under__post__button {
-    margin-bottom: 120px;
   }
 }

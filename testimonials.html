@@ -82,20 +82,30 @@
     </div>
   </div>
   <textarea class="comment__box" placeholder="Testify Here..." type="textarea"></textarea>
-  <p><span class="character__counter">140</span> Characters left</p>
+  <p><span class="character__counter">400</span> Characters left</p>
   <button onclick="post_testimonial()">Post</button>
   <div class="under__post__button">
   </div>
 </section>
 </div>
 
+<div class="timeline__header">
+  <h1>See What People Are Saying</h1>
+</div>
 
 <!-- Timeline -->
     <div class="timeline">
-      <div class="testimonial__container right">
-          <div class="testimonial" id="testimonial">
-            <h2></h2>
-              <p></p>
+      <div class="testimonial__container right" id="new__testimonial__container">
+          <div class="testimonial">
+            <h2 id="name"></h2>
+            <div class="new__rating">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+          </div>
+              <p id="testimonial"></p>
           </div>
         </div>
       <div class="testimonial__container left">
