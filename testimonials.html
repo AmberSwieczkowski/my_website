@@ -69,23 +69,35 @@
 
   <div class="testimonial__comment__box__container">
     <section>
-  <textarea class="comment__box" placeholder="Testify here" type="textarea"></textarea>
+  <div class="name__and__rating">
+    <div class="name">
+      <textarea class="name__box" placeholder="Your Name..." type="textarea"></textarea>
+    </div>
+      <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+    </div>
+  </div>
+  <textarea class="comment__box" placeholder="Testify Here..." type="textarea"></textarea>
   <p><span class="character__counter">140</span> Characters left</p>
   <button onclick="post_testimonial()">Post</button>
   <div class="under__post__button">
-    <p></p>
   </div>
-  <ul class="clearfix comments">
-    <li>Last testimonial...</li>
-    <li>Second to last testimonial...</li>
-  </ul>
 </section>
 </div>
 
 
 <!-- Timeline -->
     <div class="timeline">
-      <div id="testimonial__container"></div>
+      <div class="testimonial__container right">
+          <div class="testimonial" id="testimonial">
+            <h2></h2>
+              <p></p>
+          </div>
+        </div>
       <div class="testimonial__container left">
         <div class="testimonial">
           <h2>Claudius</h2>

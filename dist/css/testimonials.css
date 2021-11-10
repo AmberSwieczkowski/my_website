@@ -13,12 +13,12 @@ body {
   height: 8px;
   position: fixed;
   z-index: 100;
-  background-color: #131313;
+  background-color: #ff99ff;
 }
 
 .progress-bar {
   height: 8px;
-  background: #ff99ff;
+  background: #bbff99;
   width: 0%;
   z-index: 100;
 }
@@ -128,6 +128,7 @@ body {
   border: 4px solid #bbff99;
 }
 
+/* Star Ratings */
 .checked {
   color: #fffc66;
   margin-top: 0.2rem;
@@ -169,45 +170,18 @@ body {
   }
 }
 
-/* Testimonial Comments Box */
-.testimonial__comment__box__container .clearfix {
-  clear: both;
-}
-
+/* New Testimonial Comments Section */
 .testimonial__comment__box__container .comment__box {
   color: #131313;
-}
-
-.testimonial__comment__box__container h1,
-.testimonial__comment__box__container p,
-.testimonial__comment__box__container textarea,
-.testimonial__comment__box__container li,
-.testimonial__comment__box__container button {
-  margin: 20px;
-  padding: 0;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-}
-
-.testimonial__comment__box__container header {
-  min-height: 100px;
-}
-
-.testimonial__comment__box__container header h1 {
-  font-size: 150%;
-  font-weight: 600;
-  line-height: 400%;
-  text-align: center;
 }
 
 .testimonial__comment__box__container section {
   width: 400px;
   margin: 0 auto;
+  margin-top: 120px;
 }
 
-.testimonial__comment__box__container section textarea {
+.testimonial__comment__box__container section .comment__box, .testimonial__comment__box__container .name__box {
   width: 100%;
   height: 70px;
   padding: 5px;
@@ -220,11 +194,26 @@ body {
   background: -webkit-gradient(linear, left bottom, left top, from(#91ffda), color-stop(30%, #00ffff), color-stop(70%, #a3f7ff), to(#bbff99));
   background: linear-gradient(to top, #91ffda 0%, #00ffff 30%, #a3f7ff 70%, #bbff99 100%);
   border-radius: 6px;
+  margin-top: 20px;
+}
+
+.testimonial__comment__box__container section .comment__box.name__box, .testimonial__comment__box__container .name__box.name__box {
+  width: 50%;
+  height: 30px;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.testimonial__comment__box__container .rating {
+  float: right;
+  width: 30%;
+  height: 10px;
 }
 
 .testimonial__comment__box__container section p {
   float: left;
   line-height: 30px;
+  color: #fff;
 }
 
 .testimonial__comment__box__container section span {
@@ -234,14 +223,14 @@ body {
 .testimonial__comment__box__container section button {
   border: 0;
   width: 30%;
-  color: #fff;
+  color: #131313;
   height: 35px;
   float: right;
   outline: none;
   cursor: pointer;
   font-weight: 700;
-  background-color: #0091ff;
-  border-bottom: 3px solid #00ffff;
+  background-color: #ffcc66;
+  border-bottom: 3px solid #ff99ff;
   border-radius: 6px;
 }
 
@@ -251,34 +240,12 @@ body {
 }
 
 .testimonial__comment__box__container section button:disabled {
-  background-color: #e0e0e0;
-  border-bottom: 3px solid;
+  background-color: #131313;
+  border: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  color: #e0e0e0;
 }
 
 .testimonial__comment__box__container .under__post__button {
   margin-bottom: 120px;
 }
-
-.testimonial__comment__box__container section ul {
-  margin-top: 60px;
-  list-style: none;
-  padding-left: 0px;
-}
-
-.testimonial__comment__box__container section ul li {
-  padding: 10px 10px;
-  word-wrap: break-word;
-  border-bottom: 3px solid #ff99ff;
-}
-
-.testimonial__comment__box__container section ul li:hover {
-  border-bottom: 3px solid #ffcc66;
-}
-
-/* Testimonial Posting Box */
-#testimonial__container {
-  border: 1px solid white;
-  color: #fff;
-  left: 50%;
-}
-/*# sourceMappingURL=testimonials.css.map */

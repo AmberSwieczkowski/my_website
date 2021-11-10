@@ -63,12 +63,12 @@ body {
   height: 8px;
   position: fixed;
   z-index: 100;
-  background-color: color(c-black);
+  background-color: color(c-pink);
 }
 
 .progress-bar {
   height: 8px;
-  background: color(c-pink);
+  background: color(c-lime);
   width: 0%;
   z-index: 100;
 }
@@ -168,7 +168,7 @@ body {
   }
 }
 
-// Star Ratings
+/* Star Ratings */
 .checked {
   color: color(c-star_yellow);
   margin-top: 0.2rem;
@@ -215,46 +215,19 @@ body {
   }
 }
 
-/* Testimonial Comments Box */
+/* New Testimonial Comments Section */
 .testimonial__comment__box__container {
-  .clearfix {
-    clear: both;
-  }
-
   .comment__box {
     color: color(c-black);
-  }
-
-  h1,
-  p,
-  textarea,
-  li,
-  button {
-    margin: 20px;
-    padding: 0;
-    color: color(c-white);
-    font-size: 1em;
-    font-weight: 400;
-    font-family: "Open Sans", sans-serif;
-  }
-
-  header {
-    min-height: 100px;
-  }
-
-  header h1 {
-    font-size: 150%;
-    font-weight: 600;
-    line-height: 400%;
-    text-align: center;
   }
 
   section {
     width: 400px;
     margin: 0 auto;
+    margin-top: 120px;
   }
 
-  section textarea {
+  section .comment__box, .name__box {
     width: 100%;
     height: 70px;
     padding: 5px;
@@ -266,11 +239,26 @@ body {
     border-bottom: 4px solid color(c-lime);
     background: color(c-aqua_to_lime);
     border-radius: 6px;
+    margin-top: 20px;
+
+    &.name__box {
+      width: 50%;
+      height: 30px;
+      float: left;
+      margin-bottom: 10px;
+    }
+  }
+
+  .rating {
+    float: right;
+    width: 30%;
+    height: 10px;
   }
 
   section p {
     float: left;
     line-height: 30px;
+    color: color(c-white);
   }
 
   section span {
@@ -280,14 +268,14 @@ body {
   section button {
     border: 0;
     width: 30%;
-    color: #fff;
+    color: color(c-black);
     height: 35px;
     float: right;
     outline: none;
     cursor: pointer;
     font-weight: 700;
-    background-color: color(c-royalblue);
-    border-bottom: 3px solid color(c-aqua);
+    background-color: color(c-orange);
+    border-bottom: 3px solid color(c-pink);
     border-radius: 6px;
   }
 
@@ -297,34 +285,13 @@ body {
   }
 
   section button:disabled {
-    background-color: color(c-grey);
-    border-bottom: 3px solid color(-c-grey);
+    background-color: color(c-black);
+    border: 1px solid color(c-grey);
+    border-bottom: 3px solid color(c-grey);
+    color: color(c-grey);
   }
 
   .under__post__button {
     margin-bottom: 120px;
   }
-
-  section ul {
-    margin-top: 60px;
-    list-style: none;
-    padding-left: 0px;
-  }
-
-  section ul li {
-    padding: 10px 10px;
-    word-wrap: break-word;
-    border-bottom: 3px solid color(c-pink);
-  }
-
-  section ul li:hover {
-    border-bottom: 3px solid color(c-orange);
-  }
-}
-
-/* Testimonial Posting Box */
-#testimonial__container {
-  border: 1px solid white;
-  color: color(c-white);
-  left: 50%;
 }
