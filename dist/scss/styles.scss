@@ -42,14 +42,14 @@ $colors: (
 }
 
 .navbar__container {
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   height: 80px;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 5px 20px;
 }
 
 #navbar__logo {
@@ -64,7 +64,7 @@ $colors: (
   align-items: center;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 0;
   padding-right: 1.5rem;
 }

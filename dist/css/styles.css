@@ -28,9 +28,9 @@
 }
 
 .navbar__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -39,7 +39,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 5px 20px;
 }
 
 #navbar__logo {
@@ -61,7 +61,7 @@
   text-decoration: none;
   font-size: 2rem;
   padding: 0;
-  padding-right: 2rem;
+  padding-right: 1.5rem;
 }
 
 .fa-umbrella-beach {
