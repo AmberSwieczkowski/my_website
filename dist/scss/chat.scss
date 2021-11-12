@@ -3,13 +3,18 @@ $colors: (
   c-aqua: #00ffff,
   c-lime: #bbff99,
   c-orange: #ffcc66,
+  c-light_grey: #eeeed7,
   c-pink: #ff99ff,
+  c-purple: #e432f4,
+  c-purple_light: lighten(#e432f4, 10%),
   c-grey: #e0e0e0,
-  c-grey_darker: darken(#e0e0e0, 20%),
+  c-grey_yellow: #eeeed7,
   c-white: #fff,
   c-black: #131313,
   c-background_black: #141414,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
   c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
 );
 

@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Krabby Patty Formula</title>
-    <link rel="stylesheet" href="dist/css/styles.css" />
-    <link rel="stylesheet" href="dist/css/top_secret.css">
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/to_do_list.css" />
 
     <!--Icon Umbrella-Beach Import-->
     <link
@@ -15,13 +14,15 @@
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
       crossorigin="anonymous"
     />
+
+    <title>My To-Do List</title>
   </head>
   <body>
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/top_secret.html" id="navbar__logo">
-          <i class="fas fa-umbrella-beach"></i>TOP SECRET</a
+        <a href="/index.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>WELCOME HOME</a
         >
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -30,15 +31,15 @@
         </div>
         <ul class="navbar__menu">
           <li class="navbar__item">
-            <a href="/index.html" class="navbar__links">Home</a>
-          </li>
-          <li class="navbar__item">
             <a href="/claudius.html" class="navbar__links"
               >Chat With Claudius</a
             >
           </li>
           <li class="navbar__item">
             <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
           </li>
           <li class="navbar__item">
             <a href="/about_you.html" class="navbar__links">About You</a>
@@ -57,40 +58,80 @@
     <div class="scrolling-progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div>
-    <!-- Hero Section -->
-    <div class="top__secret__main">
-      <div class="top__secret__main__container">
-        <div class="top__secret__main__content">
-          <h1>Discover The Krabby Patty Secret Formula</h1>
-          <h2>For A Limited Time Only</h2>
-          <p>See what makes us different.</p>
-          <button class="top__secret__main__btn">
-            <a href="./claudius.html">Chat with Claudius</a>
-          </button>
+    <div id="wrapper">
+      <header>
+        <div id="date"></div>
+        <div id="page-banner">
+          <h1 class="title">Agenda</h1>
+          <p>May You Always Do What You Are Afraid To Do</p>
+          <form id="search__items">
+            <input type="text" placeholder="Search items..." />
+          </form>
         </div>
-        <div class="top__secret__main__img--container">
-          <img
-            src="images/scroll-and-magnifying-glass.jpeg"
-            alt="scroll and magnifying glass"
-            id="top__secret__main__img"
+      </header>
+      <form id="add-item">
+        <div class="add__new__item">
+          <input
+            id="new__item__input"
+            type="text"
+            placeholder="Add something to do..."
           />
+          <button>Add</button>
         </div>
-      </div>
-    </div>
+        <div class="checkboxes">
+          <input type="checkbox" id="hide" />
+          <label for="hide">Hide List</label>
+        </div>
+      </form>
 
-    <!-- Services Section -->
-    <div class="services">
-      <h1>See what the hype is about</h1>
-      <div class="services__container">
-        <div class="services__card">
-          <h2>Experience Bliss</h2>
-          <p>Grown by Native Wenjas</p>
-          <button>Get Started</button>
+      <div id="tabbed-content">
+        <div class="schedule__buttons tabs">
+          <li data-view="#view__today__button" class="week__buttons">Today</li>
+          <li data-view="#view__tomorrow__button" class="week__buttons">
+            Tomorrow
+          </li>
         </div>
-        <div class="services__card">
-          <h2>Are you Ready?</h2>
-          <p>Take the leap</p>
-          <button>Get Started</button>
+
+        <div class="panel active" id="view__today__button">
+          <div id="today__list" class="list">
+            <h2 class="today__list">Today</h2>
+            <ul>
+              <li class="to__do__list__item">
+                <span class="to__do__item">Finish Laundry</span>
+                <span class="done">done</span>
+                <span class="reschedule reschedule__tomorrow">tomorrow</span>
+              </li>
+              <li class="to__do__list__item">
+                <span class="to__do__item">Pay Bills</span>
+                <span class="done">done</span>
+                <span class="reschedule reschedule__tomorrow">tomorrow</span>
+              </li>
+              <li class="to__do__list__item">
+                <span class="to__do__item"
+                  >Seandre's Recommendation Letter</span
+                >
+                <span class="done">done</span>
+                <span class="reschedule reschedule__tomorrow">tomorrow</span>
+              </li>
+              <li class="to__do__list__item">
+                <span class="to__do__item">Book Airbnb</span>
+                <span class="done">done</span>
+                <span class="reschedule reschedule__tomorrow">tomorrow</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="view__tomorrow__button">
+          <div id="item-list" class="list">
+            <h2 class="tomorrow__list">Tomorrow</h2>
+            <ul>
+              <li>
+                <span class="to__do__item">Finish Laundry</span>
+                <span class="done">done</span>
+                <span class="reschedule reschedule__today">today</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -159,9 +200,8 @@
         </div>
       </div>
     </div>
-
     <script src="dist/scripts/app.js"></script>
     <script src="dist/scripts/scrolling_progress_bar.js"></script>
-
+    <script src="dist/scripts/to_do_list.js"></script>
   </body>
 </html>

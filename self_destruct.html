@@ -5,16 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gotcha!</title>
+    <style>
+      body {
+        background: #131313;
+        color: #fff;
+      }
+
+      h1 {
+        z-index: 100;
+      }
+    </style>
   </head>
   <body>
     <div>
       <h1>
         Thanks for authorizing access to your account! Your request has been
         processed and your self will be destructed in <span id="demo"></span>!
+        The area below was created for your enjoyment while you wait for your
+        fate. Hover below and be amazed at my JavaScript skills.
       </h1>
       <p class="draining__bank"></p>
     </div>
-
+    <div>
+      <canvas id="canvas1"></canvas>
+    </div>
+    <script src="dist/scripts/canvas_script.js"></script>
     <script src="dist/scripts/countdown_timer.js"></script>
   </body>
 </html>
