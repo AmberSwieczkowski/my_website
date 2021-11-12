@@ -1,0 +1,12 @@
+canvas {
+  background: #fff;
+  margin: 0;
+}
+
+h1 {
+  z-index: 100;
+  background: #e432f4;
+  border-bottom: 10px solid #00ffff;
+  color: #fff;
+  padding: 20px;
+}
