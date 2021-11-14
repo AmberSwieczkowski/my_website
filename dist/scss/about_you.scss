@@ -1,0 +1,203 @@
+$colors: (
+  c-royalblue: #0091ff,
+  c-aqua: #00ffff,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-light_grey: #eeeed7,
+  c-pink: #ff99ff,
+  c-purple: #e432f4,
+  c-purple_light: lighten(#e432f4, 10%),
+  c-grey: #e0e0e0,
+  c-grey_yellow: #eeeed7,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function linear_gradient_colors() {
+  @return background
+      repeating-linear-gradient(
+        45deg,
+        color(c-white),
+        color(c-aqua) 2em,
+        color(c-white) 4em,
+        color(c-lime) 3em,
+        color(c-black) 5em,
+        #787e7e 6em,
+        color(c-white) 3em
+      ),
+    repeating-linear-gradient(
+      -45deg,
+      color(c-black),
+      color(c-aqua) 2em,
+      color(c-black) 3em,
+      color(c-lime) 4em,
+      color(c-white) 5em,
+      color(c-aqua) 6em,
+      color(c-white) 3em
+    );
+}
+
+@function linear_gradient_background() {
+  @return linear_gradient_colors(), background-blend-mode multiply,
+    background-size auto;
+}
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 840px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: Helvetica, sans-serif, Arial;
+  background-color: color(c-black);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+  background-color: color(c-black);
+
+  
+  header a {
+    color: color(c-aqua);
+    text-decoration: none;
+    padding: $padding;
+    display: block;
+    text-transform: uppercase;
+  }
+
+main {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "main__claudius__text card";
+  }
+
+  section#card {
+    background: color(c-orange_to_pink);
+    padding: 20px;
+    margin: 1em auto;
+    border-radius: $borders;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+
+    @include desktop {
+      grid-area: card;
+      height: fit-content;
+      align-self: center;
+      margin: 1em;
+    }
+  }
+  section#main__claudius__text {
+    color: color(c-aqua);
+    padding: $padding;
+    text-align: center;
+
+    @include desktop {
+      grid-area: main__claudius__text;
+      text-align: left;
+      margin: 4em 0 0 4em;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 10px;
+      text-transform: uppercase;
+      color: color(c-aqua);
+
+      @include desktop {
+        width: 30%;
+        font-size: 4em;
+        line-height: 0.9em;
+      }
+    }
+
+    p {
+      font-size: 1.4em;
+      color: color(c-pink);
+    }
+
+    a {
+      color: color(c-orange);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      margin: 50px auto 0 auto;
+      padding: $padding;
+
+      @include desktop {
+        display: inline-block;
+        padding: $padding $padding * 4;
+      }
+    }
+  }
+  }
+
+  
+  // Hover affect around Claudius is Waiting
+
+  .claudius__is__waiting {
+    background-color: color(c-black);
+    position: relative;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    transition: all 1s;
+    &:after,
+    &:before {
+      content: " ";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      transition: all 1s;
+    }
+    &:after {
+      top: -1px;
+      left: -1px;
+      border-top: 5px solid color(c-lime);
+      border-left: 5px solid color(c-lime);
+    }
+    &:before {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 5px solid color(c-aqua);
+      border-right: 5px solid color(c-aqua);
+    }
+    &:hover {
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+
+      &:before,
+      &:after {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
