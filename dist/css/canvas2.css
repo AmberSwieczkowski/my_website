@@ -7,17 +7,34 @@
 
 body {
   background: #131313;
+  height: 50%;
+}
+
+.header {
+  color: #ffcc66;
+  text-align: center;
+  padding: 2%;
+  margin: auto;
+  font-size: 1rem;
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  margin: auto;
+  width: 30%;
 }
 
 #canvas2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 100%;
   border: 5px solid #fff;
 }
 
@@ -25,15 +42,23 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 95%;
 }
 
 .controls > input {
   border: 2px solid #fff;
-  width: 70%;
+  width: 60%;
 }
 
 .controls > label {
-  width: 25%;
+  width: 50%;
   color: #fff;
   font-size: 15px;
 }

@@ -26,35 +26,52 @@ $colors: (
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background: color(c-black);
+  height: 50%;
+}
+
+.header {
+  color: color(c-orange);
+  text-align: center;
+  padding: 2%;
+  margin: auto;
+  font-size: 1rem;
 }
 
 .container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: auto;
+  width: 30%;
 }
 
 #canvas2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 100%;
   border: 5px solid color(c-white);
 }
 
 .controls {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 95%;
 }
 
 .controls > input {
   border: 2px solid color(c-white);
-  width: 70%;
+  width: 60%;
 }
 
 .controls > label {
-  width: 25%;
+  width: 50%;
   color: color(c-white);
   font-size: 15px;
 }

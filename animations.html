@@ -4,21 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Claudius Main Page</title>
-
-    <link rel="stylesheet" href="./dist/css/main_claudius.css" />
+    <title>Animations</title>
+    <link rel="stylesheet" href="./dist/css/animations.css" />
     <link rel="stylesheet" href="./dist/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="dist/css/chatbot.css" />
 
-    <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
-    <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <!--Font Awesome Icon Import, Umbrella-Beach -->
+    <!--Icon Umbrella-Beach Import-->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
@@ -38,8 +32,8 @@
     <!-- Navbar Section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/index.html" id="navbar__logo">
-          <i class="fas fa-umbrella-beach"></i>CLAUDIUS</a
+        <a href="/testimonials.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>Animations</a
         >
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -57,7 +51,7 @@
             <a href="/top_secret.html" class="navbar__links">Top Secret</a>
           </li>
           <li class="navbar__item">
-            <a href="/animations.html" class="navbar__links">Animations</a>
+            <a href="/bliss.html" class="navbar__links">Bliss</a>
           </li>
           <li class="navbar__btn">
             <a
@@ -73,43 +67,44 @@
     <div class="scrolling-progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div>
-    <main class="main__claudius__container">
-      <section id="main__claudius__text">
-        <h1>Your Personal Assistant</h1>
-        <p>Click the orange bubble to begin your journey</p>
-        <a href="#" class="claudius__is__waiting"
-          ><span>Claudius is waiting for you</span></a
-        >
-      </section>
-
-      <section id="card">
-        <div id="chatbot-container">
-          <div id="chatbot-inner">
-            <i style="font-size: 3rem" class="fas fa-user-secret"></i>
-            <div id="chatbot"></div>
-          </div>
+    <div id="animation__main__container">
+      <div id="animations__header">
+        <h1>Check out my Canvas Experiments!</h1>
+      </div>
+      <div id="animations__body">
+        <div class="animations__list">
+          <h2>Coding with Vanilla JavaScript and HTML Canvas Creations</h2>
+          <p>These were made from this playlist:</p>
+          <a
+            href="https://www.youtube.com/watch?v=qNEb9of714U&list=PLYElE_rzEw_siuo-kkHh5h7Sk--6IPYNh&index=1&ab_channel=Frankslaboratory"
+            >Creative Coding with Vanilla JavaScript and HTML Canvas</a
+          >
+          <ul>
+            <a href="/dist/animations/canvas1.html"
+              ><li>My First JavaScript Animation</li></a
+            >
+            <a href="/dist/animations/canvas2.html"
+              ><li>My Second JavaScript Animation</li></a
+            >
+          </ul>
         </div>
-      </section>
-    </main>
 
-    <div>
-      <div class="text-center">
-        <h1 class="xl reset-margin large-margin">Claudius</h1>
-        <p>Claudius a pure-bred Confess-A-Bear!</p>
-        <p>
-          I'm continuing my mom's line of work who was first employed by
-          Spongebob Squarepants and worked closely with Patrick Star.
-        </p>
+        <div class="animations__list">
+          <h2>Canvas Practice with Chris Courses</h2>
+          <p>These were made from this playlist:</p>
+          <a
+            href="https://www.youtube.com/watch?v=EO6OkltgudE&ab_channel=ChrisCourses"
+            >HTML5 Canvas Tutorial for Beginners</a
+          >
+          <ul>
+            <a href="/dist/animations/practice1.html"
+              ><li>Drawing on the Canvas</li></a
+            >
+          </ul>
+        </div>
       </div>
     </div>
-    <script src="dist/scripts/chatbot_conversation.js"></script>
-    <script
-      type="text/babel"
-      data-presets="es2015,es2016,es2017"
-      src="dist/scripts/chatbot.js"
-    ></script>
-    <script src="dist/scripts/app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="dist/scripts/scrolling_progress_bar.js"></script>
   </body>
+  <script src="dist/scripts/app.js"></script>
+  <script src="dist/scripts/scrolling_progress_bar.js"></script>
 </html>

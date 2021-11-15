@@ -1,0 +1,45 @@
+body {
+  background-color: #131313;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#animations__header h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding-top: 50px;
+  color: #bbff99;
+}
+
+#animations__body {
+  padding-top: 100px;
+  text-align: center;
+  background-color: #131313;
+}
+
+#animations__body .animations__list {
+  margin-bottom: 5%;
+}
+
+#animations__body h2 {
+  font-size: 2rem;
+  color: #00ffff;
+  padding-bottom: 3%;
+}
+
+#animations__body p {
+  font-size: 1.8rem;
+  margin: 3px;
+  color: #bbff99;
+}
+
+#animations__body a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffcc66;
+  margin: 3px;
+}
+
+#animations__body li {
+  color: #e432f4;
+  margin: 3px;
+}
