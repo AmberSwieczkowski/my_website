@@ -247,19 +247,18 @@ $colors: (
 // Scrolling Progress Bar
 
 .scrolling-progress-container {
+  background-color: color(c-black);
   width: 100%;
   height: 8px;
-  background: #ccc;
   position: fixed;
   z-index: 100;
-  background-color: color(c-black);
-}
 
-.progress-bar {
-  height: 8px;
-  background: color(c-pink);
-  width: 0%;
-  z-index: 100;
+  .progress-bar {
+    height: 8px;
+    background: color(c-pink);
+    width: 0%;
+    z-index: 100;
+  }
 }
 
 /* Home Main Section Index CSS */

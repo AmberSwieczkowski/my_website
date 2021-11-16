@@ -13,7 +13,8 @@ $colors: (
   c-black: #131313,
   c-background_black: #141414,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
-  c-aqua_to_purple: linear-gradient(to top, #00ffff 0%, #e432f4 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
   c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
 );
 
@@ -21,16 +22,16 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
-body {
-  background: color(c-black);
+* {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-h1 {
-  z-index: 100;
-  background: color(c-purple);
-  border-bottom: 10px solid color(c-aqua);
-  color: color(c-white);
-  padding: 20px;
+#canvas1 {
+  position: absolute;
+  background: color(c-white);
+  // top: 0;
+  // left: 0;
 }
-

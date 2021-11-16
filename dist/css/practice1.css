@@ -1,10 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+body {
+  background-color: #131313;
 }
 
-canvas {
-  background: #00ffff;
+.main__practice1__container {
+  background-color: #131313;
+  color: #131313;
+  margin-top: 8px;
+}
+
+#main__practice1__header {
+  color: #c182db;
+  padding: 20px;
+  text-align: center;
+}
+
+#practice1 {
+  background: #131313;
+  color: #131313;
 }
