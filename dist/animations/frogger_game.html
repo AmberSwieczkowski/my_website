@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frogger</title>
+    <link rel="stylesheet" href="/dist/css/frogger_game.css" />
+  </head>
+  <body>
+    <div class="frogger__wrapper">
+      <!-- Canvas 1: Particle Affects -->
+      <canvas class="frogger__canvas" id="frogger__canvas1"></canvas>
+      <!-- Canvas 2: Logs and Turtles -->
+      <canvas class="frogger__canvas" id="frogger__canvas2"></canvas>
+      <!-- Canvas 3: Frogs -->
+      <canvas class="frogger__canvas" id="frogger__canvas3"></canvas>
+      <!-- Canvas 4: Cars, Grass, Tree and Other Overlays -->
+      <canvas class="frogger__canvas" id="frogger__canvas4"></canvas>
+      <!-- Canvas 5: Unknown -->
+      <canvas class="frogger__canvas" id="frogger__canvas5"></canvas>
+    </div>
+
+    <!-- Canvas Setup, Global Variables, References to Sprites  -->
+    <script src="/dist/scripts/frogger/frogger_setup.js"></script>
+    <!-- Player Character -->
+    <script src="/dist/scripts/frogger/frogger_main.js"></script>
+
+    <script src="/dist/scripts/frogger/frogger_particles.js"></script>
+
+    <!--  -->
+    <script src="/dist/scripts/frogger/frogger_ripples.js"></script>
+
+    <script src="/dist/scripts/frogger/frogger_obstacles.js"></script>
+
+    <script src="/dist/scripts/frogger/frogger_utilities.js"></script>
+  </body>
+</html>
