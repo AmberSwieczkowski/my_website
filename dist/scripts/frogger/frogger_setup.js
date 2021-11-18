@@ -39,7 +39,7 @@ const logsArray = [];
 
 // Images
 const background_lvl2 = new Image();
-background_lvl2.src = '/dist/images/frogger/background_lvl2.png';
+background_lvl2.src = '/images/frogger/background_lvl2.png';
 
 const grass = new Image();
-grass.src = '/dist/images/frogger/grass.png';
+grass.src = '/images/frogger/grass.png';
