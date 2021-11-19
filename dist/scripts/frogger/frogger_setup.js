@@ -43,3 +43,19 @@ background_lvl2.src = '/images/frogger/background_lvl2.png';
 
 const grass = new Image();
 grass.src = '/images/frogger/grass.png';
+
+const collisions = new Image();
+collisions.src = '/images/frogger/collisions.png';
+
+const turtle = new Image();
+turtle.src = '/images/frogger/turtles.png';
+
+const log = new Image();
+log.src = '/images/frogger/log.png';
+
+const car = new Image();
+car.src = '/images/frogger/cars.png';
+let numberOfCars = 3;
+
+const froggerSprite = new Image();
+froggerSprite.src = '/images/frogger/frog_spritesheet.png'

@@ -15,6 +15,7 @@ function animateFrogger(){
     handleObstacles();
     handleScoreBoard();
     ctx4.drawImage(grass, 0, 0, canvas.width, canvas.height);
+    frame++;
     requestAnimationFrame(animateFrogger);
 }
 animateFrogger();
@@ -33,12 +34,13 @@ window.addEventListener('keydown', function(e) {
 window.addEventListener('keyup', function(e) {
     delete keys[e.key];
     frogger.moving = false;
+    frogger.frameX = 0;
 });
 
 /* Resets frog to beginning after moving past top of canvas */
 function scored() {
     score++;
-    gameSpeed += 0.05;
+    gameSpeed += 0.2;
     frogger.x = canvas.width/2 - frogger.width/2;
     frogger.y = canvas.height - frogger.height - 40;
 }
@@ -53,4 +55,17 @@ function handleScoreBoard() {
     ctx4.font = '15px Verdana';
     ctx4.fillText('Collisions: ' + collisionsCount, 10, 175);
     ctx4.fillText('Game Speed: ' + gameSpeed.toFixed(1), 10, 195);
+}
+
+// Collision detection between two rectangles
+function collision(first, second) {
+    return !( first.x > second.x + second.width || first.x + first.width < second.x || first.y > second.y + second.height || first.y + first.height < second.y);
+}
+
+function resetGame() {
+    frogger.x = canvas.width/2 - frogger.width/2;
+    frogger.y = canvas.height - frogger.height - 40;
+    score = 0;
+    collisionsCount++;
+    gameSpeed = 1;
 }

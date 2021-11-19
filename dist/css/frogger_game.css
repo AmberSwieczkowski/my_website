@@ -7,7 +7,7 @@
   height: 600px;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url("/dist/images/frogger/background.png");
+  background: url("/images/frogger/background.png");
 }
 
 .frogger__canvas {
