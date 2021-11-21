@@ -8,11 +8,11 @@ class Particle {
         this.directionY = Math.random() * 1 - 0.5;
     }
     draw() {
-        ctx1.fillStyle = 'rgba(150, 150, 150, ' + this.opacity + ')'
-        ctx1.beginPath();
-        ctx1.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-        ctx1.fill();
-        ctx1.closePath();
+        ctx2.fillStyle = 'rgba(150, 150, 150, ' + this.opacity + ')'
+        ctx2.beginPath();
+        ctx2.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx2.fill();
+        ctx2.closePath();
     }
     drawRipple() {
         ctx1.strokeStyle = 'rgba(255, 255, 255, ' + this.opacity + ')'

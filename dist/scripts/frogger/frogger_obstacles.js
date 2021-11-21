@@ -32,7 +32,7 @@ class Obstacle {
     }
     update(){
         // moves obstacles horizontally
-        this.x += this.speed * gameSpeed;
+        this.x += this.speed + gameSpeed;
         // resets obstacles behind edge after moving off screen
         if (this.speed > 0) {
             if(this.x > canvas.width + this.width) {

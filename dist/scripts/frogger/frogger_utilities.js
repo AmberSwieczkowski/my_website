@@ -24,7 +24,6 @@ animateFrogger();
 window.addEventListener('keydown', function(e) {
     keys = [];
     keys[e.key] = true;
-    /* keyCode uses 37=left | 38=up | 39=right | 40=down | 32=space */
     if (keys["ArrowLeft"] || keys["ArrowUp"] || keys["ArrowRight"] || keys["ArrowDown"] || keys[" "]){
         frogger.jump();
         console.log(e);
