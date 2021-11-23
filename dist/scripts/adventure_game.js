@@ -134,7 +134,7 @@ const textNodes = [
 },
 {
   id: 5,
-  text: 'You head further down the tropical dirt road when you come across an old jeep next to a giant mud hut. It starts to rain.',
+  text: 'You head further down the road when you come across an old jeep next to a giant mud hut. It starts to rain.',
   options: [
       {
           text: 'Take the jeep',
@@ -157,32 +157,27 @@ const textNodes = [
   options: [
     {
       text: 'Take shelter in the cave',
-      nextText: 7
+      nextText: 9
     },
     {
       text: 'Keep driving',
-      nextText: 8
+      nextText: 10
     }
   ]
 },
 {
   id: 7,
-  text: 'Inside the mud hut you start to get hungry',
+  text: 'The floor of the mud hut is quicksand and you are never heard from again',
   options: [
     {
-      text: 'Go hunting',
-      nextText: 9
-    },
-    {
-      text: 'Attack it with your sword',
-      requiredState: (currentState) => currentState.sword,
-      nextText: 9
+      text: 'Restart',
+      nextText: -1
     }
   ]
 },
 {
   id: 8,
-  text: 'The monster laughed as you hid behind your shield and ate you.',
+  text: 'You are struck by lightening and turn into to dust',
   options: [
     {
       text: 'Restart',
@@ -192,10 +187,10 @@ const textNodes = [
 },
 {
   id: 9,
-  text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you are voted Defender of the USA and live out the rest of your days ithe whithouse.',
+  text: 'A family of bears live in the cave. They tie you up and roast you over the fire for dinner',
   options: [
     {
-      text: 'Congratulations. Play Again.',
+      text: 'Restart',
       nextText: -1
     }
   ]
