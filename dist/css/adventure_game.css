@@ -36,6 +36,13 @@ body {
   text-align: center;
 }
 
+#inventory__list {
+  font-size: 2rem;
+  color: #b9d9ce;
+  text-align: left;
+  padding-bottom: 50px;
+}
+
 .adv__buttons__grid {
   display: -ms-grid;
   display: grid;
@@ -54,6 +61,7 @@ body {
   outline: none;
   font-size: 2rem;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .adv__button:hover {

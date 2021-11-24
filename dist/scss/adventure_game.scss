@@ -59,6 +59,13 @@ body {
   text-align: center;
 }
 
+#inventory__list {
+  font-size: 2rem;
+  color: color(c-green_adventure);
+  text-align: left;
+  padding-bottom: 50px;
+}
+
 .adv__buttons__grid {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -75,6 +82,7 @@ body {
   outline: none;
   font-size: 2rem;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .adv__button:hover {

@@ -1,7 +1,9 @@
 const textElement = document.getElementById('main__adv__text');
+const inventoryElement = document.getElementById('inventory__list');
 const optionButtonsElement = document.getElementById('adv__option__buttons');
 
-let state = {}
+let state = {};
+let inventory__list = [' none'];
 
 function startGame() {
     state = {};
@@ -10,7 +12,8 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-    textElement.innerText = textNode.text
+    textElement.innerText = textNode.text;
+    inventoryElement.innerText += inventory__list;
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -43,6 +46,7 @@ const textNodes = [
 {
   id: 1,
   text: 'You wake up in a strange place and you see a small jar of blue goo and a giant bag of berries near you.',
+  inventory: inventory__list,
   options: [
       {
           text: 'Take goo',
@@ -96,7 +100,7 @@ const textNodes = [
 },
 {
   id: 3,
-  text: 'After leaving the merchant you walk down a tropical dirt road and notice a key on the ground. You pick up the key.',
+  text: 'After leaving the merchant you walk down a dirt road and notice a key on the ground.',
   options: [
       {
           text: 'Pick up the key and keep walking',
@@ -127,7 +131,6 @@ const textNodes = [
     {
       text: 'Ignore the kid',
       requiredState: (currentState) => currentState.key,
-      setState: { key: false },
       nextText: 5
     }
   ]
@@ -142,7 +145,7 @@ const textNodes = [
           nextText: 6
       },
       {
-          text: 'Enter the mud hut',
+          text: 'Enter the hut',
           nextText: 7
       },
       {
@@ -167,7 +170,7 @@ const textNodes = [
 },
 {
   id: 7,
-  text: 'The floor of the mud hut is quicksand and you are never heard from again',
+  text: 'The floor of the mud hut is quicksand and you are ',
   options: [
     {
       text: 'Restart',
@@ -191,6 +194,54 @@ const textNodes = [
   options: [
     {
       text: 'Restart',
+      nextText: -1
+    }
+  ]
+},
+{
+  id: 10,
+  text: 'The rain disappears as quickly as it came. You notice the road dead ends at a giant fortified castle. You park the jeep behind a tree',
+  options: [
+    {
+      text: 'Wait in the jeep',
+      nextText: 11
+    },
+    {
+      text: 'Walk through the front door',
+      nextText: 12
+    },
+    {
+      text: 'Sneak in',
+      nextText: 13
+    }
+  ]
+},
+{
+  id: 11,
+  text: 'The jeep was hit by a rocket launcher',
+  options: [
+    {
+      text: 'Restart',
+      nextText: -1
+    }
+  ]
+},
+{
+  id: 12,
+  text: 'You are arrested and thrown into a dungeon',
+  options: [
+    {
+      text: 'Restart',
+      nextText: -1
+    }
+  ]
+},
+{
+  id: 13,
+  text: 'You win!',
+  options: [
+    {
+      text: 'Congratulations! Play again.',
       nextText: -1
     }
   ]
