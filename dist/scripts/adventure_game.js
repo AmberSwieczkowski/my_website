@@ -137,7 +137,7 @@ const textNodes = [
 },
 {
   id: 5,
-  text: 'You head further down the road when you come across an old jeep next to a giant mud hut. It starts to rain.',
+  text: 'You head further down the road when you come across an old jeep next to a small hut. It starts to rain.',
   options: [
       {
           text: 'Take the jeep',
@@ -170,7 +170,7 @@ const textNodes = [
 },
 {
   id: 7,
-  text: 'The floor of the mud hut is quicksand and you are ',
+  text: 'The floor of the hut is quicksand and you sink quickly to your death',
   options: [
     {
       text: 'Restart',
