@@ -2,18 +2,20 @@ const textElement = document.getElementById('main__adv__text');
 const inventoryElement = document.getElementById('inventory__list');
 const optionButtonsElement = document.getElementById('adv__option__buttons');
 
-let state = {};
-let inventory__list = [' none'];
+let state = [];
+let inventory = [];
+let inventory__list = `Inventory: ${inventory}`;
 
 function startGame() {
-    state = {};
+    state = [];
+    inventory = [];
     showTextNode(1);
 }
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
     textElement.innerText = textNode.text;
-    inventoryElement.innerText += inventory__list;
+    inventoryElement.innerText = inventory__list;
     while (optionButtonsElement.firstChild) {
         optionButtonsElement.removeChild(optionButtonsElement.firstChild)
     }
@@ -25,6 +27,7 @@ function showTextNode(textNodeIndex) {
             button.classList.add('adv__button');
             button.addEventListener('click', () => selectOption(option));
             optionButtonsElement.appendChild(button);
+
         }
     })
 }
