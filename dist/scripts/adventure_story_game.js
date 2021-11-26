@@ -1,17 +1,23 @@
 const mainTextElement = document.getElementById('main__adv__text');
 const inventoryListElement = document.getElementById('inventory__list');
+const choicesElement = document.getElementById('adv__option__buttons');
 
-inventory__list = []
-inventory = `Inventory: ${inventory__list}`
+let inventory_list = [];
+const inventory = `Inventory: ${inventory_list}`;
 
 function startGame() {
+    inventory_list = [];
     inventoryListElement.innerText = inventory;
     mainTextElement.innerText = chapter1.beginning.situation;
 }
 
+const button = document.createElement('button');
+button.innerText = chapter1.beginning.choices.text;
+
+
 const chapter1 = {
     beginning: {
-        situation: "You wake up in your recliner after a restful nap. As you get up to get  some water you realize this is not your house. You can't remember how you got here   and you start to panic.",
+        situation: "You wake up in your recliner after a restful nap. As you get up to get  some water you realize this is not your house. You can't remember how you got here and you start to panic.",
         choices:
         [ 
             {
