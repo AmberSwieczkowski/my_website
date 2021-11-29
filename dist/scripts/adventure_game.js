@@ -48,7 +48,7 @@ function selectOption(option) {
 const textNodes = [
 {
   id: 1,
-  text: 'You wake up in a strange place and you see a small jar of blue goo and a giant bag of berries near you.',
+  text: 'You wake up on a strange island and you see a small jar of blue goo and a giant bag of berries near you.',
   inventory: inventory__list,
   options: [
       {
@@ -69,7 +69,7 @@ const textNodes = [
 },
 {
   id: 2,
-  text: 'You venture forth in search of answers to where you are when you come across a merchant',
+  text: 'You venture forth in search of answers to where you are when you come across a merchant.',
   options: [
       {
           text: 'Trade the goo for a sword',
@@ -103,7 +103,7 @@ const textNodes = [
 },
 {
   id: 3,
-  text: 'After leaving the merchant you walk down a dirt road and notice a key on the ground.',
+  text: 'After leaving the merchant you follow a beaten path and notice a key on the ground.',
   options: [
       {
           text: 'Pick up the key and keep walking',
@@ -173,7 +173,7 @@ const textNodes = [
 },
 {
   id: 7,
-  text: 'The floor of the hut is quicksand and you sink quickly to your death',
+  text: 'The floor of the hut is quicksand and you sink quickly to your death.',
   options: [
     {
       text: 'Restart',
@@ -183,7 +183,7 @@ const textNodes = [
 },
 {
   id: 8,
-  text: 'You are struck by lightening and turn into to dust',
+  text: 'You are struck by lightening and turn into to dust.',
   options: [
     {
       text: 'Restart',
@@ -193,7 +193,7 @@ const textNodes = [
 },
 {
   id: 9,
-  text: 'A family of bears live in the cave. They tie you up and roast you over the fire for dinner',
+  text: 'A family of bears live in the cave. They tie you up and roast you over the fire for dinner.',
   options: [
     {
       text: 'Restart',
@@ -203,7 +203,7 @@ const textNodes = [
 },
 {
   id: 10,
-  text: 'The rain disappears as quickly as it came. You notice the road dead ends at a giant fortified castle. You park the jeep behind a tree',
+  text: 'The rain disappears as quickly as it came. You notice the road dead ends at a giant fortified castle. You park the jeep behind a tree.',
   options: [
     {
       text: 'Wait in the jeep',
@@ -211,17 +211,17 @@ const textNodes = [
     },
     {
       text: 'Walk through the front door',
-      nextText: 12
+      nextText: 13
     },
     {
-      text: 'Sneak in',
-      nextText: 13
+      text: 'Sneak in a side door',
+      nextText: 12
     }
   ]
 },
 {
   id: 11,
-  text: 'The jeep was hit by a rocket launcher',
+  text: 'The jeep was hit by a rocket launcher.',
   options: [
     {
       text: 'Restart',
@@ -231,7 +231,7 @@ const textNodes = [
 },
 {
   id: 12,
-  text: 'You are arrested and thrown into a dungeon',
+  text: 'You step on a land mine and explode.',
   options: [
     {
       text: 'Restart',
@@ -241,7 +241,7 @@ const textNodes = [
 },
 {
   id: 13,
-  text: 'You win!',
+  text: 'The servants recognize you as the reigning monarch and you live the rest of your life ruling over the island!',
   options: [
     {
       text: 'Congratulations! Play again.',
