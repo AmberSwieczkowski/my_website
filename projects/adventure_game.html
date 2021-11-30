@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/adventure_game.css" />
+    <!--Icon Umbrella-Beach Import-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>Adventure Game</title>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="adventure_game.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>Adventure Game</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/claudius.html" class="navbar__links">Claudius</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/projects.html" class="navbar__links">Projects</a>
+          </li>
+
+          <li class="navbar__btn">
+            <a
+              href="/self_destruct_verification.html"
+              class="self_destruct_button"
+              ><span>Self Destruct</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Scrolling Progress Bar -->
+    <div class="scrolling-progress-container">
+      <div class="progress-bar" style="background: #37848c" id="myBar"></div>
+    </div>
+    <div class="adv__game">
+      <div class="main__adv__container">
+        <div id="inventory__list"></div>
+        <div id="main__adv__text">Text</div>
+        <div id="adv__option__buttons" class="adv__buttons__grid">
+          <button class="adv__button">Option1</button>
+          <button class="adv__button">Option2</button>
+          <button class="adv__button">Option3</button>
+          <button class="adv__button">Option4</button>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="/scripts/adventure_game.js"></script> -->
+    <script src="/scripts/adventure_game.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/scrolling_progress_bar.js"></script>
+  </body>
+</html>

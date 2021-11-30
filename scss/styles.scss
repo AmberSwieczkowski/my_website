@@ -1,18 +1,30 @@
 $colors: (
-  primary: #005dff,
-  primary_light: lighten(#005dff, 40%),
-  primary_dark: darken(#005dff, 40%),
   c-royalblue: #0091ff,
+  c-blue_adventure: #37848c,
   c-aqua: #00ffff,
+  c-green_adventure: #b9d9ce,
   c-lime: #bbff99,
   c-orange: #ffcc66,
+  c-orange_adventure: #d9583b,
+  c-salmon: #f77062,
+  c-light_grey: #eeeed7,
   c-pink: #ff99ff,
+  c-purple: #e432f4,
+  c-purple_light: lighten(#e432f4, 10%),
+  c-red_adventure: #8c0303,
+  c-grey_dark: #333,
+  c-grey_adventure: #d9d9d9,
   c-grey: #e0e0e0,
+  c-grey_yellow: #eeeed7,
   c-white: #fff,
   c-black: #131313,
   c-background_black: #141414,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
   c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+  c-black_to_red_adventure:
+    linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%),
 );
 
 @function color($color-name) {
@@ -296,22 +308,10 @@ $colors: (
   animation: blinker 5s linear infinite;
 }
 
-@keyframes blinker {
-  50% {
-    opacity: 0.2;
-  }
-}
-
 .main__content h2 {
-  font-size: 1.2rem;
-  background-color: color(c-aqua);
-  background-image: color(c-orange_to_pink);
+  font-size: 2rem;
+  color: color(c-purple);
   background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  padding-right: 5%;
   text-align: center;
 }
 
@@ -319,8 +319,7 @@ $colors: (
   margin-top: 1rem;
   font-size: 1.6rem;
   font-weight: 700;
-  color: color(c-white);
-  padding: 2px;
+  color: color(c-salmon);
   margin-bottom: 10%;
   text-align: center;
 }
@@ -329,7 +328,7 @@ $colors: (
   font-size: 1rem;
   background-image: color(c-aqua_to_lime);
   padding: 2% 5%;
-  margin: 1% 20% 1% 20%;
+  margin: 1% 30%;
   border: none;
   border-radius: 10px;
   color: color(c-white);
@@ -356,7 +355,7 @@ $colors: (
   left: 0;
   width: 0;
   height: 100%;
-  background: color(c-white);
+  background: color(c-salmon);
   transition: all 0.35s;
   border-radius: 10px;
 }
@@ -375,21 +374,11 @@ $colors: (
 
 #main__img {
   box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   height: auto;
   object-fit: cover;
-  border-radius: 3%;
-  transition: transform 0.3s;
+  border-radius: 50px;
   margin-bottom: 0 auto;
-}
-
-.main__img--container:hover {
-  background-color: transparent;
-  -ms-transform: scale(1.2);
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
-  // transition: 0.2s ease-in;
-  display: flex;
 }
 
 /* Mobile Responsive */
@@ -449,10 +438,130 @@ $colors: (
     margin: 0 0;
     align-content: center;
   }
+}
 
-  .main_img {
-    align-content: center;
-    margin: 0 auto;
+/* Profile Card Section */
+
+.card {
+  width: 400px;
+  margin: auto;
+  padding: 50px;
+  background-color: #42515a;
+  box-shadow: 0 10px 30px #42515a;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 5px solid color(c-lime);
+}
+
+.card .card-header {
+  position: relative;
+  height: 100px;
+  // border: 5px solid color(c-lime);
+}
+
+.card .card-header .profile-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 8px solid color(c-purple);
+  box-shadow: 0 0 20px #42515a;
+}
+
+.card .card-header .profile-img:hover {
+  width: 230px;
+  height: 230px;
+  border: 8px solid color(c-aqua);
+}
+
+.card .card-body {
+  text-align: center;
+  margin: auto;
+}
+
+.card .card-body .name {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: color(c-purple);
+}
+
+.card .card-body .name:hover {
+  color: color(c-aqua);
+}
+
+.card .card-body .mail {
+  font-size: 20px;
+  color: color(c-grey_adventure);
+}
+
+.card .card-body .mail:hover {
+  color: color(c-white);
+}
+
+.card .card-body .job {
+  margin-top: 10px;
+  font-size: 20px;
+  color: color(c-lime);
+}
+
+.card .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.card .social-links .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  background-color: color(c-purple);
+  color: color(c-white);
+  font-size: 20px;
+  border-radius: 100%;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.card .social-links .social-icon:last-child {
+  margin-right: 0;
+}
+
+.card .social-links .social-icon:hover {
+  background-color: color(c-aqua);
+  height: 50px;
+  width: 50px;
+  text-decoration: none;
+}
+
+.card .card-footer {
+  background-color: color(c-purple);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px 0 20px 0;
+  width: 390px;
+  position: relative;
+  top: 50px;
+  right: 50px;
+}
+
+.card .card-footer .count {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .card {
+    width: 96%;
+  }
+
+  .card .card-body {
+    padding: 10px 20px;
   }
 }
 
@@ -540,7 +649,7 @@ $colors: (
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: color(c-salmon);
   position: absolute;
   top: 440px;
   left: 30px;

@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Claudius Main Page</title>
-
-    <link rel="stylesheet" href="./dist/css/main_claudius.css" />
-    <link rel="stylesheet" href="./dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/main_claudius.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/chatbot.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="dist/css/chatbot.css" />
 
     <!-- These provide in-browser transpilation of ES6 JS code to ES5 to support IE11 -->
     <script src="https://unpkg.com/@babel/polyfill@7.6.0/dist/polyfill.min.js"></script>
@@ -33,6 +31,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap"
       rel="stylesheet"
     />
+    <title>Claudius Main Page</title>
   </head>
   <body>
     <!-- Navbar Section -->
@@ -57,7 +56,7 @@
             <a href="/top_secret.html" class="navbar__links">Top Secret</a>
           </li>
           <li class="navbar__item">
-            <a href="/animations.html" class="navbar__links">Animations</a>
+            <a href="/projects.html" class="navbar__links">Projects</a>
           </li>
           <li class="navbar__btn">
             <a
@@ -92,24 +91,50 @@
       </section>
     </main>
 
-    <div>
-      <div class="text-center">
-        <h1 class="xl reset-margin large-margin">Claudius</h1>
-        <p>Claudius a pure-bred Confess-A-Bear!</p>
+    <details class="claudius__info__details">
+      <summary>Who is Claudius?</summary>
+      <div class="claudius__info__container">
+        <h1>Doctor Professor Sir Captain Claudimuffis</h1>
+        <h2>
+          was once a full time clinical pyschologist and world traveling life
+          coach...
+        </h2>
         <p>
-          I'm continuing my mom's line of work who was first employed by
-          Spongebob Squarepants and worked closely with Patrick Star.
+          Known for being the only remaining pure-bred Confess-A-Bear, Doctor
+          Professor Sir Captain Claudimuffis, or more intimately known as
+          Claudius, was first employed Spongebob Squarepants and worked closely
+          with Patrick Star for over 20 years! Claudius joined our team 5 years
+          ago which has allowed him to virtually help hundreds of thousands of
+          people get their lives back. He uses Texas-approved scientific methods
+          and a simple, one-step-at-a-time approach. Are you ready for a
+          too-good-to-be-true, pain-free, quick-fix for your life? No challenge
+          is too hard for Claudius! Did we mention, <i>it's free</i>? What are
+          you waiting for?
         </p>
       </div>
-    </div>
-    <script src="dist/scripts/chatbot_conversation.js"></script>
+    </details>
+    <details class="claudius__info__details">
+      <summary>Most Noteworthy Clients</summary>
+      <div class="claudius__noteworthy__clients">
+        <ul class="claudius__client__list">
+          <li>Joe Biden</li>
+          <li>Hillary Clinton</li>
+          <li>Barak Obama</li>
+          <li>Nancy Pelosi</li>
+          <li>Adolf Hitler</li>
+          <li>Joseph Stalin</li>
+          <li>Mao Zedong</li>
+        </ul>
+      </div>
+    </details>
+    <script src="/scripts/chatbot_conversation.js"></script>
     <script
       type="text/babel"
       data-presets="es2015,es2016,es2017"
       src="dist/scripts/chatbot.js"
     ></script>
-    <script src="dist/scripts/app.js"></script>
+    <script src="/scripts/app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="dist/scripts/scrolling_progress_bar.js"></script>
+    <script src="/scripts/scrolling_progress_bar.js"></script>
   </body>
 </html>

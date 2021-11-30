@@ -22,6 +22,8 @@ $colors: (
   c-aqua_to_purple:
     linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
   c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+  c-black_to_red_adventure:
+    linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%),
 );
 
 @function color($color-name) {
@@ -37,13 +39,13 @@ $colors: (
   box-sizing: border-box;
 }
 
-body {
+.adv__game {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: color(c-orange_adventure);
+  background: color(c-black_to_red_adventure);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -52,9 +54,9 @@ body {
   max-width: 80%;
   background-color: color(c-blue_adventure);
   padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 0 50px 5px;
-  color: color(c-grey_adventure);
+  border-radius: 10px;
+  box-shadow: 0 0 50px 0px;
+  color: color(c-green_adventure);
   font-size: 4rem;
   text-align: center;
 }

@@ -3,43 +3,49 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-#animations__header h1 {
+#projects__header h1 {
   text-align: center;
   font-size: 3rem;
   padding-top: 50px;
   color: #bbff99;
 }
 
-#animations__body {
-  padding-top: 100px;
+#projects__header h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  padding-top: 15px;
+  color: #f77062;
+}
+
+#projects__body {
+  padding-top: 50px;
   text-align: center;
   background-color: #131313;
 }
 
-#animations__body .animations__list {
-  margin-bottom: 5%;
+#projects__body .projects__list {
+  margin-bottom: 50px;
 }
 
-#animations__body h2 {
+#projects__body h2 {
   font-size: 2rem;
   color: #00ffff;
-  padding-bottom: 3%;
+  padding-bottom: 20px;
 }
 
-#animations__body p {
-  font-size: 1.8rem;
+#projects__body p {
+  font-size: 2.5rem;
   margin: 3px;
   color: #bbff99;
 }
 
-#animations__body a {
+#projects__body a {
   text-decoration: none;
   cursor: pointer;
   color: #ffcc66;
   margin: 3px;
 }
 
-#animations__body li {
+#projects__body li {
   color: #e432f4;
-  margin: 3px;
 }

@@ -7,7 +7,7 @@
   box-sizing: border-box;
 }
 
-body {
+.adv__game {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,8 @@ body {
           align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #d9583b;
+  background: -webkit-gradient(linear, left bottom, left top, from(#131313), color-stop(30%, #8c0303), color-stop(60%, #8c0303), to(#131313));
+  background: linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -28,10 +29,10 @@ body {
   max-width: 80%;
   background-color: #37848c;
   padding: 30px;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 50px 5px;
-          box-shadow: 0 0 50px 5px;
-  color: #d9d9d9;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 50px 0px;
+          box-shadow: 0 0 50px 0px;
+  color: #b9d9ce;
   font-size: 4rem;
   text-align: center;
 }

@@ -1,6 +1,6 @@
 # my_website
 
-# This is my first website ever: 
+# This is my first website ever KrustyKrabUSA! 
 
 www.krustykrab.us
 

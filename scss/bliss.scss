@@ -24,6 +24,200 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+
+.main__bliss {
+  background-color: color(c-background_black);
+}
+
+.main__container__bliss {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: color(c-background_black);
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+
+.main__content__bliss h1 {
+  font-family: "Rampart One", cursive;
+  font-size: 4rem;
+  background-color: color(c-aqua);
+  background-image: color(c-aqua_to_lime);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  padding: 5%;
+  text-align: center;
+  animation: blinker 5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.main__content__bliss  h2 {
+  font-size: 1.2rem;
+  background-color: color(c-aqua);
+  background-image: color(c-orange_to_pink);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+}
+
+.main__content__bliss  p {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: color(c-white);
+  padding: 2px;
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+.main__btn__bliss  {
+  font-size: 1rem;
+  background-image: color(c-aqua_to_lime);
+  padding: 2% 5%;
+  margin: 1% 33%;
+  border: none;
+  border-radius: 10px;
+  color: color(c-white);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.main__btn__bliss a {
+  position: relative;
+  z-index: 2;
+  color: color(c-black);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Archivo Black", sans-serif;
+}
+
+.main__btn__bliss:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: color(c-white);
+  transition: all 0.35s;
+  border-radius: 10px;
+
+}
+
+.main__btn__bliss:hover {
+  color: color(c-white);
+}
+
+.main__btn__bliss:hover:after {
+  width: 100%;
+}
+
+.main__img--container__bliss {
+  text-align: center;
+}
+
+#main__img__bliss {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 3%;
+  transition: transform 0.3s;
+  margin-bottom: 0 auto;
+}
+
+.main__img--container__bliss:hover {
+  background-color: transparent;
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  // transition: 0.2s ease-in;
+  display: flex;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .main__container__bliss {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90vh;
+  }
+
+  .main__content__bliss {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .main__content__bliss h1 {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .main_content__bliss h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .main__content__bliss p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main__content__bliss h1 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+  }
+
+  .main_content__bliss h2 {
+    font-size: 2rem;
+    align-items: center;
+  }
+
+  .main__content__bliss p {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+  }
+
+  .main_btn__bliss {
+    padding: 12px 12px;
+    margin: 0 0;
+    align-content: center;
+  }
+
+  .main_img__bliss {
+    align-content: center;
+    margin: 0 auto;
+  }
+}
+
 /* Main Bliss Content */
 
 .main__bliss__container {
