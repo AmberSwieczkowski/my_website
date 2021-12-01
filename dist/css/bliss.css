@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
 .main__bliss {
-  background-color: #141414;
+  background-color: #131313;
 }
 
 .main__container__bliss {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: #141414;
+  background-color: #131313;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -26,7 +26,13 @@
   font-family: "Rampart One", cursive;
   font-size: 4rem;
   background-color: #00ffff;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#00ffff), to(#bbff99));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#00ffff),
+    to(#bbff99)
+  );
   background-image: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
   background-size: 100%;
   -webkit-background-clip: text;
@@ -36,7 +42,7 @@
   padding: 5%;
   text-align: center;
   -webkit-animation: blinker 5s linear infinite;
-          animation: blinker 5s linear infinite;
+  animation: blinker 5s linear infinite;
 }
 
 @-webkit-keyframes blinker {
@@ -54,7 +60,13 @@
 .main__content__bliss h2 {
   font-size: 1.2rem;
   background-color: #00ffff;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffcc66), to(#ff99ff));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#ffcc66),
+    to(#ff99ff)
+  );
   background-image: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%);
   background-size: 100%;
   -webkit-background-clip: text;
@@ -76,7 +88,13 @@
 
 .main__btn__bliss {
   font-size: 1rem;
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#00ffff), to(#bbff99));
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#00ffff),
+    to(#bbff99)
+  );
   background-image: linear-gradient(to top, #00ffff 0%, #bbff99 100%);
   padding: 2% 5%;
   margin: 1% 33%;
@@ -127,11 +145,11 @@
 
 #main__img__bliss {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 3%;
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
@@ -155,12 +173,12 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto;
-        grid-template-columns: auto;
+    grid-template-columns: auto;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -ms-grid-column-align: center;
-        justify-self: center;
+    justify-self: center;
     width: 100%;
     margin: 0 auto;
     height: 90vh;
@@ -189,31 +207,31 @@
     font-size: 2rem;
     margin-top: 3rem;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .main_content__bliss h2 {
     font-size: 2rem;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .main__content__bliss p {
     margin-top: 2rem;
     font-size: 1.5rem;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .main_btn__bliss {
     padding: 12px 12px;
     margin: 0 0;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
   }
   .main_img__bliss {
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
     margin: 0 auto;
   }
 }
@@ -233,11 +251,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   min-height: 100vh;
   border-radius: 100px;
   background-image: url(/images/orange-sunset-over-water-with-palm-trees-and-mountains.jpg);

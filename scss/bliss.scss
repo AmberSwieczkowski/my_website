@@ -13,7 +13,7 @@ $colors: (
   c-grey_yellow: #eeeed7,
   c-white: #fff,
   c-black: #131313,
-  c-background_black: #141414,
+  c-background_black: #131313,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
   c-aqua_to_purple:
     linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
@@ -24,9 +24,8 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
-
 .main__bliss {
-  background-color: color(c-background_black);
+  background-color: color(c-black);
 }
 
 .main__container__bliss {
@@ -36,7 +35,7 @@ $colors: (
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: color(c-background_black);
+  background-color: color(c-black);
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -64,7 +63,7 @@ $colors: (
   }
 }
 
-.main__content__bliss  h2 {
+.main__content__bliss h2 {
   font-size: 1.2rem;
   background-color: color(c-aqua);
   background-image: color(c-orange_to_pink);
@@ -76,7 +75,7 @@ $colors: (
   text-align: center;
 }
 
-.main__content__bliss  p {
+.main__content__bliss p {
   margin-top: 1rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -86,7 +85,7 @@ $colors: (
   text-align: center;
 }
 
-.main__btn__bliss  {
+.main__btn__bliss {
   font-size: 1rem;
   background-image: color(c-aqua_to_lime);
   padding: 2% 5%;
@@ -120,7 +119,6 @@ $colors: (
   background: color(c-white);
   transition: all 0.35s;
   border-radius: 10px;
-
 }
 
 .main__btn__bliss:hover {

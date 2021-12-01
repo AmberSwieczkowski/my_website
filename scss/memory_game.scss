@@ -18,7 +18,7 @@ $colors: (
   c-grey_yellow: #eeeed7,
   c-white: #fff,
   c-black: #131313,
-  c-background_black: #141414,
+  c-background_black: #131313,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
   c-aqua_to_purple:
     linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
@@ -53,7 +53,8 @@ body {
   margin: 80px auto;
   border: 3px solid color(c-black);
   border-radius: 30px;
-  box-shadow: 20px 10px 100px 50px color(c-black), 20px 10px 100px 100px color(c-aqua), 20px 50px 100px 150px color(c-lime);
+  box-shadow: 20px 10px 100px 50px color(c-black),
+    20px 10px 100px 100px color(c-aqua), 20px 50px 100px 150px color(c-lime);
   color: color(c-aqua);
 }
 

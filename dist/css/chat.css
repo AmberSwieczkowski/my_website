@@ -2,8 +2,8 @@
   bottom: 0;
   right: 50px;
   -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  color: #141414;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: #131313;
   z-index: 100;
   position: fixed;
 }
@@ -67,8 +67,8 @@
   left: 0;
   scroll-behavior: smooth;
   -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .chat-container::-webkit-scrollbar {
@@ -81,14 +81,14 @@
   display: flex;
   float: left;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background-color: #ebebeb;
   border-radius: 10px 10px 0px 0px;
   padding: 10px 0px 10px 10px;
@@ -99,10 +99,10 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 25%;
   float: right;
   font-size: 20px;
@@ -122,7 +122,7 @@
   float: left;
   border: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   border-radius: 10px;
   padding: 10px;
@@ -152,7 +152,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   -webkit-animation: floatup 0.5s forwards;
-          animation: floatup 0.5s forwards;
+  animation: floatup 0.5s forwards;
 }
 
 .botText {
@@ -174,18 +174,18 @@
   margin-left: 10px;
   margin-bottom: 10px;
   -webkit-animation: floatup 0.5s forwards;
-          animation: floatup 0.5s forwards;
+  animation: floatup 0.5s forwards;
 }
 
 @-webkit-keyframes floatup {
   from {
     -webkit-transform: translateY(14px);
-            transform: translateY(14px);
+    transform: translateY(14px);
     opacity: 0;
   }
   to {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -193,12 +193,12 @@
 @keyframes floatup {
   from {
     -webkit-transform: translateY(14px);
-            transform: translateY(14px);
+    transform: translateY(14px);
     opacity: 0;
   }
   to {
     -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    transform: translateY(0px);
     opacity: 1;
   }
 }

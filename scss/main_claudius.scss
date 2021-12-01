@@ -18,7 +18,7 @@ $colors: (
   c-grey_yellow: #eeeed7,
   c-white: #fff,
   c-black: #131313,
-  c-background_black: #141414,
+  c-background_black: #131313,
   c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
   c-aqua_to_purple:
     linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
@@ -91,7 +91,6 @@ body {
   margin: 0 auto;
   background-color: color(c-black);
 
-  
   header a {
     color: color(c-aqua);
     text-decoration: none;
@@ -100,78 +99,77 @@ body {
     text-transform: uppercase;
   }
 
-main {
-  @include desktop {
-    display: grid;
-    grid-template-columns: 50% auto;
-    grid-template-areas: "main__claudius__text card";
-    padding: 50px;
-  }
-
-  section#card {
-    background: color(c-orange_to_pink);
-    padding: 20px;
-    margin: 50px auto;
-    border-radius: $borders;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    width: 80%;
-
+  main {
     @include desktop {
-      grid-area: card;
-      height: fit-content;
-      align-self: center;
-      margin: 1em;
-    }
-  }
-  section#main__claudius__text {
-    color: color(c-aqua);
-    padding: $padding;
-    text-align: center;
-    position: relative;
-
-    @include desktop {
-      grid-area: main__claudius__text;
-      text-align: left;
-      margin: 4em 0 0 10em;
+      display: grid;
+      grid-template-columns: 50% auto;
+      grid-template-areas: "main__claudius__text card";
+      padding: 50px;
     }
 
-    h1 {
-      font-size: 3em;
-      margin-top: 10px;
-      text-transform: uppercase;
+    section#card {
+      background: color(c-orange_to_pink);
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: $borders;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      width: 80%;
+
+      @include desktop {
+        grid-area: card;
+        height: fit-content;
+        align-self: center;
+        margin: 1em;
+      }
+    }
+    section#main__claudius__text {
       color: color(c-aqua);
-
-      @include desktop {
-        width: 30%;
-        font-size: 4em;
-        line-height: 0.9em;
-      }
-    }
-
-    p {
-      font-size: 1.4em;
-      color: color(c-pink);
-    }
-
-    a {
-      color: color(c-orange);
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      display: block;
-      text-align: center;
-      margin: 50px auto 0 auto;
       padding: $padding;
+      text-align: center;
+      position: relative;
 
       @include desktop {
-        display: inline-block;
-        padding: $padding $padding * 4;
+        grid-area: main__claudius__text;
+        text-align: left;
+        margin: 4em 0 0 10em;
+      }
+
+      h1 {
+        font-size: 3em;
+        margin-top: 10px;
+        text-transform: uppercase;
+        color: color(c-aqua);
+
+        @include desktop {
+          width: 30%;
+          font-size: 4em;
+          line-height: 0.9em;
+        }
+      }
+
+      p {
+        font-size: 1.4em;
+        color: color(c-pink);
+      }
+
+      a {
+        color: color(c-orange);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        margin: 50px auto 0 auto;
+        padding: $padding;
+
+        @include desktop {
+          display: inline-block;
+          padding: $padding $padding * 4;
+        }
       }
     }
   }
-  }
 
-  
   // Hover affect around Claudius is Waiting
 
   .claudius__is__waiting {
@@ -244,7 +242,7 @@ main {
 .claudius__noteworthy__clients {
   font-size: 2rem;
   margin-left: 80px;
-  padding-top:20px;
+  padding-top: 20px;
 }
 
 .claudius__client__list li {
