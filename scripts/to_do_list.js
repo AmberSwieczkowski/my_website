@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
     
     // done items
     todayList.addEventListener('click', (e) => {
-      if(e.target.className == 'to__do__item'){
+      if(e.target.className == 'to__do__item' || e.target.className == 'done'){
         const li = e.target.parentElement;
         li.remove();
       }
@@ -50,6 +50,9 @@ document.addEventListener('DOMContentLoaded', function(){
     li.appendChild(doneBtn);
     li.appendChild(reschedule__tomorrow__button);
     todayList.appendChild(li);
+
+      // reset input field as blank
+    addForm.reset();
     });
 
     // hide items

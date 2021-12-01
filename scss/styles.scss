@@ -276,7 +276,7 @@ $colors: (
 /* Home Main Section Index CSS */
 
 .main {
-  background-color: color(c-background_black);
+  background-color: color(c-black);
 }
 
 .main__container {
@@ -286,7 +286,7 @@ $colors: (
   justify-self: center;
   margin: 0 auto;
   height: 90vh;
-  background-color: color(c-background_black);
+  background-color: color(c-black);
   z-index: 1;
   width: 100%;
   max-width: 1300px;

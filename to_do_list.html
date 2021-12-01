@@ -66,6 +66,7 @@
           </form>
         </div>
       </header>
+
       <form id="add-item">
         <div class="add__new__item">
           <input
@@ -75,8 +76,21 @@
           />
           <button>Add</button>
         </div>
+        <div class="add__new__date">
+          <input 
+          type="datetime-local" 
+          id="new__date__input" 
+          value="2021-12-20T12:00" 
+          min="2021-01-01T00:00" 
+          max="2023-01-31T23:59"
+          />
+          <label for="new__date__input"></label>
+        </div>
         <div class="checkboxes">
-          <input type="checkbox" id="hide" />
+          <input 
+          type="checkbox" 
+          id="hide" 
+          />
           <label for="hide">Hide List</label>
         </div>
       </form>
@@ -176,7 +190,7 @@
               ><i class="fas fa-umbrella-beach"></i>AMBER</a
             >
           </div>
-          <p class="website__rights">CONFIDENTIAL 2021 © All Rights Reserved</p>
+          <p class="website__rights">KrustyKrabUSA 2021 © All Rights Reserved</p>
           <div class="social__icons">
             <a href="/" class="social__icon--link" target="_blank">
               <i class="fab fa-facebook"></i>

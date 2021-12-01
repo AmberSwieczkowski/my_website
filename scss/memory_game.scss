@@ -1,0 +1,86 @@
+$colors: (
+  c-royalblue: #0091ff,
+  c-blue_adventure: #37848c,
+  c-aqua: #00ffff,
+  c-green_adventure: #b9d9ce,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-orange_adventure: #d9583b,
+  c-salmon: #f77062,
+  c-light_grey: #eeeed7,
+  c-pink: #ff99ff,
+  c-purple: #e432f4,
+  c-purple_light: lighten(#e432f4, 10%),
+  c-red_adventure: #8c0303,
+  c-grey_dark: #333,
+  c-grey_adventure: #d9d9d9,
+  c-grey: #e0e0e0,
+  c-grey_yellow: #eeeed7,
+  c-white: #fff,
+  c-black: #131313,
+  c-background_black: #141414,
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+  c-black_to_red_adventure:
+    linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+body {
+  background-color: color(c-black);
+}
+
+.memory__game__container {
+  width: 650px;
+  height: 650px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  margin: 80px auto;
+  border: 3px solid color(c-black);
+  border-radius: 30px;
+  box-shadow: 20px 10px 100px 50px color(c-black), 20px 10px 100px 100px color(c-aqua), 20px 50px 100px 150px color(c-lime);
+  color: color(c-aqua);
+}
+
+.memory__game__container h1 {
+  color: color(c-lime);
+  margin-top: 20px;
+}
+
+.memory__game__grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  width: 500px;
+  margin: 50px auto 20px auto;
+}
+
+#memory__game__reset {
+  background-color: color(c-salmon);
+  color: color(c-white);
+  margin: 100px auto;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#memory__game__status {
+  color: color(c-lime);
+  margin: 30px auto;
+  font-size: 1.2rem;
+}
