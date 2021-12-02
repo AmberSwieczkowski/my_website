@@ -1,0 +1,37 @@
+body {
+  background: #131313;
+}
+
+.main__cookie__collection__container {
+  padding-top: 100px;
+}
+
+.cookie__square {
+  width: 180px;
+  height: 180px;
+  border-style: solid;
+  border-color: #fff;
+}
+
+.cookie__collection__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 800px;
+  height: 90vh;
+  margin: auto;
+}
+
+.cookie__image {
+  background-image: url("/images/cookie.jpg");
+  background-size: cover;
+}
