@@ -1,4 +1,9 @@
 $colors: (
+  bubble-blue: #a4e2f5,
+  bubble-green: #ecfa95,
+  bubble-orange: #ffb980,
+  bubble-purple: #c182db,
+  bubble-red: #fc7686,
   c-royalblue: #0091ff,
   c-blue_adventure: #37848c,
   c-aqua: #00ffff,
@@ -31,31 +36,64 @@ $colors: (
 }
 
 body {
-    background: color(c-black);
+  background: color(bubble-purple);
 }
 .main__cookie__collection__container {
-    padding-top: 100px;
+  padding-top: 50px;
+}
+
+.main__cookie__collection__header {
+  color: color(c-black);
+  position: relative;
+  text-align: center;
+  margin: auto;
+
+  h2 {
+    display: inline-block;
+  }
+}
+
+#cookie__collection__counter {
+  margin-right: 100px;
+}
+
+.cookie__collection__grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  overflow: hidden;
+  justify-content: center;
+  align-content: center;
+  width: 910px;
+  height: 550px;
+  margin: 50px auto;
+  // border: 2px solid color(c-white);
+  border-radius: 20px;
+  box-shadow: 10px -10px 50px color(bubble-blue);
 }
 
 .cookie__square {
   width: 180px;
   height: 180px;
-  border-style: solid;
-  border-color: color(c-white);
-
-}
-
-.cookie__collection__grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-content: center;
-  width: 800px;
-  height: 90vh;
-  margin: auto;
+  // border: 2px solid color(c-black);
 }
 
 .cookie__image {
-    background-image: url('/images/cookie.jpg');
-    background-size: cover;
+  background-image: url("/images/cookie.jpg");
+  background-size: cover;
+}
+
+.main__cookie__collection__footer {
+  background: color(bubble-blue);
+  position: relative;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  width: 120px;
+  border-radius: 8px;
+  
+  a {
+    color: color(c-black);
+    font-weight: bold;
+    text-decoration: none;
+  }
 }

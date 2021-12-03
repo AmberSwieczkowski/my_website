@@ -1,17 +1,24 @@
 $colors: (
-  c-royalblue: #0091ff,
-  c-aqua: #00ffff,
   bubble-blue: #a4e2f5,
-  c-lime: #bbff99,
   bubble-green: #ecfa95,
-  c-orange: #ffcc66,
   bubble-orange: #ffb980,
+  bubble-purple: #c182db,
   bubble-red: #fc7686,
+  c-royalblue: #0091ff,
+  c-blue_adventure: #37848c,
+  c-aqua: #00ffff,
+  c-green_adventure: #b9d9ce,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-orange_adventure: #d9583b,
+  c-salmon: #f77062,
   c-light_grey: #eeeed7,
   c-pink: #ff99ff,
   c-purple: #e432f4,
   c-purple_light: lighten(#e432f4, 10%),
-  bubble-purple: #c182db,
+  c-red_adventure: #8c0303,
+  c-grey_dark: #333,
+  c-grey_adventure: #d9d9d9,
   c-grey: #e0e0e0,
   c-grey_yellow: #eeeed7,
   c-white: #fff,
@@ -20,6 +27,8 @@ $colors: (
   c-aqua_to_purple:
     linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
   c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+  c-black_to_red_adventure:
+    linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%),
 );
 
 @function color($color-name) {

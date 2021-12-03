@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/cookie_collection.css" />
     <link rel="stylesheet" href="/dist/css/styles.css">
+        <!--Icon Umbrella-Beach Import-->
+        <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+        crossorigin="anonymous"
+      />
     <title>Cookie Collection</title>
   </head>
   <body>
@@ -53,14 +60,19 @@
 
     <!-- Cookie Collection Section -->
     <div class="main__cookie__collection__container">
-        <h1>Cookie Collection</h1>
-
-        <h2>Cookies:</h2>
-        <h2 id="cookie__collection__score">0</h2>
-    
-        <h2>Seconds left:</h2>
-        <h2 id="time__left">45</h2>
-    
+       <div class="main__cookie__collection__header">
+         <p>Mom just went to the other room... now is your chance...</p>
+         <br>
+        <h1>Collect As Many Cookies As You Can!</h1>
+        <br>
+        <h2 id="cookie__collection__counter">Cookies: 
+          <span id="cookie__collection__score">0</span>
+        </h2>
+  
+        <h2 id="cookie__countdown__timer">Seconds left: 
+          <span id="time__left">30</span>
+        </h2>
+       </div>
         <div class="cookie__collection__grid">
             <div class="cookie__square" id="1"></div>
             <div class="cookie__square" id="2"></div>
@@ -77,7 +89,9 @@
             <div class="cookie__square" id="13"></div>
             <div class="cookie__square" id="14"></div>
             <div class="cookie__square" id="15"></div>
-            <div class="cookie__square" id="16"></div>
+        </div>
+        <div class="main__cookie__collection__footer">
+          <a href="/projects/cookie_collection.html">Restart</a>
         </div>
     </div>
  
