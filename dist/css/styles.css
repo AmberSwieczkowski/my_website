@@ -386,7 +386,7 @@
 }
 
 /* Mobile Responsive */
-@media screen and (max-width: 1110px) {
+@media screen and (max-width: 960px) {
   .main__container {
     display: -ms-grid;
     display: grid;
@@ -399,11 +399,10 @@
         justify-self: center;
     width: 100%;
     margin: 0 auto;
-    height: 90vh;
   }
   .main__content {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 8rem;
   }
   .main__content h1 {
     font-size: 2.5rem;
@@ -420,7 +419,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 575px) {
   .main__content h1 {
     font-size: 2rem;
     margin-top: 3rem;
@@ -453,7 +452,6 @@
 .card {
   width: 68%;
   margin: auto;
-  padding: 50px;
   background-color: #42515a;
   -webkit-box-shadow: 0 10px 30px #42515a;
           box-shadow: 0 10px 30px #42515a;
@@ -567,11 +565,9 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 20px 0;
-  width: 400px;
+  width: 100%;
   position: relative;
-  top: 50px;
-  right: 50px;
-  margin: auto;
+  margin-top: 50px;
 }
 
 .card .card-footer .count {
