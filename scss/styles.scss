@@ -35,6 +35,11 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+$display: 1200px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; //col-md
+$phone: 480px; //col-sm
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -57,6 +62,20 @@ $colors: (
   top: 0;
   z-index: 999;
   opacity: 1;
+  width: 100%;
+  @media (max-width: $laptop) {
+    background: color(c-blue_adventure);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    width: 100%;
+  }
 }
 
 .navbar__container {
@@ -67,7 +86,16 @@ $colors: (
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 5px 20px;
+  @media (max-width: $phone) {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    padding: 0;
+    font-size: 10px;
+    border: 2px solid color(c-white);
+  }
 }
 
 #navbar__logo {
@@ -161,17 +189,7 @@ $colors: (
   content: "Are You Sure?";
 }
 
-@media screen and (max-width: 960px) {
-  .navbar__container {
-    display: flex;
-    justify-content: space-between;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    padding: 0;
-  }
-
+@media (max-width: $laptop) {
   .navbar__menu {
     display: grid;
     grid-template-columns: auto;
@@ -281,20 +299,46 @@ $colors: (
 
 .main {
   background-color: color(c-black);
+  padding-top: 50px;
+  @media (max-width: $laptop) {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  @media (max-width: $phone) {
+      display: grid;
+      grid-template-columns: auto;
+    }
 }
 
 .main__container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-self: center;
-  margin: 0 auto;
+  margin: 0;
   height: 90vh;
   background-color: color(c-black);
   z-index: 1;
   width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
+  @media (max-width: $laptop) {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.main__content {
+  @media (max-width: $laptop) {
+    text-align: center;
+    margin-bottom: 8rem;
+  }
 }
 
 .main__content h1 {
@@ -310,6 +354,16 @@ $colors: (
   // padding: 2%;
   text-align: center;
   animation: blinker 5s linear infinite;
+  @media (max-width: $laptop) {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    @media (max-width: $phone) {
+        font-size: 2rem;
+        margin-top: 3rem;
+        align-items: center;
+      }
 }
 
 .main__content h2 {
@@ -317,6 +371,14 @@ $colors: (
   color: color(c-purple);
   background-size: 100%;
   text-align: center;
+  @media (max-width: $laptop) {
+      font-size: 3rem;
+      text-align: center;
+    }
+  @media (max-width: $phone) {
+      font-size: 2rem;
+      align-items: center;
+    }
 }
 
 .main__content p {
@@ -326,6 +388,15 @@ $colors: (
   color: color(c-salmon);
   margin-bottom: 10%;
   text-align: center;
+  @media (max-width: $laptop) {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  @media (max-width: $phone) {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      align-items: center;
+    }
 }
 
 .main__btn {
@@ -340,6 +411,11 @@ $colors: (
   position: relative;
   transition: all 0.35s;
   outline: none;
+  @media (max-width: $phone) {
+    padding: 12px 12px;
+    margin: 0 0;
+    align-content: center;
+  }
 }
 
 .main__btn a {
@@ -372,76 +448,31 @@ $colors: (
   width: 100%;
 }
 
-/* Mobile Responsive */
-@media screen and (max-width: 960px) {
-  .main__container {
-    display: grid;
-    grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
-    margin: 0 auto;
-    // height: 90vh;
-  }
-
-  .main__content {
-    text-align: center;
-    margin-bottom: 8rem;
-  }
-
-  .main__content h1 {
-    font-size: 2.5rem;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .main_content h2 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .main__content p {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .main__content h1 {
-    font-size: 2rem;
-    margin-top: 3rem;
-    align-items: center;
-  }
-
-  .main_content h2 {
-    font-size: 2rem;
-    align-items: center;
-  }
-
-  .main__content p {
-    margin-top: 2rem;
-    font-size: 1.5rem;
-    align-items: center;
-  }
-
-  .main_btn {
-    padding: 12px 12px;
-    margin: 0 0;
-    align-content: center;
-  }
-}
-
 /* Profile Card Section */
 
 .card {
-  width: 68%;
+  width: 120%;
   margin: auto;
-  background-color: #42515a;
-  box-shadow: 0 10px 30px #42515a;
   text-align: center;
   font-size: 20px;
   border-radius: 15px;
   border: 5px solid color(c-lime);
+  background-color: #42515a;
+  box-shadow: 0 10px 30px #42515a;
+  @media (max-width: $laptop) {
+      width: 60%;
+      font-size: 0.5rem;
+      border-radius: 15px;
+      border: 5px solid color(c-white);
+      background-color: color(c-royalblue);
+    }
+  @media (max-width: $phone) {
+    width: 95%;
+    font-size: 5px;
+    border-radius: 15px;
+    border: 5px solid color(c-aqua);
+    background-color: color(c-red_adventure);
+  }
 }
 
 .card .card-header {
@@ -470,6 +501,9 @@ $colors: (
 .card .card-body {
   text-align: center;
   margin: auto;
+  @media (max-width: $tablet) {
+      padding: 10px 20px;
+  }
 }
 
 .card .card-body .name {
@@ -532,6 +566,8 @@ $colors: (
 
 .card .card-footer {
   background-color: color(c-purple);
+  display: grid;
+  grid-template-columns: auto auto auto;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 20px 0;
@@ -541,31 +577,25 @@ $colors: (
   margin-top: 50px;
 }
 
-.card .card-footer .count {
+.card .card-footer .followers {
   font-size: 20px;
 }
-@media screen and (max-width: 960px) {
-  .card {
-    width: 98%;
-  }
 
-@media screen and (max-width: 480px) {
-  .card {
-    width: 96%;
-  }
-
-  .card .card-body {
-    padding: 10px 20px;
-  }
+.card .card-footer .followers span {
+  font-weight: bold;
 }
 
 /* Services Section CSS */
 .services {
   background: color(c-black);
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
   align-items: center;
-  height: 100vh;
+  // height: 100vh;
+  @media (max-width: $laptop) {
+      display: grid;
+      grid-template-columns: auto;
+    }
 }
 
 .services h1 {
@@ -586,6 +616,9 @@ $colors: (
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  @media (max-width: $laptop) {
+      font-size: 2rem;
+    }
 }
 
 .services:hover h1 {
@@ -594,7 +627,7 @@ $colors: (
 }
 
 .services__container {
-  display: flex;
+  display: grid;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -657,18 +690,7 @@ $colors: (
   cursor: pointer;
 }
 
-@media screen and (max-width: 960px) {
-  .services {
-    height: 1600px;
-  }
-
-  .services h1 {
-    font-size: 2rem;
-    margin-top: 12rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media (max-width: $phone) {
   .services {
     height: 1400px;
   }
@@ -795,7 +817,7 @@ $colors: (
   color: color(c-white);
   margin: 5%;
 }
-@media screen and (max-width: 820px) {
+@media (max-width: $laptop) {
   .footer__links {
     padding-top: 2rem;
   }
@@ -813,7 +835,7 @@ $colors: (
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: $phone) {
   .footer__link--items {
     margin: 0;
     padding: 10px;
