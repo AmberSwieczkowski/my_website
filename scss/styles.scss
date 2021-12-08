@@ -35,10 +35,10 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
-$display: 1200px; // col-xl
+$display: 1220px; // col-xl
 $laptop: 1024px; // col-lg
 $tablet: 768px; //col-md
-$phone: 480px; //col-sm
+$phone: 550px; //col-sm
 
 * {
   -webkit-box-sizing: border-box;
@@ -303,6 +303,7 @@ $phone: 480px; //col-sm
     grid-template-columns: auto;
     align-items: center;
     justify-self: center;
+    align-content: center;
     padding-top: 0;
     width: 100%;
     margin: 0 auto;
@@ -317,6 +318,7 @@ $phone: 480px; //col-sm
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
+  justify-items: center;
   justify-self: center;
   background-color: color(c-black);
   z-index: 1;
@@ -324,9 +326,6 @@ $phone: 480px; //col-sm
   @media (max-width: $laptop) {
     display: grid;
     grid-template-columns: auto;
-    align-items: center;
-    justify-self: center;
-    width: 100%;
   }
 }
 
@@ -350,10 +349,12 @@ $phone: 480px; //col-sm
   // padding: 2%;
   text-align: center;
   animation: blinker 5s linear infinite;
+  @media (max-width: $display) {
+    font-size: 3.5rem;
+  }
   @media (max-width: $laptop) {
     font-size: 3rem;
     margin-top: 2rem;
-    text-align: center;
   }
   @media (max-width: $phone) {
     font-size: 2rem;
@@ -367,6 +368,9 @@ $phone: 480px; //col-sm
   color: color(c-purple);
   background-size: 100%;
   text-align: center;
+  @media (max-width: $display) {
+    font-size: 1rem;
+  }
   @media (max-width: $laptop) {
     font-size: 2.5rem;
     text-align: center;
@@ -384,6 +388,9 @@ $phone: 480px; //col-sm
   color: color(c-salmon);
   margin-bottom: 10%;
   text-align: center;
+  @media (max-width: $display) {
+    font-size: 0.5rem;
+  }
   @media (max-width: $laptop) {
     margin-top: 1rem;
     font-size: 2rem;
@@ -456,8 +463,11 @@ $phone: 480px; //col-sm
   border: 5px solid color(c-lime);
   background-color: #42515a;
   box-shadow: 0 10px 30px #42515a;
+  @media (max-width: $display) {
+    width: 40%;
+  }
   @media (max-width: $laptop) {
-    font-size: 10px;
+    font-size: 20px;
   }
   @media (max-width: $phone) {
     width: 95%;
@@ -469,17 +479,24 @@ $phone: 480px; //col-sm
   position: relative;
   height: 100px;
   // border: 5px solid color(c-lime);
+  @media (max-width: $tablet) {
+    height: 30px;
+  }
 }
 
 .card .card-header .profile-img {
   width: 200px;
   height: 200px;
-  border-radius: 1000px;
+  border-radius: 100px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 8px solid color(c-purple);
   box-shadow: 0 0 20px #42515a;
+  @media (max-width: $tablet) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .card .card-header .profile-img:hover {
@@ -510,6 +527,15 @@ $phone: 480px; //col-sm
 .card .card-body .mail {
   font-size: 20px;
   color: color(c-grey_adventure);
+  @media (max-width: 1400px) {
+    font-size: 15px;
+  }
+  @media (max-width: $display) {
+    font-size: 15px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 15px;
+  }
 }
 
 .card .card-body .mail:hover {
@@ -520,13 +546,26 @@ $phone: 480px; //col-sm
   margin-top: 10px;
   font-size: 20px;
   color: color(c-lime);
+  @media (max-width: $display) {
+    font-size: 10px;
+  }
 }
 
 .card .social-links {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+  @media (max-width: $display) {
+    grid-template-columns: auto auto;
+    grid-gap: 20px;
+  }
+  @media (max-width: $tablet) {
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+  }
 }
 
 .card .social-links .social-icon {
@@ -540,7 +579,7 @@ $phone: 480px; //col-sm
   font-size: 20px;
   border-radius: 100%;
   text-decoration: none;
-  margin-left: 20px;
+
 }
 
 .card .social-links .social-icon:last-child {
@@ -569,6 +608,9 @@ $phone: 480px; //col-sm
 
 .card .card-footer .followers {
   font-size: 20px;
+  @media (max-width: $display) {
+    font-size: 10px;
+  }
 }
 
 .card .card-footer .followers span {
