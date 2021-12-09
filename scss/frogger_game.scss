@@ -35,6 +35,11 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+$display: 1220px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; //col-md
+$phone: 550px; //col-sm
+
 body {
   background-color: color(c-black);
 }
@@ -44,6 +49,10 @@ body {
   margin: 50px;
   text-align: center;
   color: color(c-lime);
+  @media (max-width: $phone) {
+    font-size: 2rem;
+    margin: 50px;
+  }
 }
 
 .frogger__wrapper {
@@ -55,6 +64,15 @@ body {
   height: 600px;
   transform: translate(-50%, -50%);
   background: url("/images/frogger/background.png");
+  @media (max-width: $tablet) {
+    width: 400px;
+    height: 400px;
+  }
+  @media (max-width: $phone) {
+    top: 65%;
+    width: 360px;
+    height: 360px;
+  }
 }
 .frogger__canvas {
   position: absolute;

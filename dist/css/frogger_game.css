@@ -9,6 +9,13 @@ body {
   color: #bbff99;
 }
 
+@media (max-width: 550px) {
+  #main__frogger__heading {
+    font-size: 2rem;
+    margin: 50px;
+  }
+}
+
 .frogger__wrapper {
   border: 5px solid #e432f4;
   top: 50%;
@@ -19,6 +26,21 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: url("/images/frogger/background.png");
+}
+
+@media (max-width: 768px) {
+  .frogger__wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 550px) {
+  .frogger__wrapper {
+    top: 65%;
+    width: 360px;
+    height: 360px;
+  }
 }
 
 .frogger__canvas {

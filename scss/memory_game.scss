@@ -35,6 +35,11 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+$display: 1220px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; //col-md
+$phone: 550px; //col-sm
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -60,6 +65,10 @@ body {
   box-shadow: 20px 10px 100px 50px color(c-black),
     20px 10px 100px 100px color(c-aqua), 20px 50px 100px 150px color(c-lime);
   color: color(c-aqua);
+  @media (max-width: $tablet) {
+    width: 450px;
+    height: 450px;
+  }
 }
 
 .memory__game__container h1 {
@@ -73,6 +82,10 @@ body {
   height: 400px;
   width: 500px;
   margin: 50px auto 20px auto;
+  @media (max-width: $tablet) {
+    width: 300px;
+    height: 400px;
+  }
 }
 
 #memory__game__reset {

@@ -37,6 +37,13 @@
   text-align: center;
 }
 
+@media (max-width: 1220px) {
+  .main__adv__container {
+    max-width: 100%;
+    font-size: 3rem;
+  }
+}
+
 #inventory__list {
   font-size: 2rem;
   color: #b9d9ce;
@@ -53,6 +60,14 @@
   margin-top: 80px;
 }
 
+@media (max-width: 1220px) {
+  .adv__buttons__grid {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    margin-top: 50px;
+  }
+}
+
 .adv__button {
   background: #b9d9ce;
   border: 5px solid #b9d9ce;
@@ -63,6 +78,18 @@
   font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
+}
+
+@media (max-width: 1220px) {
+  .adv__button {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .adv__button {
+    font-size: 2rem;
+  }
 }
 
 .adv__button:hover {

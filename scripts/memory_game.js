@@ -95,7 +95,7 @@ var cardsWon = [];
 
 
 // create your board
-function createBoard() {
+function createBoard(boardSize) {
     for (let i = 0; i < cardArray.length; i++) {
         var card = document.createElement('img');
         card.setAttribute('src', '/images/memory_game/blue-marble-tile.jpg');
@@ -144,6 +144,10 @@ function flipCard() {
         }
     }
 }
+
+document.addEventListener('resize', function() {
+
+})
 
 createBoard();
 

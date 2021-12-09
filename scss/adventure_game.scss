@@ -35,6 +35,11 @@ $colors: (
   @return map-get($colors, $color-name);
 }
 
+$display: 1220px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; //col-md
+$phone: 550px; //col-sm
+
 *,
 *::before,
 *::after {
@@ -64,6 +69,10 @@ $colors: (
   color: color(c-green_adventure);
   font-size: 4rem;
   text-align: center;
+  @media (max-width: $display) {
+    max-width: 100%;
+    font-size: 3rem;
+  }
 }
 
 #inventory__list {
@@ -78,6 +87,10 @@ $colors: (
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin-top: 80px;
+  @media (max-width: $display) {
+    grid-template-columns: auto;
+    margin-top: 50px;
+  }
 }
 
 .adv__button {
@@ -90,6 +103,12 @@ $colors: (
   font-size: 2rem;
   font-weight: 800;
   cursor: pointer;
+  @media (max-width: $display) {
+    font-size: 2rem;
+  }
+  @media (max-width: $tablet) {
+    font-size: 2rem;
+  }
 }
 
 .adv__button:hover {

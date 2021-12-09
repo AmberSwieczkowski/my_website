@@ -13,11 +13,11 @@ window.onload = function() {
 }
 
 window.addEventListener('resize', function() {
-    this.cancelAnimationFrame(flowFieldAnimation);
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
-    flowField.animate(); // line animation
+        this.cancelAnimationFrame(flowFieldAnimation);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        flowField = new FlowFieldEffect(ctx, canvas.width, canvas.height);
+        flowField.animate(0); // line animation
 });
 
 const mouse = {
@@ -41,11 +41,11 @@ class FlowFieldEffect {
         this.lastTime = 0;
         this.interval = 1000/60;
         this.timer = 0;
-        this.cellSize = 15;
+        this.cellSize = 10;
         this.gradient;
         this.#createGradient();
         this.#ctx.strokeStyle = this.gradient; // line color
-        this.radius = 6;
+        this.radius = 2;
         this.vr = 0.1;
     }
 
@@ -91,7 +91,7 @@ class FlowFieldEffect {
 
             for (let y = 0; y < this.#height; y += this.cellSize){
                 for (let x = 0; x < this.#width; x += this.cellSize) {
-                    const angle = (Math.cos(mouse.x * x * 0.00001) + Math.sin(mouse.y * y * 0.00001)) * this.radius;
+                    const angle = (Math.cos(mouse.x * x * 0.0001) + Math.sin(mouse.y * y * 0.0001)) * this.radius;
                     this.#drawLine(angle, x, y);
             }
         }
