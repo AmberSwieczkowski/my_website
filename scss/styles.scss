@@ -409,17 +409,17 @@ $phone: 550px; //col-sm
   padding: 2% 5%;
   border: none;
   border-radius: 10px;
-  color: color(c-white);
   cursor: pointer;
-  left: 37%;
   position: relative;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   margin: auto;
   transition: all 0.35s;
   outline: none;
   @media (max-width: $laptop) {
     padding: 12px 12px;
-    left: 0;
-    align-content: center;
+    left: 25%;
   }
 }
 
@@ -579,7 +579,6 @@ $phone: 550px; //col-sm
   font-size: 20px;
   border-radius: 100%;
   text-decoration: none;
-
 }
 
 .card .social-links .social-icon:last-child {

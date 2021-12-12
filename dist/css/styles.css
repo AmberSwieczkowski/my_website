@@ -481,10 +481,11 @@
   padding: 2% 5%;
   border: none;
   border-radius: 10px;
-  color: #fff;
   cursor: pointer;
-  left: 37%;
   position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   margin: auto;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
@@ -494,9 +495,7 @@
 @media (max-width: 1024px) {
   .main__btn {
     padding: 12px 12px;
-    left: 0;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    left: 25%;
   }
 }
 
