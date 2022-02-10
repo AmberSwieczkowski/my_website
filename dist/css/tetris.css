@@ -16,7 +16,7 @@ body {
   font-size: 1.6rem;
   margin: auto;
   max-width: 60rem;
-  color: #d8edea;
+  color: #fff;
   background: radial-gradient(circle, #afc4ae 0%, #68ccbf 89%, #5ebfb2 100%);
 }
 
@@ -140,8 +140,8 @@ div {
   display: block;
   margin: 30px;
   text-shadow: -1px -1px 0 #a84155;
-  background: #d25068;
-  border: 1px solid #d25068;
+  background: #f77062;
+  border: 1px solid #f77062;
   width: 12rem;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f66c7b), to(#d25068));
   background-image: linear-gradient(to bottom, #f66c7b, #d25068);
