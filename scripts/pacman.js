@@ -3,7 +3,7 @@ const c = canvas.getContext('2d')
 
 const scoreEl = document.querySelector('#scoreElement')
 
-canvas.width = innerWidth / 6.4
+canvas.width = innerWidth / 3
 canvas.height = innerHeight - 180
 
 class Boundary {
@@ -535,26 +535,26 @@ function animate() {
     }
 
     // Detect Collision Between Ghosts and Player
-    // for (let ghostsIndex = ghosts.length - 1; ghostsIndex >= 0; ghostsIndex--) {
-    //     const ghost = ghosts[ghostsIndex]
+    for (let ghostsIndex = ghosts.length - 1; ghostsIndex >= 0; ghostsIndex--) {
+        const ghost = ghosts[ghostsIndex]
 
-    //     // Ghost Touches Player
-    //     if (
-    //         Math.hypot(
-    //             ghost.position.x - player.position.x,
-    //             ghost.position.y - player.position.y
-    //         ) <
-    //         ghost.radius + player.radius
-    //     ) {
+        // Ghost Touches Player
+        if (
+            Math.hypot(
+                ghost.position.x - player.position.x,
+                ghost.position.y - player.position.y
+            ) <
+            ghost.radius + player.radius
+        ) {
 
-    //         if (ghost.scared) {
-    //             ghosts.splice(ghostsIndex, 1)
-    //         } else {
-    //             cancelAnimationFrame(animationId)
-    //             alert('You Lose')
-    //         }
-    //     }
-    // }
+            if (ghost.scared) {
+                ghosts.splice(ghostsIndex, 1)
+            } else {
+                cancelAnimationFrame(animationId)
+                alert('You Lose')
+            }
+        }
+    }
 
     // Win Condition
     if (pellets.length === 0) {
