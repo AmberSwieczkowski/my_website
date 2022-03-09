@@ -3,8 +3,8 @@ const c = canvas.getContext('2d')
 
 const scoreEl = document.querySelector('#scoreElement')
 
-canvas.width = innerWidth
-canvas.height = innerHeight
+canvas.width = innerWidth / 6.4
+canvas.height = innerHeight - 180
 
 class Boundary {
     static width = 40;
@@ -303,7 +303,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/capLeft.png')
@@ -314,7 +314,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/capRight.png')
@@ -325,7 +325,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/capBottom.png')
@@ -336,7 +336,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/capTop.png')
@@ -347,7 +347,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/pipeCross.png')
@@ -358,7 +358,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         color: 'blue',
@@ -370,7 +370,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         color: 'blue',
@@ -382,7 +382,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         color: 'blue',
@@ -394,7 +394,7 @@ map.forEach((row, rowIndex) => {
                 boundaries.push(
                     new Boundary({
                         position: {
-                            x: columnIndex * Boundary.width,
+                            x: Boundary.width * columnIndex,
                             y: rowIndex * Boundary.height
                         },
                         image: createImage('../images/pacman/pipeConnectorLeft.png')
@@ -405,7 +405,7 @@ map.forEach((row, rowIndex) => {
                 pellets.push(
                     new Pellet({
                         position: {
-                            x: columnIndex * Boundary.width + Boundary.width / 2,
+                            x: Boundary.width * columnIndex + Boundary.width / 2,
                             y: rowIndex * Boundary.height + Boundary.height / 2
                         }
                     })
@@ -415,7 +415,7 @@ map.forEach((row, rowIndex) => {
                 powerUps.push(
                     new PowerUps({
                         position: {
-                            x: columnIndex * Boundary.width + Boundary.width / 2,
+                            x: Boundary.width * columnIndex + Boundary.width / 2,
                             y: rowIndex * Boundary.height + Boundary.height / 2
                         }
                     })
@@ -535,26 +535,26 @@ function animate() {
     }
 
     // Detect Collision Between Ghosts and Player
-    for (let ghostsIndex = ghosts.length - 1; ghostsIndex >= 0; ghostsIndex--) {
-        const ghost = ghosts[ghostsIndex]
+    // for (let ghostsIndex = ghosts.length - 1; ghostsIndex >= 0; ghostsIndex--) {
+    //     const ghost = ghosts[ghostsIndex]
 
-        // Ghost Touches Player
-        if (
-            Math.hypot(
-                ghost.position.x - player.position.x,
-                ghost.position.y - player.position.y
-            ) <
-            ghost.radius + player.radius
-        ) {
+    //     // Ghost Touches Player
+    //     if (
+    //         Math.hypot(
+    //             ghost.position.x - player.position.x,
+    //             ghost.position.y - player.position.y
+    //         ) <
+    //         ghost.radius + player.radius
+    //     ) {
 
-            if (ghost.scared) {
-                ghosts.splice(ghostsIndex, 1)
-            } else {
-                cancelAnimationFrame(animationId)
-                alert('You Lose')
-            }
-        }
-    }
+    //         if (ghost.scared) {
+    //             ghosts.splice(ghostsIndex, 1)
+    //         } else {
+    //             cancelAnimationFrame(animationId)
+    //             alert('You Lose')
+    //         }
+    //     }
+    // }
 
     // Win Condition
     if (pellets.length === 0) {

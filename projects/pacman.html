@@ -7,20 +7,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/pacman.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+
+    <!--Icon Umbrella-Beach Import-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Pacman</title>
   </head>
   <body>
-    <h1>PACMAN</h1>
-    <div class="gameBoardContainer">
-      <p>
-        <span>
-          Score:
-          <span id="scoreElement"> 0 </span>
-        </span>
-      </p>
-      <canvas></canvas>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/projects/pacman.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>Pacman</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/projects.html" class="navbar__links">Projects</a>
+          </li>
+          <li class="navbar__btn">
+            <a
+              href="/self_destruct_verification.html"
+              class="self_destruct_button"
+              ><span>Self Destruct</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Scrolling Progress Bar -->
+    <div class="scrolling-progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- The Game -->
+    <div class="pacmanGameContainer">
+      <h1 class="pacmanTitle">PACMAN</h1>
+      <p class="pacmanInstructions">Press the arrow keys to play!</p>
+      <div class="gameBoardContainer">
+        <p class="pacmanScore">
+          <span>
+            Score:
+            <span id="scoreElement"> 0 </span>
+          </span>
+        </p>
+        <canvas class="pacmanCanvas"></canvas>
+      </div>
     </div>
 
     <script src="../scripts/pacman.js"></script>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/scrolling_progress_bar.js"></script>
   </body>
 </html>

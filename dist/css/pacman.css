@@ -1,36 +1,45 @@
 /** @format */
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  background-color: black;
-}
-
-html,
-body {
-  overflow-x: hidden;
-  overflow-y: hidden;
+.pacmanGameContainer {
+  background-color: #131313;
+  width: 100%;
   margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
 }
 
 .gameBoardContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 
-h1 {
+.pacmanTitle {
+  margin-top: 2rem;
   color: #fff;
-  text-align: start;
-  font-size: 20px;
-  margin-top: 1rem auto;
+  text-align: center;
+  font-size: 2rem;
+  width: 100%;
 }
 
-p {
+.pacmanInstructions {
+  color: #fff;
+  text-align: center;
+  margin: 1rem;
+}
+
+.pacmanScore {
   color: #fff;
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
+}
+
+.pacmanCanvas {
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
