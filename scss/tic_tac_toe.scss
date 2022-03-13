@@ -1,0 +1,95 @@
+/** @format */
+
+$cellSize: 100px;
+$ticSize: $cellSize * 0.9;
+
+.ticTacToeBoard {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.ticTacToeCell {
+  width: $cellSize;
+  height: $cellSize;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+// Top cells
+.ticTacToeCell:first-child,
+.ticTacToeCell:nth-child(2),
+.ticTacToeCell:nth-child(3) {
+  border-top: none;
+}
+
+// Left cells
+.ticTacToeCell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+// Right cells
+.ticTacToeCell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+// Bottom cells
+.ticTacToeCell:last-child,
+.ticTacToeCell:nth-child(8),
+.ticTacToeCell:nth-child(7) {
+  border-bottom: none;
+}
+
+.ticTacToeCell.x,
+.ticTacToeCell.o {
+    cursor: not-allowed;
+}
+
+.ticTacToeBoard.x:hover {
+    
+}
+
+.ticTacToeCell.x::before,
+.ticTacToeCell.x::after {
+  content: '';
+  position: absolute;
+  width: $ticSize * 0.15;
+  height: $ticSize;
+  background-color: black;
+}
+
+.ticTacToeCell.x::before {
+    transform: rotate(45deg)
+}
+
+.ticTacToeCell.x::after {
+    transform: rotate(-45deg)
+}
+
+.ticTacToeCell.o::before,
+.ticTacToeCell.o::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ticTacToeCell.o::before {
+    width: $ticSize;
+    height: $ticSize;
+    background-color: black;
+}
+
+.ticTacToeCell.o::after {
+    width: $ticSize * .7;
+    height: $ticSize * .7;
+    background-color: white;
+}

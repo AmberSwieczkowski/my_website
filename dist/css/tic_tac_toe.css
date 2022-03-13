@@ -1,0 +1,98 @@
+/** @format */
+.ticTacToeBoard {
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ticTacToeCell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.ticTacToeCell:first-child,
+.ticTacToeCell:nth-child(2),
+.ticTacToeCell:nth-child(3) {
+  border-top: none;
+}
+
+.ticTacToeCell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.ticTacToeCell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.ticTacToeCell:last-child,
+.ticTacToeCell:nth-child(8),
+.ticTacToeCell:nth-child(7) {
+  border-bottom: none;
+}
+
+.ticTacToeCell.x,
+.ticTacToeCell.o {
+  cursor: not-allowed;
+}
+
+.ticTacToeCell.x::before,
+.ticTacToeCell.x::after {
+  content: '';
+  position: absolute;
+  width: 13.5px;
+  height: 90px;
+  background-color: black;
+}
+
+.ticTacToeCell.x::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.ticTacToeCell.x::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.ticTacToeCell.o::before,
+.ticTacToeCell.o::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+}
+
+.ticTacToeCell.o::before {
+  width: 90px;
+  height: 90px;
+  background-color: black;
+}
+
+.ticTacToeCell.o::after {
+  width: 63px;
+  height: 63px;
+  background-color: white;
+}
