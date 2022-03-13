@@ -1,29 +1,78 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/css/tic_tac_toe.css">
-    <script src="/scripts/tic_tac_toe.js" defer></script>  
-    <title>Tic Tac Toe</title>
-</head>
-<body>
-    <div class="ticTacToeBoard x" id="ticTacToeBoard">
-        <div class="ticTacToeCell x" data-cell></div>
-        <div class="ticTacToeCell o" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-        <div class="ticTacToeCell" data-cell></div>
-    </div>
-    <div class="winningMessage">
-        <div id='winningMessage' data-winning-message-text></div>
-        <button id="restartButton">Restart</button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/tic_tac_toe.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
 
-</body>
+    <!--Icon Umbrella-Beach Import-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <script src="/scripts/tic_tac_toe.js" defer></script>
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+         <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar__container">
+          <a href="/projects/tic_tac_toe.html" id="navbar__logo">
+            <i class="fas fa-umbrella-beach"></i>TIC TAC TOE</a
+          >
+          <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="/index.html" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+            </li>
+            <li class="navbar__item">
+              <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+            </li>
+            <li class="navbar__item">
+              <a href="/projects.html" class="navbar__links">Projects</a>
+            </li>
+            <li class="navbar__btn">
+              <a
+                href="/self_destruct_verification.html"
+                class="self_destruct_button"
+                ><span>Self Destruct</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Scrolling Progress Bar -->
+      <div class="scrolling-progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+      <div class="ticTacToeBoard" id="ticTacToeBoard">
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+      <div class="ticTacToeCell" data-cell></div>
+    </div>
+    <div class="winningMessage" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="ticTacToeRestartButton">Restart</button>
+    </div>
+  </body>
 </html>

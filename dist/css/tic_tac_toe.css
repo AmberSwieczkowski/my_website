@@ -1,7 +1,7 @@
 /** @format */
 .ticTacToeBoard {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[3];
@@ -15,12 +15,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #131313;
 }
 
 .ticTacToeCell {
-  width: 100px;
-  height: 100px;
-  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #00ffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,39 +61,102 @@
 }
 
 .ticTacToeCell.x::before,
-.ticTacToeCell.x::after {
-  content: '';
-  position: absolute;
-  width: 13.5px;
-  height: 90px;
-  background-color: black;
+.ticTacToeCell.x::after,
+.ticTacToeCell.o::before {
+  background-color: #bbff99;
 }
 
-.ticTacToeCell.x::before {
+.ticTacToeBoard.x .ticTacToeCell:not(.x):not(.o):hover::before,
+.ticTacToeBoard.o .ticTacToeCell:not(.x):not(.o):hover::before,
+.ticTacToeBoard.x .ticTacToeCell:not(.x):not(.o):hover::after {
+  background-color: #ff99ff;
+}
+
+.ticTacToeCell.x::before,
+.ticTacToeCell.x::after,
+.ticTacToeBoard.x .ticTacToeCell:not(.x):not(.o):hover::before,
+.ticTacToeBoard.x .ticTacToeCell:not(.x):not(.o):hover::after {
+  content: '';
+  position: absolute;
+  width: 20.25px;
+  height: 135px;
+}
+
+.ticTacToeCell.x::before,
+.ticTacToeBoard .ticTacToeCell:not(.x):not(.o):hover::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.ticTacToeCell.x::after {
+.ticTacToeCell.x::after,
+.ticTacToeBoard .ticTacToeCell:not(.x):not(.o):hover::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
 
 .ticTacToeCell.o::before,
-.ticTacToeCell.o::after {
+.ticTacToeCell.o::after,
+.ticTacToeBoard.o .ticTacToeCell:not(.x):not(.o):hover::before,
+.ticTacToeBoard.o .ticTacToeCell:not(.x):not(.o):hover::after {
   content: '';
   position: absolute;
   border-radius: 50%;
 }
 
-.ticTacToeCell.o::before {
-  width: 90px;
-  height: 90px;
-  background-color: black;
+.ticTacToeCell.o::before,
+.ticTacToeBoard.o .ticTacToeCell:not(.x):not(.o):hover::before {
+  width: 135px;
+  height: 135px;
 }
 
-.ticTacToeCell.o::after {
-  width: 63px;
-  height: 63px;
-  background-color: white;
+.ticTacToeCell.o::after,
+.ticTacToeBoard.o .ticTacToeCell:not(.x):not(.o):hover::after {
+  width: 94.5px;
+  height: 94.5px;
+  background-color: #131313;
+}
+
+.winningMessage {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #131313;
+  opacity: 0.9;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #131313;
+  font-size: 5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #00ffff;
+}
+
+.winningMessage button {
+  font-size: 3rem;
+  background-color: #131313;
+  border: 1px solid #00ffff;
+  padding: 0.25em 0.5em;
+  cursor: pointer;
+  color: #00ffff;
+}
+
+.winningMessage button:hover {
+  background-color: #fff;
+  color: #131313;
+  border-color: #131313;
+}
+
+.winningMessage.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
