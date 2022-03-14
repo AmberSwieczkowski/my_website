@@ -77,6 +77,7 @@ body {
   float: right;
   width: 30%;
   height: 10px;
+  color: #f0ed3e;
 }
 
 .testimonial__comment__box__container section p {
@@ -256,6 +257,7 @@ body {
 
 /* Star Ratings on Old Testimonials */
 .checked {
+  color: #f0ed3e;
   margin-top: 0.2rem;
   margin-bottom: 1rem;
 }

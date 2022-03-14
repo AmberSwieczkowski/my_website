@@ -25,8 +25,7 @@
 }
 
 .main__adv__container {
-  width: 800px;
-  max-width: 80%;
+  width: 80vw;
   background-color: #37848c;
   padding: 30px;
   border-radius: 10px;

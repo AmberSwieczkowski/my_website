@@ -596,6 +596,7 @@
   width: 230px;
   height: 230px;
   border: 8px solid #00ffff;
+  border-radius: 130px;
 }
 
 .card .card-body {
@@ -751,6 +752,7 @@
 /* Services Section CSS */
 .services {
   background: #131313;
+  color: #00ffff;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto auto;
@@ -758,6 +760,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {

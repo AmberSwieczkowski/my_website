@@ -503,6 +503,7 @@ $phone: 550px; //col-sm
   width: 230px;
   height: 230px;
   border: 8px solid color(c-aqua);
+  border-radius: 130px;
 }
 
 .card .card-body {
@@ -619,9 +620,11 @@ $phone: 550px; //col-sm
 /* Services Section CSS */
 .services {
   background: color(c-black);
+  color: color(c-aqua);
   display: grid;
   grid-template-rows: auto auto;
   align-items: center;
+  text-align: center;
   @media (max-width: $laptop) {
     display: grid;
     grid-template-columns: auto;
