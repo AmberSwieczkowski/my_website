@@ -32,7 +32,7 @@ const chat = {
         ]
     },
     2: {
-        text: "But if we become friends, I'll let you call me Claudius.",
+        text: "Not too fast there... If we become friends, I'll let you call me Claudius.",
         next: 3
     },
     3: {
@@ -53,24 +53,45 @@ const chat = {
         ]
     },
     4: {
-        text: 'You are very attractive.',
+        text: 'You are too attractive to be wasting so much of your potential. You know what I\'m talking about. You are better than that.',
         next: 6
     },
     5: {
-        text: 'Go to the river at midnight and there will be a bag under the big oak tree with everything you need to improve yourself.',
-        next: 6
+        text: 'Go to the river at just before sunrise and sit under the giant fruit tree. Further instructions will be given to you there. Do you understand?',
+        options: [
+            { 
+                text: 'Yes, of course.',
+                next: 6
+            },
+            {
+                text: 'Which river?',
+                next: 7
+            },
+            {
+                text: 'Which tree?',
+                next: 7
+            },
+            {
+                text: 'I don\'t need to improve myself, thank you very much...',
+                next: 4
+            }
+        ]
     },
     6: {
         text: 'It\'s my bedtime now. Goodnight!',
         options: [
             {
-                text: "<strong>Wait</strong> come back",
-                url: "./index.html"
+                text: "<strong>Wait</strong> come back. I love you!",
+                url: "/claudius.html"
             },
             {
                 text: "Self-Destruct",
                 url: "./index.html"
             }
         ]
+    },
+    7: {
+        text: 'There is a sparkling river that brings life. Follow it East until you find the oldest tree. You will recognize it by its wisdom. Your potential will be waiting for you at sunrise.',
+        next: 6
     }
 };
