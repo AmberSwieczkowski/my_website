@@ -5,9 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/dist/css/canvas2.css" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+
+    <!--Icon Umbrella-Beach Import-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
     <title>Pixel Slider</title>
   </head>
   <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/projects/frogger_game.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>PIXEL SLIDER</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/index.html" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/projects.html" class="navbar__links">Projects</a>
+          </li>
+          <li class="navbar__btn">
+            <a
+              href="/self_destruct_verification.html"
+              class="self_destruct_button"
+              ><span>Self Destruct</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
     <div class="header">
       <h1 class="main__header">Use the slider to change the pixels in the picture!</h1>
     </div>
@@ -26,5 +69,6 @@
       </div>
     </div>
     <script src="/scripts/canvas2.js"></script>
+    <script src="/scripts/app.js"></script>
   </body>
 </html>
