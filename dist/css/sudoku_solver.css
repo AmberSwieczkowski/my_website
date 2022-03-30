@@ -1,0 +1,63 @@
+/** @format */
+.sudokuContainer {
+  background-color: #131313;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+#solveButton {
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  color: #00ffff;
+  padding: 10px 20px;
+}
+
+#solveButton:hover {
+  background-color: #00ffff;
+  border: 2px solid #131313;
+  color: #131313;
+  cursor: pointer;
+}
+
+#sudokuGrid,
+#solutionGrid,
+#sudokuGameboard,
+#solutionGameboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[9];
+      grid-template-columns: repeat(9, 50px);
+  margin: 30px auto;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #bbff99;
+  color: #bbff99;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+}
