@@ -44,20 +44,22 @@ $colors: (
   align-items: center;
   margin: auto;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   column-gap: 50px;
 }
 
-#solveButton {
+#solveButton,
+#newGameButton {
   background-color: transparent;
   border: 2px solid color(c-aqua);
   color: color(c-aqua);
   padding: 10px 20px;
 }
 
-#solveButton:hover {
+#solveButton:hover,
+#newGameButton {
   background-color: color(c-aqua);
   border: 2px solid color(c-black);
   color: color(c-black);
@@ -66,8 +68,7 @@ $colors: (
 
 #sudokuGrid,
 #solutionGrid,
-#sudokuGameboard,
-#solutionGameboard {
+#sudokuGameboard {
   display: grid;
   grid-template-columns: repeat(9, 50px);
   margin: 30px auto;

@@ -7,7 +7,7 @@
           align-items: center;
   margin: auto;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,14 +19,16 @@
           column-gap: 50px;
 }
 
-#solveButton {
+#solveButton,
+#newGameButton {
   background-color: transparent;
   border: 2px solid #00ffff;
   color: #00ffff;
   padding: 10px 20px;
 }
 
-#solveButton:hover {
+#solveButton:hover,
+#newGameButton {
   background-color: #00ffff;
   border: 2px solid #131313;
   color: #131313;
@@ -35,8 +37,7 @@
 
 #sudokuGrid,
 #solutionGrid,
-#sudokuGameboard,
-#solutionGameboard {
+#sudokuGameboard {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (50px)[9];
