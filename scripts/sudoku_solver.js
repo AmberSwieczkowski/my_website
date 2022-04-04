@@ -1,4 +1,4 @@
-var grid = [
+var grid1 = [
     [7, 3, 0, 8, 6, 1, 0, 0, 0],
     [0, 9, 0, 0, 4, 2, 3, 7, 0],
     [6, 4, 0, 0, 0, 0, 5, 1, 8],
@@ -11,43 +11,78 @@ var grid = [
     [0, 1, 0, 6, 8, 0, 7, 2, 4],
     [8, 0, 3, 7, 2, 0, 0, 0, 9],
 ]
-let gameboard = document.getElementById('sudokuGameboard')
 
-// var grid = [
-//     [5, 3, 0, 0, 7, 0, 0, 0, 0],
-//     [6, 0, 0, 1, 9, 5, 0, 0, 0],
-//     [0, 9, 8, 0, 0, 0, 0, 6, 0],
-//     [8, 0, 0, 0, 6, 0, 0, 0, 3],
-//     [4, 0, 0, 8, 0, 3, 0, 0, 1],
-//     [7, 0, 0, 0, 2, 0, 0, 0, 6],
-//     [0, 6, 0, 0, 0, 0, 2, 8, 0],
-//     [0, 0, 0, 0, 1, 9, 0, 0, 5],
-//     [0, 0, 0, 0, 0, 0, 0, 0, 0]
-// ]
+var grid2 = [
+    [5, 3, 0, 0, 7, 0, 0, 0, 0],
+    [6, 0, 0, 1, 9, 5, 0, 0, 0],
+    [0, 9, 8, 0, 0, 0, 0, 6, 0],
+
+    [8, 0, 0, 0, 6, 0, 0, 0, 3],
+    [4, 0, 0, 8, 0, 3, 0, 0, 1],
+    [7, 0, 0, 0, 2, 0, 0, 0, 6],
+
+    [0, 6, 0, 0, 0, 0, 2, 8, 0],
+    [0, 0, 0, 0, 1, 9, 0, 0, 5],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0]
+]
+let game1 = true
+let grid;
+
+let gameboard = document.getElementById('sudokuGameboard')
+let boxes = document.getElementsByClassName('box')
+let gridAlreadyCreated = false
 
 let newGame = () => {
-    // document.getElementById('newGameButton').disabled = true
-    // document.getElementById('solveButton').removeAttribute('disabled')
-    deleteGrid()
+    document.getElementById('newGameButton').disabled = true
+    document.getElementById('solveButton').removeAttribute('disabled')
     console.log('New Game')
-    for (let row in grid) {
-        for (let column in grid) {
-            let sudokuBox = document.createElement('div')
-            sudokuBox.classList.add('box')
-            let sudokuBoxValue = grid[row][column]
-            if (sudokuBoxValue !== 0) {
-                sudokuBox.innerHTML = sudokuBoxValue
-            } else {
-                sudokuBox.innerHTML = ' '
-            }
-            gameboard.appendChild(sudokuBox)
+    deleteGrid()
+    if (game1) {
+        grid = grid1
+        game1 = false
+    } else {
+        grid = grid2
+        game1 = true
+    }
+    if (!gridAlreadyCreated) {
+        createGrid()
+        gridAlreadyCreated = true
+    }
+    let row = 0
+    let column = 0
+    for (let i = 0; i < boxes.length; i++) {
+        let eachBox = boxes[i]
+        let sudokuBoxValue = grid[row][column]
+        if (sudokuBoxValue !== 0) {
+            eachBox.innerHTML = sudokuBoxValue
+            eachBox.classList.add('solvedBox')
+        } else {
+            eachBox.innerHTML = ' '
+        }
+        if (column >= 8) {
+            row++
+            column = 0
+        } else {
+            column++
         }
     }
 }
 
+let createGrid = () => {
+    for (let i = 0; i < 81; i++) {
+        let sudokuBox = document.createElement('div')
+        sudokuBox.classList.add('box')
+        sudokuBox.innerHTML = ' '
+        gameboard.appendChild(sudokuBox)
+    }
+    console.log(boxes)
+}
+
 let deleteGrid = () => {
-    while (gameboard.firstChild) {
-        gameboard.removeChild(gameboard.firstChild)
+    for (let i = 0; i < boxes.length; i++) {
+        let eachBox = boxes[i]
+        eachBox.innerHTML = ' '
+        eachBox.classList.remove('unsolvedBox')
     }
 }
 
@@ -80,9 +115,10 @@ let isPossible = (row, column, number) => {
 }
 
 let iterations = 0
-let solvedGrid;
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 let solve = async () => {
-    document.getElementById('solveButton').disabled = true
+    solving = true
     for (let row = 0; row < 9; row++) {
         for (let column = 0; column < 9; column++) {
             if (grid[row][column] === 0) {
@@ -98,29 +134,31 @@ let solve = async () => {
             }
         }
     }
-    solvedGrid = grid
+    const solvedGrid = JSON.parse(JSON.stringify([...grid]))
     console.log(JSON.parse(JSON.stringify(solvedGrid)))
-    deleteGrid()
-    const sleep = ms => new Promise(r => setTimeout(r, ms));
-    for (let row in solvedGrid) {
-        for (let column in solvedGrid) {
-            let sudokuBox = document.createElement('div')
-            sudokuBox.classList.add('box')
-            let sudokuBoxValue = solvedGrid[row][column]
-            if (sudokuBoxValue !== 0) {
-                sudokuBox.innerHTML = sudokuBoxValue
-            } else {
-                sudokuBox.innerHTML = ' '
-            }
-            gameboard.appendChild(sudokuBox)
-            await sleep(100)
+    let row = 0
+    let column = 0
+    for (let i = 0; i < boxes.length; i++) {
+        let eachBox = boxes[i]
+        if (eachBox.innerHTML === ' ') {
+            eachBox.classList.add('unsolvedBox')
+            console.log('solving...')
         }
+        let sudokuBoxValue = solvedGrid[row][column]
+        eachBox.innerHTML = sudokuBoxValue
+        if (column >= 8) {
+            row++
+            column = 0
+        } else {
+            column++
+        }
+        await sleep(100)
     }
+    document.getElementById('newGameButton').removeAttribute('disabled')
 }
 
 
-
-let printSolution = () => {
-    solve()
-    document.getElementById('newGameButton').removeAttribute('disabled')
+let printSolution = async () => {
+    await solve()
+    document.getElementById('solveButton').disabled = true
 }

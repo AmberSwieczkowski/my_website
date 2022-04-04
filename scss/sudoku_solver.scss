@@ -53,14 +53,15 @@ $colors: (
 #solveButton,
 #newGameButton {
   background-color: transparent;
-  border: 2px solid color(c-aqua);
-  color: color(c-aqua);
+  border: 2px solid color(c-purple);
+  color: color(c-purple);
   padding: 10px 20px;
+  margin: 10px;
 }
 
 #solveButton:hover,
-#newGameButton {
-  background-color: color(c-aqua);
+#newGameButton:hover {
+  background-color: color(c-purple);
   border: 2px solid color(c-black);
   color: color(c-black);
   cursor: pointer;
@@ -84,4 +85,20 @@ $colors: (
   justify-content: center;
   display: flex;
   font-size: 30px;
+  opacity: 1;
+}
+
+.unsolvedBox {
+  color: color(c-purple);
+  font-weight: bold;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
