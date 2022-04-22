@@ -1,3 +1,5 @@
+/** @format */
+
 $colors: (
   bubble-blue: #a4e2f5,
   bubble-green: #ecfa95,
@@ -46,7 +48,7 @@ $phone: 550px; //col-sm
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 /* Navigation Bar Section CSS */
@@ -184,7 +186,7 @@ $phone: 550px; //col-sm
 }
 
 .self_destruct_button:hover:before {
-  content: "Are You Sure?";
+  content: 'Are You Sure?';
 }
 
 @media (max-width: $laptop) {
@@ -337,7 +339,7 @@ $phone: 550px; //col-sm
 }
 
 .main__content h1 {
-  font-family: "Rampart One", cursive;
+  font-family: 'Rampart One', cursive;
   font-size: 4rem;
   background-color: color(c-aqua);
   background-image: color(c-aqua_to_lime);
@@ -430,12 +432,12 @@ $phone: 550px; //col-sm
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
-  font-family: "Archivo Black", sans-serif;
+  font-family: 'Archivo Black', sans-serif;
 }
 
 .main__btn:after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 0;
@@ -666,7 +668,7 @@ $phone: 550px; //col-sm
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/images/sheep-on-mountain.jpeg");
+    url('/images/sheep-on-mountain.jpeg');
   background-size: cover;
   position: relative;
   color: color(c-white);
@@ -681,7 +683,7 @@ $phone: 550px; //col-sm
       rgba(0, 0, 0, 0) 0%,
       rgba(17, 17, 17, 0.6) 100%
     ),
-    url("/images/dog-in-sunglasses.jpeg");
+    url('/images/dog-in-sunglasses.jpeg');
   background-size: cover;
 }
 
