@@ -1,3 +1,5 @@
+/** @format */
+
 $colors: (
   bubble-blue: #a4e2f5,
   bubble-green: #ecfa95,
@@ -40,10 +42,54 @@ body {
   margin: 0;
 }
 
-h1 {
-  z-index: 100;
-  background: color(c-purple);
-  border-bottom: 10px solid color(c-aqua);
-  color: color(c-white);
-  padding: 20px;
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
+.login__form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 80vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  background: color(c-black);
+  border-radius: 10px;
+  opacity: 0.95;
+}
+
+.login__form__message {
+  z-index: 1;
+  color: color(c-aqua);
+  text-align: center;
+  margin: 50px;
+  font-size: 1rem;
+}
+
+.login__form {
+  margin: 30px;
+  position: absolute;
+  top: 85%;
+  left: 75%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-75%, -75%);
+}
+
+.login__button {
+  background-color: color(c-salmon);
+  border: 5px solid color(c-salmon);
+  padding: 5px 10px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.login__button:hover {
+  cursor: pointer;
+  background-color: color(c-aqua);
+  border: 5px solid color(c-aqua);
 }

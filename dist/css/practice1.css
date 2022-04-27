@@ -2,6 +2,11 @@ body {
   background-color: #131313;
 }
 
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
 .main__practice1__container {
   background-color: #131313;
   color: #131313;

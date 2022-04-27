@@ -72,7 +72,7 @@ var colorArray = [
 window.addEventListener('mousemove', 
     function(event) {
         mouse.x = event.x;
-        mouse.y = event.y - 150;
+        mouse.y = event.y;
         console.log(mouse)
 })
 
