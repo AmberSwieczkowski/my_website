@@ -1,0 +1,30 @@
+{
+  "name": "my_website",
+  "version": "1.0.0",
+  "description": "# This is my first website ever KrustyKrabUSA!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node login/server.js",
+    "devStart": "nodemon login/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amberm31/my_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amberm31/my_website/issues"
+  },
+  "homepage": "https://github.com/amberm31/my_website#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
+    "express-ejs-layouts": "^2.5.1",
+    "mongoose": "^6.3.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
