@@ -4,8 +4,8 @@
   "description": "# This is my first website ever KrustyKrabUSA!",
   "main": "index.js",
   "scripts": {
-    "start": "node login/server.js",
-    "devStart": "nodemon login/server.js"
+    "start": "node mybrary/server.js",
+    "devStart": "nodemon mybrary/server.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,10 @@
   "dependencies": {
     "body-parser": "^1.20.0",
     "ejs": "^3.1.7",
-    "express": "^4.18.0",
+    "express": "^4.18.1",
     "express-ejs-layouts": "^2.5.1",
-    "mongoose": "^6.3.1"
+    "mongoose": "^6.3.1",
+    "multer": "^1.4.4"
   },
   "devDependencies": {
     "dotenv": "^16.0.0",
