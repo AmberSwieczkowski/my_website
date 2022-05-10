@@ -1,41 +1,39 @@
 /** @format */
 
+@import './variables_colors';
+
 .pacmanGameContainer {
-  background-color: #131313;
+  background-color: color(c-black);
   width: 100%;
   margin: auto;
   display: grid;
   grid-template-columns: auto;
-  
 }
 
 .gameBoardContainer {
   align-items: center;
   justify-content: center;
   margin: auto;
-  
 }
 
 .pacmanTitle {
   margin-top: 2rem;
-  color: #fff;
+  color: color(c-white);
   text-align: center;
   font-size: 2rem;
   width: 100%;
-  
 }
 
 .pacmanInstructions {
-  color: #fff;
+  color: color(c-white);
   text-align: center;
   margin: 1rem;
 }
 
 .pacmanScore {
-  color: #fff;
+  color: color(c-white);
   font-family: sans-serif;
   font-size: 1rem;
-  
 }
 
 .pacmanCanvas {

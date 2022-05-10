@@ -1,9 +1,11 @@
 <!-- @format -->
 
-<h2>New Book</h2>
+<h2 class="mybrary__page__header">New Book</h2>
 
 <form action="/books" method="POST">
   <%- include('_form_fields') %>
-  <a href="/books">Cancel</a>
-  <button type="submit">Create</button>
+  <div class="mybrary__form__row mybrary__form__row__end mybrary__btn__row">
+    <a class="mybrary__btn mybrary__btn__danger" href="/books">Cancel</a>
+    <button class="mybrary__btn mybrary__btn__primary" type="submit">Create</button>
+  </div>
 </form>

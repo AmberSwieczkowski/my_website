@@ -1,33 +1,41 @@
 <!-- @format -->
 
-<h2>Search Books</h2>
+<h2 class="mybrary__page__header">Search Books</h2>
 <form action="/books" method="GET">
-  <div>
-    <label>Title:</label>
-    <input type="text" name="title" value="<%= searchOptions.title %>" />
+  <div class="mybrary__form__row">
+    <div class="mybrary__form__item">
+      <label>Title:</label>
+      <input type="text" name="title" value="<%= searchOptions.title %>" />
+    </div>
   </div>
-  <div>
-    <label>Published After:</label>
-    <input
-      type="date"
-      name="publishedAfter"
-      value="<%= searchOptions.publishedAfter %>"
-    />
+  <div class="mybrary__form__row">
+    <div class="mybrary__form__item">
+      <label>Published After:</label>
+      <input
+        type="date"
+        name="publishedAfter"
+        value="<%= searchOptions.publishedAfter %>"
+      />
+    </div>
+    <div class="mybrary__form__item">
+      <label>Published Before:</label>
+      <input
+        type="date"
+        name="publishedBefore"
+        value="<%= searchOptions.publishedBefore %>"
+      />
+    </div>
   </div>
-  <div>
-    <label>Published Before:</label>
-    <input
-      type="date"
-      name="publishedBefore"
-      value="<%= searchOptions.publishedBefore %>"
-    />
+  <div class="mybrary__form__row mybrary__form__row__end">
+    <button class="mybrary__btn mybrary__btn__primary" type="submit">
+      Search
+    </button>
   </div>
-  <button type="submit">Search</button>
 </form>
 <div>
   <% books.forEach(book => { %>
-    <a href="/books/<%= book.id %> ">
-      <img height="150" width="100" src="<%= book.coverImagePath %>">
-    </a>
+  <a href="/books/<%= book.id %> ">
+    <img height="150" width="100" src="<%= book.coverImagePath %>" />
+  </a>
   <% }) %>
 </div>

@@ -1,9 +1,11 @@
 <!-- @format -->
 
-<h2>Edit Author</h2>
+<h2 class="mybrary__page__header">Edit Author</h2>
 
 <form action="/authors/<%= author.id %>?_method=PUT" method="POST">
   <%- include('_form_fields') %>
-  <a href="/authors/<%= author.id %> ">Cancel</a>
-  <button type="submit">Update</button>
+  <div class="mybrary__form__row mybrary__form__row__end mybrary__btn__row">
+    <a class="mybrary__btn mybrary__btn__danger" href="/authors/<%= author.id %> ">Cancel</a>
+    <button class="mybrary__btn mybrary__btn__primary" type="submit">Update</button>
+  </div>
 </form>

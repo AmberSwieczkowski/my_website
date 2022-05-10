@@ -1,0 +1,132 @@
+/** @format */
+
+@import './variables_colors';
+
+.footer__container {
+  background-color: color(c-black);
+  color: color(c-black);
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: flex;
+  bottom: 0;
+}
+
+#footer__logo {
+  color: color(c-white);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0;
+  bottom: 0;
+  height: 100%;
+  @media (max-width: $laptop) {
+    margin-bottom: 2rem;
+  }
+}
+
+.footer__links {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: $laptop) {
+    padding-top: 2rem;
+  }
+}
+
+.footer__link--wrapper {
+  display: flex;
+  color: color(c-black);
+  @media (max-width: $laptop) {
+    flex-direction: column;
+  }
+}
+
+.footer__link--items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 16px;
+  text-align: left;
+  width: 160px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  @media (max-width: $phone) {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.footer__link--items h2 {
+  margin-bottom: 16px;
+}
+
+.footer__link--items > h2 {
+  color: color(c-white);
+}
+
+.footer__link--items a {
+  color: color(c-white);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.footer__link--items a:hover {
+  color: color(c-grey);
+  transition: 0.3s ease-out;
+}
+
+/* Social Icons */
+
+.social__icon--link {
+  color: color(c-white);
+  font-size: 24px;
+}
+
+.social__media {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.social__media--wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto 0 auto;
+  @media (max-width: $laptop) {
+    flex-direction: column;
+  }
+}
+
+.social__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+}
+
+.social__logo {
+  color: color(c-white);
+  justify-self: flex-start;
+  margin-left: 5%;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.website__rights {
+  color: color(c-white);
+  margin: 5%;
+}

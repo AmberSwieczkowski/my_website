@@ -1,0 +1,204 @@
+/** @format */
+
+@import './variables_colors';
+
+$mybrary-nav-title-font-size: 3rem;
+$mybrary-nav-title-font-weight: bold;
+$mybrary-nav-link-font-weight: 300;
+$form-label-font-size: 1.2rem;
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.mybrary___home__page {
+  background: linear-gradient(
+    to right,
+    color(mybrary-c-background_dark) 0%,
+    color(mybrary-c-background_light) 100%
+  );
+  color: color(mybrary-c-text_light);
+}
+
+.mybrary__container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.mybrary__inner__container {
+  margin: 0 2rem;
+}
+
+// Header Section
+
+.mybrary__header__title {
+  color: color(mybrary-c-text_light);
+  text-decoration: none;
+  font-size: $mybrary-nav-title-font-size;
+  font-weight: $mybrary-nav-title-font-weight;
+}
+
+.mybrary__header__navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.mybrary__header__navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.mybrary__header__navbar li {
+  list-style: none;
+}
+
+.mybrary__header__navbar li a {
+  text-decoration: none;
+  color: color(mybrary-c-text_light);
+  font-weight: $mybrary-nav-link-font-weight;
+  padding: 1rem;
+}
+
+.mybrary__header__navbar li a:hover,
+.mybrary__header__title:hover {
+  color: color(c-white);
+}
+
+.mybrary__page__header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+// Mybrary buttons
+
+.mybrary__btn {
+  border: 1px solid color(c-black);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mybrary__btn__row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mybrary__btn__row > * {
+  margin-left: 1rem;
+}
+
+.mybrary__btn__row > *:first-child {
+  margin-left: 0;
+}
+
+.mybrary__btn__primary {
+  color: color(mybrary-c-btn_primary_text);
+  background-color: color(mybrary-c-btn_primary_background);
+}
+
+.mybrary__btn__primary:hover {
+  color: color(mybrary-c-btn_primary_text_dark);
+  background-color: color(mybrary-c-btn_primary_background_dark);
+}
+
+.mybrary__btn__danger {
+  color: color(c-black);
+  background-color: color(mybrary-c-btn_danger_background);
+}
+
+.mybrary__btn__danger:hover {
+  color: color(c-black);
+  background-color: color(mybrary-c-btn_danger_background_dark);
+}
+
+// Form Styles
+
+.mybrary__form__row {
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.mybrary__form__item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.mybrary__form__item:first-child {
+  margin-left: 0;
+}
+
+.no__grow {
+  flex-grow: 0;
+}
+
+.mybrary__form__row__end {
+  justify-content: flex-end;
+}
+
+.mybrary__form__item > label {
+  font-size: $form-label-font-size;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.mybrary__form__item input,
+.mybrary__form__item select,
+.mybrary__form__item textarea {
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid color(mybrary-c-form_input_border);
+  background-color: color(mybrary-c-form_input_background);
+  color: color(mybrary-c-text_light);
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  outline: none;
+  color-scheme: dark;
+}
+
+.mybrary__form__item input:focus,
+.mybrary__form__item select:focus,
+.mybrary__form__item textarea:focus {
+  border-color: color(mybrary-c-form_input_border_light);
+}
+
+.mybrary__form__item select option {
+  background-color: color(c-black);
+}
+
+.mybrary__form__item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.filepond--root {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+}
+
+.filepond--panel-root {
+  background-color: color(mybrary-c-form_input_background);
+  border: 1px solid color(mybrary-c-form_input_border);
+}
+
+.filepond--drop-label {
+  color: color(mybrary-c-text_light);
+  font-size: inherit;
+}

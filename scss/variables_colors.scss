@@ -1,0 +1,58 @@
+/** @format */
+
+$mybrary-c-base_hue: 300;
+$mybrary-c-danger_hue: 120; // $mybrary-c-base_hue - 180
+
+$display: 1220px; // col-xl
+$laptop: 1024px; // col-lg
+$tablet: 768px; //col-md
+$phone: 550px; //col-sm
+
+$colors: (
+  bubble-blue: #a4e2f5,
+  bubble-green: #ecfa95,
+  bubble-orange: #ffb980,
+  bubble-purple: #c182db,
+  bubble-red: #fc7686,
+  c-royalblue: #0091ff,
+  c-blue_adventure: #37848c,
+  c-aqua: #00ffff,
+  c-green_adventure: #b9d9ce,
+  c-lime: #bbff99,
+  c-orange: #ffcc66,
+  c-orange_adventure: #d9583b,
+  c-salmon: #f77062,
+  c-light_grey: #eeeed7,
+  c-pink: #ff99ff,
+  c-purple: #e432f4,
+  c-purple_light: lighten(#e432f4, 10%),
+  c-red_adventure: #8c0303,
+  c-grey_dark: #333,
+  c-grey_adventure: #d9d9d9,
+  c-grey: #e0e0e0,
+  c-grey_yellow: #eeeed7,
+  c-white: #fff,
+  c-black: #131313,
+  c-aqua_to_lime: linear-gradient(to top, #00ffff 0%, #bbff99 100%),
+  c-aqua_to_purple:
+    linear-gradient(to top, #e432f4 0%, #00ffff 33%, #e432f4 100%),
+  c-orange_to_pink: linear-gradient(to top, #ffcc66 0%, #ff99ff 100%),
+  c-black_to_red_adventure:
+    linear-gradient(to top, #131313 0%, #8c0303 30%, #8c0303 60%, #131313 100%),
+  mybrary-c-background_dark: hsl($mybrary-c-base_hue, 100%, 8%),
+  mybrary-c-background_light: hsl($mybrary-c-base_hue, 100%, 16%),
+  mybrary-c-text_light: hsl($mybrary-c-base_hue, 100%, 87%),
+  mybrary-c-btn_primary_text: hsl($mybrary-c-base_hue, 100%, 20%),
+  mybrary-c-btn_primary_text_dark: hsl($mybrary-c-base_hue, 100%, 10%),
+  mybrary-c-btn_primary_background: hsl($mybrary-c-base_hue, 100%, 83%),
+  mybrary-c-btn_primary_background_dark: hsl($mybrary-c-base_hue, 100%, 73%),
+  mybrary-c-btn_danger_background: hsl($mybrary-c-danger_hue, 100%, 83%),
+  mybrary-c-btn_danger_background_dark: hsl($mybrary-c-danger_hue, 100%, 73%),
+  mybrary-c-form_input_border: hsl($mybrary-c-base_hue, 100%, 50%),
+  mybrary-c-form_input_border_light: hsl($mybrary-c-base_hue, 100%, 80%),
+  mybrary-c-form_input_background: hsl($mybrary-c-base_hue, 100%, 31%),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
