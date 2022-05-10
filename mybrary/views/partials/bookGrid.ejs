@@ -1,0 +1,14 @@
+<!-- @format -->
+
+<% bookCoverClass = locals.large ? 'mybrary__book__cover__large' : '' %>
+
+<div class="mybrary__book__grid">
+  <% books.forEach(book => { %>
+  <a href="/books/<%= book.id %>">
+    <img
+      class="mybrary__book__cover <%= bookCoverClass %>"
+      src="<%= book.coverImagePath %>"
+    />
+  </a>
+  <% }) %>
+</div>

@@ -5,7 +5,10 @@
 $mybrary-nav-title-font-size: 3rem;
 $mybrary-nav-title-font-weight: bold;
 $mybrary-nav-link-font-weight: 300;
-$form-label-font-size: 1.2rem;
+$mybrary-form-label-font-size: 1.2rem;
+$mybrary-book-cover-width: 200px;
+$mybrary-book-cover-width-large: 325px;
+$mybrary-book-cover-aspect-ratio: 0.75;
 
 *,
 *::before,
@@ -153,7 +156,7 @@ $form-label-font-size: 1.2rem;
 }
 
 .mybrary__form__item > label {
-  font-size: $form-label-font-size;
+  font-size: $mybrary-form-label-font-size;
   margin-bottom: 0.25rem;
   margin-left: 0.25rem;
 }
@@ -201,4 +204,76 @@ $form-label-font-size: 1.2rem;
 .filepond--drop-label {
   color: color(mybrary-c-text_light);
   font-size: inherit;
+}
+
+// Author Styles
+
+.mybrary__author__name {
+  font-size: 1.5rem;
+}
+
+.mybrary__author__row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.mybrary__book__cover {
+  width: $mybrary-book-cover-width;
+  height: 267px;
+
+}
+
+.mybrary__book__cover__large {
+  width: $mybrary-book-cover-width-large;
+  height: 434px;
+}
+
+.mybrary__book__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.mybrary__error__message {
+  color: color(mybrary-c-btn_danger_background);
+}
+
+// Show Book Details Page
+
+.mybrary__book__details {
+  display: flex;
+}
+
+.mybrary__book__details__btn__grid {
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  grid-template-areas:
+    'edit delete'
+    'author author';
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mybrary__book__details__author__btn {
+  grid-area: author;
+  justify-self: stretch;
+}
+
+.mybrary__book__details__grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: auto auto;
+  margin-left: 1rem;
+}
+
+.mybrary__book__details__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: flex-start;
 }

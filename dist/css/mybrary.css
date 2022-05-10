@@ -212,3 +212,93 @@
   color: #ffbdff;
   font-size: inherit;
 }
+
+.mybrary__author__name {
+  font-size: 1.5rem;
+}
+
+.mybrary__author__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.mybrary__book__cover {
+  width: 200px;
+  height: 267px;
+}
+
+.mybrary__book__cover__large {
+  width: 325px;
+  height: 434px;
+}
+
+.mybrary__book__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+}
+
+.mybrary__error__message {
+  color: #a8ffa8;
+}
+
+.mybrary__book__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mybrary__book__details__btn__grid {
+  display: -ms-grid;
+  display: grid;
+  justify-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+      grid-template-areas: 'edit delete' 'author author';
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.mybrary__book__details__author__btn {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: author;
+  -ms-grid-column-align: stretch;
+      justify-self: stretch;
+}
+
+.mybrary__book__details__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  margin-left: 1rem;
+}
+
+.mybrary__book__details__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}

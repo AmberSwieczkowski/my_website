@@ -16,18 +16,20 @@
 </form>
 <br />
 <% authors.forEach(author => { %>
-<div><%= author.name %></div>
-<div class="mybrary__btn__row">
-  <a
-    class="mybrary__btn mybrary__btn__primary"
-    href="/authors/<%= author.id %> "
-    >View</a
-  >
-  <a
-    class="mybrary__btn mybrary__btn__primary"
-    href="/authors/<%= author.id %>/edit "
-    >Edit</a
-  >
-  <%- include('../partials/deleteForm', { url: `/authors/${author.id}` }) %>
+<div class="mybrary__author__row">
+  <div class="mybrary__author__name"><%= author.name %></div>
+  <div class="mybrary__btn__row">
+    <a
+      class="mybrary__btn mybrary__btn__primary"
+      href="/authors/<%= author.id %> "
+      >View</a
+    >
+    <a
+      class="mybrary__btn mybrary__btn__primary"
+      href="/authors/<%= author.id %>/edit "
+      >Edit</a
+    >
+    <%- include('../partials/deleteForm', { url: `/authors/${author.id}` }) %>
+  </div>
 </div>
 <% }) %>
