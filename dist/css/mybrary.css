@@ -1,0 +1,214 @@
+/** @format */
+/** @format */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.mybrary___home__page {
+  background: -webkit-gradient(linear, left top, right top, from(#290029), to(#520052));
+  background: linear-gradient(to right, #290029 0%, #520052 100%);
+  color: #ffbdff;
+}
+
+.mybrary__container {
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+
+.mybrary__inner__container {
+  margin: 0 2rem;
+}
+
+.mybrary__header__title {
+  color: #ffbdff;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.mybrary__header__navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.mybrary__header__navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.mybrary__header__navbar li {
+  list-style: none;
+}
+
+.mybrary__header__navbar li a {
+  text-decoration: none;
+  color: #ffbdff;
+  font-weight: 300;
+  padding: 1rem;
+}
+
+.mybrary__header__navbar li a:hover,
+.mybrary__header__title:hover {
+  color: #fff;
+}
+
+.mybrary__page__header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.mybrary__btn {
+  border: 1px solid #131313;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.mybrary__btn__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mybrary__btn__row > * {
+  margin-left: 1rem;
+}
+
+.mybrary__btn__row > *:first-child {
+  margin-left: 0;
+}
+
+.mybrary__btn__primary {
+  color: #660066;
+  background-color: #ffa8ff;
+}
+
+.mybrary__btn__primary:hover {
+  color: #330033;
+  background-color: #ff75ff;
+}
+
+.mybrary__btn__danger {
+  color: #131313;
+  background-color: #a8ffa8;
+}
+
+.mybrary__btn__danger:hover {
+  color: #131313;
+  background-color: #75ff75;
+}
+
+.mybrary__form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.mybrary__form__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+}
+
+.mybrary__form__item:first-child {
+  margin-left: 0;
+}
+
+.no__grow {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.mybrary__form__row__end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.mybrary__form__item > label {
+  font-size: 1.2rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+}
+
+.mybrary__form__item input,
+.mybrary__form__item select,
+.mybrary__form__item textarea {
+  height: 2rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid magenta;
+  background-color: #9e009e;
+  color: #ffbdff;
+  font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  outline: none;
+  color-scheme: dark;
+}
+
+.mybrary__form__item input:focus,
+.mybrary__form__item select:focus,
+.mybrary__form__item textarea:focus {
+  border-color: #ff99ff;
+}
+
+.mybrary__form__item select option {
+  background-color: #131313;
+}
+
+.mybrary__form__item textarea {
+  height: 100%;
+  resize: none;
+}
+
+.filepond--root {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+}
+
+.filepond--panel-root {
+  background-color: #9e009e;
+  border: 1px solid magenta;
+}
+
+.filepond--drop-label {
+  color: #ffbdff;
+  font-size: inherit;
+}

@@ -1,0 +1,26 @@
+/** @format */
+body {
+  background-color: #131313;
+}
+
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
+.main__practice1__container {
+  background-color: #131313;
+  color: #131313;
+  margin-top: 8px;
+}
+
+#main__practice1__header {
+  color: #c182db;
+  padding: 20px;
+  text-align: center;
+}
+
+#practice1 {
+  background: #131313;
+  color: #131313;
+}

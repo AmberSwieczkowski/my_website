@@ -1,0 +1,91 @@
+/** @format */
+.sudokuContainer {
+  background-color: #131313;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+#solveButton,
+#newGameButton {
+  background-color: transparent;
+  border: 2px solid #e432f4;
+  color: #e432f4;
+  padding: 10px 20px;
+  margin: 10px;
+}
+
+#solveButton:hover,
+#newGameButton:hover {
+  background-color: #e432f4;
+  border: 2px solid #131313;
+  color: #131313;
+  cursor: pointer;
+}
+
+#sudokuGrid,
+#solutionGrid,
+#sudokuGameboard {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (50px)[9];
+      grid-template-columns: repeat(9, 50px);
+  margin: 30px auto;
+}
+
+.box {
+  height: 50px;
+  width: 50px;
+  border: 1px solid #bbff99;
+  color: #bbff99;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+  opacity: 1;
+}
+
+.unsolvedBox {
+  color: #e432f4;
+  font-weight: bold;
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
