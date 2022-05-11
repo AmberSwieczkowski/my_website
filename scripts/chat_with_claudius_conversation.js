@@ -39,7 +39,7 @@ const chat = {
         text: "I'm here to either judge or help you.",
         options: [
             {
-                text: "<strong>Judge</strong> me if you can",
+                text: "<strong>Judge</strong> me if you can.",
                 next: 4
             },
             {
@@ -53,13 +53,13 @@ const chat = {
         ]
     },
     4: {
-        text: 'You are too attractive to be wasting so much of your potential. You know what I\'m talking about. You are better than that.',
+        text: 'You are attractive. Stay sexy.',
         next: 6
     },
     5: {
-        text: 'Go to the river at just before sunrise and sit under the giant fruit tree. Further instructions will be given to you there. Do you understand?',
+        text: 'Go to the river just before sunrise and sit under the giant fruit tree. Further instructions will be given to you there. Do you understand?',
         options: [
-            { 
+            {
                 text: 'Yes, of course.',
                 next: 6
             },

@@ -12,6 +12,10 @@ body {
   height: 50%;
 }
 
+canvas {
+  overflow: hidden;
+}
+
 .header {
   color: #ffcc66;
   text-align: center;
@@ -20,12 +24,12 @@ body {
   font-size: 1rem;
 }
 
-.container {
+.pixels__container {
   margin: auto;
   width: 30%;
 }
 
-#canvas2 {
+#pixels {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

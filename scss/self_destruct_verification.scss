@@ -1,12 +1,13 @@
-@import './variables_colors';
+/** @format */
 
+@import './variables_colors';
 
 .main__sdv {
   background-color: color(c-black);
 }
 
 .main__content_sdv h1 {
-  font-family: "Permanent Marker", cursive;
+  font-family: 'Permanent Marker', cursive;
   font-size: 4rem;
   background-color: color(c-aqua);
   background-image: linear-gradient(
@@ -20,7 +21,7 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  padding: 5%;
+  padding-top: 5%;
   text-align: center;
   animation: blinker 1s linear infinite;
 }
@@ -40,7 +41,7 @@
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
-  padding: 5%;
+  padding-top: 5%;
   text-align: center;
 }
 
@@ -50,20 +51,23 @@
   font-weight: 700;
   color: color(c-white);
   padding: 2px;
-  margin-bottom: 10%;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 /* Self Destruct Verification Button Section */
 
 .self_destruct_verification_button {
+  font-size: 2.5rem;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   text-decoration: none;
   padding: 3% 5%;
-  height: 100%;
-  width: 50%;
+  height: 200px;
+  width: 600px;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -71,6 +75,8 @@
   color: color(c-black);
   transition: none;
   margin: auto;
+  font-family: 'Permanent Marker', cursive;
+
 }
 
 .self_destruct_verification_button a {
@@ -78,15 +84,12 @@
   z-index: 2;
   color: color(c-white);
   text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: "Permanent Marker", cursive;
 }
 
 .self_destruct_verification_button:hover {
-  background: color(c-orange_to_pink);
+  background: linear-gradient(to top, #830404 0%, #ec2c2c 50%, #830404 100%);
   transition: none;
-  padding: 3% 5%;
+  // padding: 3% 5%;
 }
 
 .self_destruct_verification_button:hover span {
@@ -94,8 +97,8 @@
 }
 
 .self_destruct_verification_button:hover:before {
-  font-family: "Space Mono", monospace;
-  content: "Are You REALLY Sure? This Cannot Be Undone.";
+  font-family: 'Space Mono', monospace;
+  content: 'Are You REALLY Sure?';
   font-size: 2rem;
 }
 
@@ -116,8 +119,8 @@
   align-items: center;
   text-decoration: none;
   padding: 10px 20px;
-  height: 100%;
-  width: 100%;
+  height: 50px;
+  width: 150px;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -136,7 +139,7 @@
 }
 
 .back_to_safety_button:hover:before {
-  content: "Take Me Back";
+  content: 'Take Me Back';
 }
 
 /* Self Destruct Verification Main Image */

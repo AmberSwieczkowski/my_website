@@ -1,4 +1,4 @@
-var canvas = document.querySelector('#practice1');
+var canvas = document.querySelector('#bubbles');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;

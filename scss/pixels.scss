@@ -15,6 +15,10 @@ body {
   height: 50%;
 }
 
+canvas {
+  overflow: hidden;
+}
+
 .header {
   color: color(c-orange);
   text-align: center;
@@ -23,12 +27,12 @@ body {
   font-size: 1rem;
 }
 
-.container {
+.pixels__container {
   margin: auto;
   width: 30%;
 }
 
-#canvas2 {
+#pixels {
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,4 +1,4 @@
-const canvas = document.getElementById('canvas2');
+const canvas = document.getElementById('pixels__canvas');
 const ctx = canvas.getContext('2d');
 
 const image1 = new Image();
