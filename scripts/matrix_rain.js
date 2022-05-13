@@ -65,7 +65,7 @@ function animate(timeStamp) {
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
     if (timer > nextFrame) {
-        ctx.fillStyle = 'rgba(0.05, 0.05, 0.05, 0.1)';
+        ctx.fillStyle = 'rgba(19, 19, 19, 0.1)';
         ctx.textAlign = 'center';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = gradient; //'#0aff0a'

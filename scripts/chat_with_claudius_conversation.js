@@ -53,8 +53,17 @@ const chat = {
         ]
     },
     4: {
-        text: 'You are attractive. Stay sexy.',
-        next: 6
+        text: 'You need a challenge and an adventure.',
+        options: [
+            {
+                text: 'Take the challenge.',
+                url: '/projects/adventure_game.html'
+            },
+            {
+                text: 'Go on an adventure.',
+                url: '/projects/adventure_game.html'
+            }
+        ]
     },
     5: {
         text: 'Go to the river just before sunrise and sit under the giant fruit tree. Further instructions will be given to you there. Do you understand?',
@@ -72,7 +81,7 @@ const chat = {
                 next: 7
             },
             {
-                text: 'I don\'t need to improve myself, thank you very much...',
+                text: 'I don\'t need your help, thank you very much...',
                 next: 4
             }
         ]
