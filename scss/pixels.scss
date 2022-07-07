@@ -17,6 +17,10 @@ body {
 
 canvas {
   overflow: hidden;
+  background-color: color(c-black);
+  position: absolute;
+  z-index: -1;
+  height: 100%;
 }
 
 .header {
