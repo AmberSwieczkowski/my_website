@@ -1,5 +1,9 @@
 /** @format */
 /** @format */
+body {
+  background: #131313;
+}
+
 .main__sdv {
   background-color: #131313;
 }
