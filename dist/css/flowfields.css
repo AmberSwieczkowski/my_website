@@ -1,7 +1,5 @@
 /** @format */
-
-@import './variables_colors';
-
+/** @format */
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +7,7 @@
   box-sizing: border-box;
 }
 
-#canvas1 {
+#flowfields {
   position: absolute;
-  background: color(c-purple);
-  // top: 0;
-  // left: 0;
+  background: #e432f4;
 }

@@ -6,7 +6,7 @@
           box-sizing: border-box;
 }
 
-body {
+.matrix__rain__body {
   overflow: hidden;
   background: #131313;
 }

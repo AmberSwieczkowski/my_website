@@ -12,7 +12,7 @@
 
 body {
   background: color(c-black);
-  height: 50%;
+  overflow: hidden;
 }
 
 canvas {
@@ -20,11 +20,11 @@ canvas {
   background-color: color(c-black);
   position: absolute;
   z-index: -1;
-  height: 100%;
+  height: 80%;
 }
 
 .header {
-  color: color(c-orange);
+  color: color(c-pink);
   text-align: center;
   padding: 2%;
   margin: auto;

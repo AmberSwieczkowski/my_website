@@ -43,7 +43,7 @@ class AsciiEffect {
         this.#pixels = this.#ctx.getImageData(0, 0, this.#width, this.#height);
         console.log(this.#pixels.data);
     }
-    #convertToSymbol(avg_color_val){
+    #convertToSymbol(avg_color_val) {
         if (avg_color_val > 300) return '@';
         else if (avg_color_val < 20) return 'M';
         else if (avg_color_val < 40) return 'L';
@@ -71,23 +71,23 @@ class AsciiEffect {
         else if (avg_color_val < 270) return '-';
         else if (avg_color_val < 280) return 'X';
         else if (avg_color_val < 290) return 'W';
-                        else return '';
+        else return '';
     }
-    #scanImage(cellSize){
+    #scanImage(cellSize) {
         this.#imageCellArray = [];
-        for (let y = 0; y < this.#pixels.height; y += cellSize){
+        for (let y = 0; y < this.#pixels.height; y += cellSize) {
             for (let x = 0; x < this.#pixels.width; x += cellSize) {
                 const posX = x * 4;
                 const posY = y * 4;
                 const pos = (posY * this.#pixels.width) + posX; // all complete rows + current x position in current row
-                
+
                 // if pixel is not transparent (less than 128 opacity), then apply the const values to the pixel data
-                if (this.#pixels.data[pos + 3] > 128){
+                if (this.#pixels.data[pos + 3] > 128) {
                     const red = this.#pixels.data[pos];
                     const green = this.#pixels.data[pos + 1];
                     const blue = this.#pixels.data[pos + 2];
                     const total = red + green + blue;
-                    const averageColorValue = total/3;
+                    const averageColorValue = total / 3;
                     const color = "rgb(" + red + "," + green + "," + blue + ")";
                     const symbol = this.#convertToSymbol(averageColorValue)
                     if (total > 200) this.#imageCellArray.push(new Cell(x, y, symbol, color));
@@ -97,7 +97,7 @@ class AsciiEffect {
         console.log(this.#imageCellArray);
     }
     #drawAscii() {
-        this.#ctx.clearRect(0,0, this.#width, this.#height);
+        this.#ctx.clearRect(0, 0, this.#width, this.#height);
         for (let i = 0; i < this.#imageCellArray.length; i++) {
             this.#imageCellArray[i].draw(this.#ctx);
         }
@@ -112,10 +112,10 @@ let effect;
 function handleSlider() {
     if (inputSlider.value == 1) {
         inputLabel.innerHTML = 'Original image'
-        ctx.drawImage(image1, 0 , 0, canvas.width, canvas.height);
+        ctx.drawImage(image1, 0, 0, canvas.width, canvas.height);
     } else {
         inputLabel.innerHTML = 'Resolution ' + inputSlider.value + ' px';
-        ctx.font = parseInt(inputSlider.value) * 1.2 + 'px Verdana';
+        ctx.font = parseInt(inputSlider.value) * 1 + 'px Verdana';
         effect.draw(parseInt(inputSlider.value));
 
     }
@@ -128,4 +128,4 @@ image1.onload = function initialize() {
     handleSlider();
     console.log(effect);
     // effect.draw(2); this controls the image pixelation for the first time when the page initially loads
-    }
+}

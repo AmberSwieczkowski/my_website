@@ -1,0 +1,17 @@
+/** @format */
+
+@import './variables_colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#flowfields {
+  position: absolute;
+  background: color(c-purple);
+  // top: 0;
+  // left: 0;
+}
