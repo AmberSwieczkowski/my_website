@@ -1,0 +1,334 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="stylesheet" href="/dist/css/resume.css" />
+    <link rel="stylesheet" href="/dist/css/matrix_rain.css" />
+
+    <!--Icons Umbrella-Beach and Contact Import-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <title>Resume: Amber Swieczkowski</title>
+  </head>
+  <body>
+    <canvas id="matrix__rain" class="matrix__rain__resume__background"></canvas>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/index.html" id="navbar__logo">
+          <i class="fas fa-umbrella-beach"></i>RESUME</a
+        >
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/claudius.html" class="navbar__links"
+              >Chat With Claudius</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a href="/testimonials.html" class="navbar__links">Testimonials</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/top_secret.html" class="navbar__links">Top Secret</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/projects.html" class="navbar__links">Projects</a>
+          </li>
+          <li class="navbar__btn">
+            <a
+              href="/self_destruct_verification.html"
+              class="self_destruct_button"
+              ><span>Self Destruct</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Scrolling Progress Bar -->
+    <div class="scrolling-progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+
+    <!-- Resume Section -->
+    <div class="resume__body">
+      <div class="resume__container">
+        <div class="left__side">
+          <div class="profile__text">
+            <div class="image__box">
+              <img
+                src="https://i.ibb.co/hdRmd21/Profile-Picture-1-square.jpg"
+                alt="Profile Picture Amber"
+                width="200px"
+                height="200px"
+              />
+            </div>
+            <h2>Amber Swieczkowski <br /><span>Web Developer</span></h2>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="resume__contact__info">
+            <h3 class="resume__contact__title">Contact Info</h3>
+            <ul>
+              <!-- Email -->
+              <a
+                href="mailto:amberswieczkowski@pm.me?subject=Development Inquiry"
+                target="_blank"
+                class="resume__contact__link"
+              >
+                <li>
+                  <span class="resume__contact__icon"
+                    ><i class="fas fa-envelope" aria-hidden="true"></i>
+                  </span>
+                  <span class="resume__contact__text"
+                    >amberswieczkowski@pm.me</span
+                  >
+                </li>
+              </a>
+              <!-- Website Krusty Krab -->
+              <a
+                href="https://www.krustykrab.us/"
+                target="_blank"
+                class="resume__contact__link"
+              >
+                <li>
+                  <span class="resume__contact__icon"
+                    ><i class="fas fa-globe" aria-hidden="true"></i>
+                  </span>
+                  <span class="resume__contact__text">krustykrab.us</span>
+                </li>
+              </a>
+              <!-- Github -->
+              <a
+                href="https://github.com/AmberSwieczkowski"
+                target="_blank"
+                class="resume__contact__link"
+              >
+                <li>
+                  <span class="resume__contact__icon"
+                    ><i class="fab fa-github" aria-hidden="true"></i>
+                  </span>
+                  <span class="resume__contact__text"
+                    >github.com/amberswieczkowski</span
+                  >
+                </li>
+              </a>
+              <!-- LinkedIn -->
+              <a
+                href="https://www.linkedin.com/in/amberswieczkowski/"
+                target="_blank"
+                class="resume__contact__link"
+              >
+                <li>
+                  <span class="resume__contact__icon"
+                    ><i class="fab fa-linkedin" aria-hidden="true"></i>
+                  </span>
+                  <span class="resume__contact__text"
+                    >linkedin.com/amberswieczkowski</span
+                  >
+                </li>
+              </a>
+              <li>
+                <span class="resume__contact__icon"
+                  ><i class="fa fa-map-marker" aria-hidden="true"></i>
+                </span>
+                <span class="resume__contact__text">Remote, Europe</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Education -->
+          <div class="resume__contact__info resume__education">
+            <h3 class="resume__contact__title">Education</h3>
+            <ul>
+              <li>
+                <h5>2022 - Present</h5>
+                <h4>MS Computer Science</h4>
+                <h4>Georgia Institute of Technology</h4>
+              </li>
+              <li>
+                <h5>2012 - 2017</h5>
+                <h4>BS Chemical Engineering</h4>
+                <h4>McNeese State University</h4>
+              </li>
+            </ul>
+          </div>
+
+          <div class="resume__contact__info resume__languages">
+            <h3 class="resume__contact__title">Languages</h3>
+            <ul>
+              <li>
+                <span class="resume__languages__text">English</span>
+                <span class="resume__languages__percent">
+                  <div style="width: 95%"></div>
+                </span>
+              </li>
+              <li>
+                <span class="resume__languages__text">Polish</span>
+                <span class="resume__languages__percent">
+                  <div style="width: 35%"></div>
+                </span>
+              </li>
+              <li>
+                <span class="resume__languages__text">Spanish</span>
+                <span class="resume__languages__percent">
+                  <div style="width: 75%"></div>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right__side">
+          <div class="resume__about">
+            <h2 class="resume__about__title">Profile</h2>
+            <p>
+              Senior Software Developer with 6 years of experience in full stack
+              development and 4 years of experience working remotely. Provides
+              robust, well-tested and maintainable solutions.<br /><br />Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Optio, repellat
+              fugit voluptatum, est alias magni enim obcaecati voluptatem
+              aperiam, eveniet deleniti sunt a vel soluta ut distinctio quasi
+              totam ipsum.
+            </p>
+          </div>
+          <div class="resume__about">
+            <h2 class="resume__about__title">Experience</h2>
+            <div class="resume__experience__box">
+              <div class="resume__experience__year__company">
+                <h5>2021 - Present</h5>
+                <h5>SpaceX</h5>
+              </div>
+              <div class="resume__experience__text">
+                <h4>Senior Software Engineer</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Reiciendis incidunt architecto nam vitae.
+                </p>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <div class="resume__experience__year__company">
+                <h5>2018 - 2021</h5>
+                <h5>SpaceX</h5>
+              </div>
+              <div class="resume__experience__text">
+                <h4>Senior Software Engineer</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Reiciendis incidunt architecto nam vitae.
+                </p>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <div class="resume__experience__year__company">
+                <h5>2015 - 2018</h5>
+                <h5>SpaceX</h5>
+              </div>
+              <div class="resume__experience__text">
+                <h4>Senior Software Engineer</h4>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Reiciendis incidunt architecto nam vitae.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume__about resume__skills">
+            <h2 class="resume__about__title">Professional Skills</h2>
+            <div class="resume__experience__box">
+              <h4>Html</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>CSS</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>JavaScript</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>Node</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>Python</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>Java</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 70%"></div>
+              </div>
+            </div>
+            <div class="resume__experience__box">
+              <h4>Git</h4>
+              <div class="resume__languages__percent">
+                <div style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume__about resume__tools">
+            <h2 class="resume__about__title">Tools</h2>
+            <ul>
+              <li>
+                <span class="resume__tools__icon">
+                  <i class="fab fa-react"></i>
+                </span>
+                <span class="resume__tools__text">React</span>
+              </li>
+              <li>
+                <span class="resume__tools__icon">
+                  <i class="fab fa-node-js"></i>
+                </span>
+                <span class="resume__tools__text">Express</span>
+              </li>
+              <li>
+                <span class="resume__tools__icon">
+                  <i class="fas fa-database"></i>
+                </span>
+                <span class="resume__tools__text">MongoDB</span>
+              </li>
+              <li>
+                <span class="resume__tools__icon">
+                  <i class="fab fa-sass"></i>
+                </span>
+                <span class="resume__tools__text">Sass</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/scrolling_progress_bar.js"></script>
+    <script src="/scripts/matrix_rain.js"></script>
+  </body>
+</html>
